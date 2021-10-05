@@ -1,0 +1,74 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-main-container {
+    height: 100vh;
+}
+
+[name='block_configuration'],
+.ez-block-config {
+    height: 100%;
+}
+
+.ez-block-config {
+    display: grid;
+    grid-template-areas: 'tabs' 'content' 'actions';
+    grid-template-rows: auto 1fr calculateRem(120px);
+    height: 100%;
+
+    &--default {
+        .ibexa-main-container {
+            .container {
+                margin: 0;
+                padding: calculateRem(12px) 0 0 0;
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .ibexa-tab-content {
+        margin-bottom: 0;
+        padding-left: calculateRem(8px);
+        padding-right: calculateRem(8px);
+        border-width: calculateRem(1px) 0 0 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    &__link {
+        &--has-invalid-fields {
+            + .ez-warning-icon {
+                display: flex;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &__content {
+        grid-area: content;
+        padding: calculateRem(24px) calculateRem(48px);
+        background-color: $ibexa-white;
+        overflow: auto;
+    }
+
+    &__actions {
+        grid-area: actions;
+        display: flex;
+        align-items: center;
+
+        .ibexa-btn {
+            margin-left: calculateRem(16px);
+        }
+    }
+
+    [data-open-udw] {
+        display: block;
+    }
+
+    &__error {
+        @include error-under-label();
+    }
+}

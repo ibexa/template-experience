@@ -1,0 +1,40 @@
+.c-pb-day-view {
+    flex: 1 0 calculateRem(75px);
+    height: calculateRem(75px);
+    position: relative;
+    border-radius: $ibexa-border-radius;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(24px);
+    border: calculateRem(1px) solid transparent;
+
+    &__label {
+        padding: calculateRem(2px) calculateRem(6px);
+        font-size: calculateRem(16px);
+    }
+
+    &--is-selected {
+        color: $ibexa-color-info;
+        background-color: $ibexa-color-info-200;
+
+        .c-pb-day-view--has-event {
+            border-color: $ibexa-color-light;
+        }
+    }
+
+    &--is-selectable {
+        cursor: pointer;
+    }
+
+    &:not(&--is-selectable) {
+        background-color: $ibexa-color-light-300;
+        color: $ibexa-color-dark-400;
+    }
+
+    &--has-event:not(&--is-selected) {
+        border-color: $ibexa-color-light;
+    }
+
+    &--has-event {
+        border-color: $ibexa-color-info;
+    }
+}

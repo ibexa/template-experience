@@ -1,0 +1,93 @@
+.c-pb-sidebar {
+    $ibexa-sidebar-width: calculateRem(356px);
+
+    position: fixed;
+    z-index: 500;
+    top: calculateRem(160px);
+    left: calc(100% - #{$ibexa-sidebar-width});
+    width: $ibexa-sidebar-width;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: calculateRem(5px);
+    overflow: hidden;
+    background-color: $ibexa-color-white;
+    box-shadow: $ibexa-edit-header-box-shadow;
+    transition-property: opacity, transform;
+    transition-duration: $ibexa-admin-transition-duration;
+    transition-timing-function: $ibexa-admin-transition;
+    transform-origin: top center;
+
+    &--collapsed {
+        transform: scaleY(0);
+        opacity: 0;
+
+        .c-pb-sidebar__toggler {
+            .ibexa-icon {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &__title-bar {
+        height: calculateRem(32px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $ibexa-color-light-400;
+        fill: $ibexa-color-dark;
+        padding: 0 calculateRem(16px) 0 calculateRem(10px);
+        cursor: move;
+    }
+
+    &__title {
+        line-height: calculateRem(36px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+        padding-top: calculateRem(8px);
+        user-select: none;
+    }
+
+    &__toggler {
+        display: flex;
+        padding: calculateRem(2px);
+        border: calculateRem(1px) solid $ibexa-color-dark;
+        border-radius: calculateRem(2px);
+        cursor: pointer;
+
+        .ibexa-icon {
+            width: calculateRem(10px);
+            height: calculateRem(10px);
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        }
+    }
+
+    &__icon-wrapper {
+        display: flex;
+    }
+
+    &__title,
+    &__filter-bar {
+        padding-left: calculateRem(30px);
+        padding-right: calculateRem(30px);
+    }
+
+    &__blocks-group {
+        max-height: calc(100vh - #{calculateRem(280px)});
+        overflow: auto;
+    }
+
+    &__filter {
+        margin-top: calculateRem(22px);
+        margin-bottom: calculateRem(32px);
+    }
+
+    &__infobar-toggler {
+        .ibexa-icon {
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        }
+
+        &--collapsed {
+            .ibexa-icon {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.c-update-preview-request-params {
+    &__segments-list {
+        .ibexa-input--radio {
+            &:active {
+                border-color: $ibexa-color-ground-dark;
+                box-shadow: 0 0 calculateRem(2px) 0 rgba($ibexa-color-ground-dark, 0.75);
+            }
+
+            &:checked {
+                border: calculateRem(1px) solid $ibexa-color-ground-dark;
+                box-shadow: inset 0 0 0 calculateRem(4px) $ibexa-color-ground-dark;
+            }
+        }
+    }
+
+    &__segments-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: calculateRem(5px) calculateRem(20px);
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $ibexa-color-ground-dark;
+            color: $ibexa-color-font-light;
+        }
+
+        .ibexa-input--radio {
+            margin-right: calculateRem(6px);
+        }
+    }
+
+    &__segments-group-name {
+        padding: calculateRem(5px) calculateRem(20px) calculateRem(5px) calculateRem(42px);
+        background-color: $ibexa-color-base-pale;
+        color: $ibexa-color-font-pale;
+    }
+}

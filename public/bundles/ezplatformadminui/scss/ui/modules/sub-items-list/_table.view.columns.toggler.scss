@@ -1,0 +1,18 @@
+.c-table-view-columns-toggler {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $ibexa-color-dark;
+
+    &__panel {
+        top: calculateRem(36px);
+        right: calculateRem(17px);
+
+        &--above-btn {
+            bottom: calculateRem(36px);
+            top: auto;
+        }
+    }
+}

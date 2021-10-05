@@ -1,0 +1,37 @@
+.c-pb-sidebar-block {
+    @include ibexa-font-sans-serif();
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: calculateRem(48px);
+    padding: calculateRem(6px) calculateRem(11px);
+    border: calculateRem(1px) solid #d0d1d4;
+    border-radius: $ibexa-border-radius;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    .ibexa-icon {
+        margin: calculateRem(8px);
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background: $ibexa-color-base-light;
+    }
+
+    &--is-draggable {
+        cursor: grab;
+        opacity: 1;
+    }
+
+    &__name {
+        @include ibexa-font-sans-serif();
+
+        font-size: calculateRem(12px);
+        font-weight: 600;
+        line-height: calculateRem(15px);
+    }
+}

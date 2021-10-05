@@ -1,0 +1,436 @@
+// TODO: should be remove when ez-table--list is redesigned
+.ez-table {
+    border-spacing: 0 calculateRem(1px);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $ibexa-white;
+        align-items: center;
+        padding: 0 calculateRem(20px);
+        min-height: calculateRem(50px);
+        border-radius: calculateRem(4px) calculateRem(4px) 0 0;
+    }
+
+    &__headline {
+        font-size: calculateRem(16px);
+        margin-bottom: 0;
+        font-weight: bold;
+        color: $ibexa-black;
+    }
+
+    &__header-cell {
+        .table & {
+            border-top: calculateRem(1px) solid $ibexa-color-base;
+            border-bottom: calculateRem(1px) solid $ibexa-color-base;
+        }
+
+        .table &--has-icon {
+            width: calculateRem(52px);
+        }
+
+        .table &--after-icon {
+            padding-left: 0;
+        }
+    }
+
+    &__sort-column {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: calculateRem(9px);
+            right: calculateRem(-10px);
+        }
+
+        &--asc:after {
+            border-left: calculateRem(3px) solid transparent;
+            border-right: calculateRem(3px) solid transparent;
+            border-bottom: calculateRem(5px) solid $ibexa-black;
+        }
+
+        &--desc::after {
+            border-left: calculateRem(3px) solid transparent;
+            border-right: calculateRem(3px) solid transparent;
+            border-top: calculateRem(5px) solid $ibexa-black;
+        }
+    }
+
+    &__cell {
+        vertical-align: middle;
+
+        &--field-definitions-head {
+            width: calc(100% / 3);
+        }
+
+        .table &--has-action-btns {
+            padding-right: calculateRem(20px);
+            text-align: right;
+
+            .btn {
+                margin: 0 calculateRem(5px);
+            }
+        }
+
+        .table &--has-text-info {
+            padding: calculateRem(16px) calculateRem(8px);
+            text-align: center;
+        }
+
+        &--has-checkbox {
+            width: 5%;
+        }
+
+        .table &--has-icon {
+            padding: calculateRem(17px) calculateRem(16px) 0 calculateRem(16px);
+            width: calculateRem(24px);
+            text-align: right;
+            line-height: 0;
+
+            .ibexa-icon {
+                margin-top: calculateRem(-2px);
+            }
+        }
+
+        .table &--after-icon {
+            padding-left: 0;
+        }
+
+        &--no-content {
+            margin-bottom: calculateRem(48px);
+            padding: calculateRem(12px) calculateRem(16px);
+            background-color: $ibexa-white;
+            font-style: italic;
+            color: $ibexa-black;
+        }
+
+        &--limitation {
+            width: 70%;
+        }
+    }
+
+    &__cell-link,
+    &__cell-link:hover {
+        color: $ibexa-color-font;
+        text-decoration: none;
+    }
+}
+
+.ez-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calculateRem(16px) calculateRem(8px) calculateRem(16px);
+    background-color: $ibexa-white;
+
+    &__headline {
+        font-size: calculateRem(16px);
+        margin-bottom: 0;
+        font-weight: bold;
+        color: $ibexa-black;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__tools {
+        white-space: nowrap;
+
+        .btn {
+            margin: 0 calculateRem(5px);
+        }
+    }
+
+    &--bordered-bottom {
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+}
+
+.ez-table-header.ground-base {
+    background-color: $ibexa-white;
+}
+
+.ez-table-no-content {
+    margin: 0;
+    padding: 0 calculateRem(24px) calculateRem(24px);
+    overflow-x: auto;
+    background-color: $ibexa-white;
+    font-style: italic;
+    font-size: calculateRem(14px);
+    color: $ibexa-color-font;
+}
+
+.ez-table {
+    &--no-border {
+        td {
+            border: none;
+        }
+    }
+
+    &--no-bordered-top {
+        thead th {
+            border-top-width: 0;
+        }
+    }
+
+    &--list {
+        background: none;
+        margin-bottom: calculateRem(48px);
+
+        .ez-table {
+            &__cell {
+                font-size: calculateRem(16px);
+                border: none;
+
+                &:first-child {
+                    font-weight: bold;
+                    width: calc(100% / 3);
+                }
+
+                &:last-child {
+                    width: (calc((100% / 3) * 2));
+                }
+            }
+        }
+    }
+}
+
+.ez-checkbox-cell {
+    width: 5%;
+}
+
+.ez-limitation-cell {
+    width: 70%;
+}
+
+.ez-scrollable-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: calculateRem(48px);
+
+    table {
+        margin-bottom: 0;
+    }
+}
+
+.ez-link-manager-view {
+    .ez-table__row {
+        .ez-table__cell {
+            &--has-action-btns {
+                display: flex;
+                justify-content: space-between;
+                width: auto;
+            }
+        }
+    }
+}
+// TODO: end
+
+.ibexa-table {
+    font-family: $font-family-sans-serif;
+    font-size: $ibexa-text-font-size;
+    line-height: calculateRem(24px);
+    border-spacing: 0;
+    background-color: $ibexa-color-white;
+
+    &.table > :not(caption) > * > * {
+        box-shadow: none;
+    }
+
+    &__row:nth-child(odd) {
+        .ibexa-table__cell {
+            background-color: $ibexa-color-light-300;
+        }
+    }
+
+    &__row:nth-child(even) {
+        .ibexa-table__cell {
+            background-color: $ibexa-color-white;
+        }
+    }
+
+    &__cell:first-child {
+        border-top-left-radius: $ibexa-border-radius;
+        border-bottom-left-radius: $ibexa-border-radius;
+    }
+
+    &__cell:last-child {
+        border-top-right-radius: $ibexa-border-radius;
+        border-bottom-right-radius: $ibexa-border-radius;
+    }
+
+    &__cell.ibexa-table__cell {
+        vertical-align: middle;
+        padding: calculateRem(12px) calculateRem(16px);
+
+        .form-check {
+            display: flex;
+            height: calculateRem(16px);
+            width: calculateRem(16px);
+            margin-bottom: 0;
+            min-height: calculateRem(16px);
+        }
+    }
+
+    &__empty-table-cell {
+        background: $ibexa-color-white;
+        text-align: center;
+    }
+
+    &__empty-table-image {
+        margin-bottom: calculateRem(28px);
+    }
+
+    &__empty-table-text {
+        @include ibexa-font-sans-serif();
+
+        font-size: $ibexa-text-font-size;
+        line-height: calculateRem(24px);
+
+        strong {
+            font-size: $ibexa-text-font-size-large;
+            line-height: calculateRem(33px);
+            font-weight: 600;
+        }
+    }
+
+    &__header-cell {
+        .table & {
+            @include ibexa-font-sans-serif();
+
+            font-size: $ibexa-text-font-size-small;
+            font-weight: normal;
+            color: $ibexa-color-dark-400;
+            line-height: calculateRem(18px);
+            vertical-align: middle;
+            border-bottom: 0;
+            padding: calculateRem(18px) calculateRem(16px);
+        }
+
+        .table &--has-icon {
+            max-width: calculateRem(52px);
+        }
+
+        &--field-definitions-head {
+            width: calc(100% / 3);
+        }
+    }
+
+    &__header-cell-checkbox {
+        &.ibexa-input--checkbox {
+            margin-bottom: 0;
+        }
+    }
+
+    &__sort-column {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+
+        &:after {
+            content: url('/bundles/ezplatformadminui/img/down.svg');
+            position: absolute;
+            width: calculateRem(5px);
+            height: calculateRem(13px);
+            top: calc(50% - #{calculateRem(7px)});
+            right: calculateRem(-10px);
+            transform: rotate(180deg);
+            display: none;
+        }
+
+        &--asc:after {
+            display: block;
+        }
+
+        &--desc::after {
+            display: block;
+            transform: none;
+        }
+    }
+
+    &__cell {
+        vertical-align: middle;
+
+        &--has-checkbox {
+            width: calculateRem(48px);
+        }
+
+        .table &--has-icon {
+            line-height: 0;
+            width: calculateRem(32px);
+        }
+
+        &--no-content {
+            margin-bottom: calculateRem(48px);
+            padding: calculateRem(12px) calculateRem(16px);
+            background-color: $ibexa-white;
+            font-style: italic;
+            color: $ibexa-black;
+        }
+
+        &--limitation {
+            width: 70%;
+        }
+    }
+
+    .table &__cell--close-left,
+    .table &__header-cell--close-left {
+        padding-left: 0;
+    }
+
+    &__cell-btns-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__cell-link,
+    &__cell-link:hover {
+        color: $ibexa-color-font;
+        text-decoration: none;
+    }
+
+    &--not-striped {
+        .ibexa-table__row {
+            background-color: $ibexa-color-white;
+        }
+    }
+}
+
+.ibexa-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: calculateRem(30px);
+    padding-bottom: calculateRem(15px);
+    border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+
+    &__headline {
+        @include ibexa-font-sans-serif();
+
+        font-size: $ibexa-text-font-size-large;
+        line-height: calculateRem(33px);
+        color: $ibexa-black;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+
+        .btn {
+            margin: 0 calculateRem(5px);
+        }
+    }
+}

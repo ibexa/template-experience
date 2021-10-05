@@ -1,0 +1,17 @@
+.ibexa-pb-timeline-wrapper {
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    position: absolute;
+    top: calculateRem(158px);
+    left: calculateRem(16px);
+    right: calculateRem(16px);
+    z-index: 125;
+    transform: scaleY(0);
+    transform-origin: top;
+    will-change: transform;
+    opacity: 0;
+
+    .ibexa-pb-timeline-visible & {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

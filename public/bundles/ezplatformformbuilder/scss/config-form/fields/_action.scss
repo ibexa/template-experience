@@ -1,0 +1,8 @@
+.fb-config-field.fb-config-field--action {
+    .fb-config-field {
+        &__action-wrapper {
+            padding: calculateRem(20px);
+            background: $ibexa-color-base-light;
+        }
+    }
+}

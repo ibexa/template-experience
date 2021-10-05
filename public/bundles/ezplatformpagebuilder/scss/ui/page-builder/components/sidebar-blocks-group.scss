@@ -1,0 +1,51 @@
+.c-pb-sidebar-blocks-group {
+    margin-bottom: calculateRem(1px);
+    padding: 0 calculateRem(30px);
+
+    .ibexa-icon {
+        transition: transform $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &--colapsed {
+        .ibexa-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &--colapsed &__blocks {
+        display: none;
+    }
+
+    &__title-bar {
+        display: flex;
+        align-items: center;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        padding: calculateRem(5px) calculateRem(2px) calculateRem(10px) calculateRem(2px);
+        cursor: pointer;
+    }
+
+    &__title {
+        @include ibexa-font-sans-serif();
+
+        flex-grow: 1;
+        font-size: $ibexa-text-font-size-medium;
+        font-weight: 600;
+        line-height: calculateRem(21px);
+        user-select: none;
+    }
+
+    &__toggler {
+        .ibexa-icon {
+            width: calculateRem(8px);
+            height: calculateRem(8px);
+        }
+    }
+
+    &__blocks {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, #{calculateRem(126px)});
+        grid-row-gap: calculateRem(8px);
+        grid-column-gap: calculateRem(16px);
+        padding: 0 calculateRem(2px) calculateRem(16px) calculateRem(2px);
+    }
+}

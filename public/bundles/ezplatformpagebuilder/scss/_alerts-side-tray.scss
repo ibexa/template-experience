@@ -1,0 +1,14 @@
+.ibexa-pb-alerts-side-tray {
+    z-index: 200;
+    position: absolute;
+    top: calculateRem(150px);
+    right: calculateRem(16px);
+    width: calculateRem(340px);
+    transition: top $ibexa-admin-transition-duration $ibexa-admin-transition;
+}
+
+.ibexa-pb-timeline-visible {
+    .ibexa-pb-alerts-side-tray {
+        top: calculateRem(254px);
+    }
+}

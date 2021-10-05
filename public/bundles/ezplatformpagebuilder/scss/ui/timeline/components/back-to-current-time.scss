@@ -1,0 +1,7 @@
+.c-pb-back-to-current-time {
+    box-shadow: 0 calculateRem(12px) calculateRem(44px) 0 rgba($ibexa-color-accent, 0.3);
+
+    &__btn {
+        margin-left: calculateRem(-15px);
+    }
+}

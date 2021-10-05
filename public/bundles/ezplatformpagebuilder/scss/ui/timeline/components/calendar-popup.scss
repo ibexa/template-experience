@@ -1,0 +1,35 @@
+.c-pb-calendar-popup {
+    &__toggler {
+        @include ibexa-font-sans-serif();
+
+        display: grid;
+        grid-template:
+            'icon time'
+            'icon date';
+        padding: calculateRem(8px);
+        text-align: left;
+        color: $ibexa-color-info;
+
+        .ibexa-icon {
+            fill: $ibexa-color-info;
+            grid-area: icon;
+        }
+    }
+
+    &__toggler-label-time {
+        grid-area: time;
+        font-size: calculateRem(18px);
+        font-weight: 600;
+    }
+
+    &__toggler-label-date {
+        grid-area: date;
+        font-size: calculateRem(12px);
+        line-height: calculateRem(18px);
+    }
+
+    &__container {
+        width: calculateRem(565px);
+        padding: calculateRem(8px);
+    }
+}

@@ -1,0 +1,22 @@
+.c-pb-timeline-popup {
+    &__container {
+        position: absolute;
+        margin-top: calculateRem(-10px);
+        z-index: 1;
+        background-color: $ibexa-color-white;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        transform-origin: top;
+        opacity: 0;
+        transform: scaleY(0);
+        overflow: hidden;
+    }
+
+    &--popup-expanded {
+        .c-pb-timeline-popup__container {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+}

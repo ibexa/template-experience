@@ -1,0 +1,54 @@
+.c-pb-event-tooltip {
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(100% + 1rem));
+    top: calculateRem(-25px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    background-color: $ibexa-color-white;
+    box-shadow: $ibexa-edit-header-box-shadow;
+    cursor: auto;
+    width: calculateRem(320px);
+
+    &__hidden-wrapper {
+        border-radius: $ibexa-border-radius;
+        overflow: hidden;
+    }
+
+    &__scroll-wrapper {
+        max-height: calculateRem(300px);
+        overflow: auto;
+    }
+
+    &__item:not(:first-child) {
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calculateRem(25px);
+        left: calculateRem(-6px);
+        width: calculateRem(10px);
+        height: calculateRem(10px);
+        background: $ibexa-color-white;
+        border-style: solid;
+        border-color: $ibexa-color-light;
+        border-width: calculateRem(1px) 0 0 calculateRem(1px);
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+
+    &--on-left {
+        left: 0;
+        right: auto;
+        transform: translateX(calc(-100% - 1rem));
+
+        &::before {
+            left: auto;
+            right: calculateRem(-6px);
+            border-width: calculateRem(1px) calculateRem(1px) 0 0;
+            transform: rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import './public/bundles/ezplatformadminui/scss/_custom.scss';
+
+.ez-block-checkbox-field {
+    .form-check {
+        display: flex;
+        height: 100%;
+    }
+
+    .ibexa-input {
+        margin-right: calculateRem(4px);
+    }
+}

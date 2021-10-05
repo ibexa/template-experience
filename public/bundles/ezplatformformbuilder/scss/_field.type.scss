@@ -1,0 +1,95 @@
+.ibexa-form-builder {
+    margin-bottom: calculateRem(20px);
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(4px);
+
+    &__call-to-action {
+        padding: calculateRem(16px);
+        display: none;
+
+        .ibexa-form-builder__message {
+            margin-bottom: 0;
+            font-size: $ibexa-text-font-size-medium;
+
+            &--create-form {
+                margin-bottom: calculateRem(24px);
+                font-size: $ibexa-text-font-size-small;
+                color: $ibexa-color-dark-400;
+            }
+        }
+    }
+
+    &-preview {
+        position: relative;
+        background: $ibexa-white;
+        padding: calculateRem(8px);
+
+        &__actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0;
+            background: $ibexa-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &--no-value {
+        .ibexa-form-builder-preview {
+            display: none;
+        }
+
+        .ibexa-form-builder__call-to-action {
+            display: block;
+        }
+    }
+
+    &--loading-preview {
+        .ibexa-form-builder-preview {
+            &__preloader {
+                z-index: 100;
+                opacity: 1;
+            }
+        }
+    }
+
+    .ibexa-field-edit--ezform.is-invalid + & {
+        background-color: $ibexa-color-danger-100;
+        border-color: $ibexa-color-danger-100;
+
+        .ibexa-btn {
+            background-color: $ibexa-color-danger-100;
+        }
+
+        .ibexa-form-builder__message {
+            color: $ibexa-color-danger;
+        }
+    }
+}
+
+.ibexa-form-builder-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $ibexa-color-base-pale;
+    overflow: auto;
+}
+
+.ibexa-form-builder--closed {
+    .ibexa-form-builder-wrapper {
+        display: none;
+    }
+}

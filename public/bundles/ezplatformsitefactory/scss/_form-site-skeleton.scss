@@ -1,0 +1,16 @@
+.ez-site-factory-form-site-skeleton {
+    margin-top: calculateRem(4px);
+
+    .ibexa-label {
+        padding-bottom: calculateRem(8px);
+    }
+
+    &--is-hidden {
+        display: none;
+    }
+
+    &__widget {
+        min-width: calculateRem(48px);
+        margin-right: calculateRem(20px);
+    }
+}

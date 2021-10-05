@@ -1,0 +1,1 @@
+module.exports = [".\/vendor\/ezsystems\/ezplatform-richtext\/src\/bundle\/Resources\/encore\/ez.webpack.custom.config.js"];

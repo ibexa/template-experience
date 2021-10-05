@@ -1,0 +1,25 @@
+.ibexa-pagination {
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        font-size: $ibexa-text-font-size-medium;
+        display: flex;
+        align-items: center;
+    }
+
+    &__navigation {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .page-item {
+            @include pagination-item();
+        }
+
+        .page-link {
+            @include pagination-link();
+        }
+    }
+}
