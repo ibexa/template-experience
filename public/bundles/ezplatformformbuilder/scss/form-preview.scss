@@ -1,0 +1,12 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+
+.ibexa-fb-preview-form {
+    height: 100%;
+    background-color: $ibexa-color-white;
+    overflow: auto;
+
+    .ibexa-main-container {
+        display: block;
+        height: auto;
+    }
+}

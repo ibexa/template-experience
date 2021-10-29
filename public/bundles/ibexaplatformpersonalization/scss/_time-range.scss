@@ -1,0 +1,16 @@
+.ibexa-time-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__download {
+        display: flex;
+        justify-content: center;
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__custom-range-container {
+        min-width: calculateRem(225px);
+        margin-right: calculateRem(38px);
+    }
+}

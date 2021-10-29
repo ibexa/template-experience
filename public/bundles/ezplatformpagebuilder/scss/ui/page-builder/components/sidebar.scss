@@ -1,0 +1,17 @@
+.c-pb-sidebar {
+    @include sidebar-drag-items;
+
+    &__toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+        border: calculateRem(1px) solid $ibexa-color-black;
+    }
+
+    &--collapsed {
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+.ibexa-table-header--price-management {
+    .ibexa-table-header {
+        &__price-select {
+            margin-right: calculateRem(8px);
+        }
+    }
+}
