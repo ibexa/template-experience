@@ -1,0 +1,5 @@
+.c-ibexa-fb-form-field {
+    @include drag-item;
+
+    margin-bottom: calculateRem(8px);
+}

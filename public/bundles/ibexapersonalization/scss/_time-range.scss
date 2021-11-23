@@ -1,0 +1,23 @@
+.ibexa-time-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+        &--right {
+            align-items: end;
+        }
+    }
+
+    &__custom-range-container {
+        min-width: calculateRem(225px);
+    }
+
+    .ibexa-dropdown,
+    .ibexa-field-edit--ezdate {
+        width: calculateRem(250px);
+    }
+}
