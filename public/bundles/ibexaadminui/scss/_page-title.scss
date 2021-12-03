@@ -1,0 +1,13 @@
+.ez-page-title {
+    &__top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    &__content-name {
+        font-weight: normal;
+        font-size: calculateRem(26px);
+        width: calc(100% - #{calculateRem(36px)});
+        margin-bottom: calculateRem(16px);
+    }
+}

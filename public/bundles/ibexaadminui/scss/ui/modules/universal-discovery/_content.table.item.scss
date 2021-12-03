@@ -1,0 +1,17 @@
+.c-content-table-item {
+    cursor: pointer;
+
+    &--marked {
+        background-color: lighten($ibexa-color-white, 15%);
+    }
+
+    &--not-selectable {
+        background-color: $ibexa-color-light-200;
+        cursor: not-allowed;
+    }
+
+    .table &__icon-wrapper {
+        width: calculateRem(20px);
+        padding-right: 0;
+    }
+}

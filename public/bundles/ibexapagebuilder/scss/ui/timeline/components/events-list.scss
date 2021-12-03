@@ -1,0 +1,17 @@
+.c-pb-events-list {
+    overflow: hidden;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        cursor: pointer;
+
+        &:not(:first-child) {
+            border-top: calculateRem(1px) solid $ibexa-color-light;
+        }
+    }
+}

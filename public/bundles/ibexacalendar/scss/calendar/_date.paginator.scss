@@ -1,0 +1,22 @@
+.c-date-paginator {
+    display: flex;
+
+    &__date {
+        display: flex;
+        align-items: center;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__date-main {
+        margin-right: calculateRem(8px);
+    }
+
+    &__btn--today,
+    &__btn--increase {
+        margin-right: calculateRem(16px);
+    }
+    
+    &__btn--decrease {
+        margin-right: calculateRem(8px);
+    }    
+}

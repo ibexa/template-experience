@@ -1,0 +1,9 @@
+.ez-configuration-field {
+    &--boolean {
+        .ez-data-source {
+            &__value {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.c-upload-list-item {
+    display: flex;
+    background: $ibexa-white;
+    padding: calculateRem(8px) 0;
+    min-height: calculateRem(60px);
+
+    &--errored {
+        background: $ibexa-color-danger-100;
+        color: $ibexa-color-danger;
+        border-radius: $ibexa-border-radius;
+
+        .ibexa-icon {
+            fill: $ibexa-color-danger;
+        }
+
+        .c-upload-list-item__size {
+            color: $ibexa-color-danger;
+        }
+    }
+
+    &__icon-wrapper {
+        flex: 0 0 calculateRem(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__meta {
+        padding: 0 calculateRem(16px);
+        line-height: 1.4;
+        max-width: 25vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: calculateRem(16px);
+        margin-right: calculateRem(8px);
+        max-width: 15vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__size {
+        color: $ibexa-color-base-dark;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__info {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__message {
+        font-style: italic;
+        font-size: $ibexa-text-font-size-small;
+
+        .ibexa-icon {
+            margin-right: calculateRem(4px);
+        }
+
+        &--success {
+            color: $ibexa-color-positive;
+
+            .ibexa-icon {
+                fill: $ibexa-color-positive;
+            }
+        }
+    }
+
+    &__actions {
+        text-align: right;
+
+        .ibexa-btn {
+            margin: 0;
+        }
+    }
+
+    &__action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: calculateRem(15px);
+        width: calculateRem(44px);
+        height: calculateRem(44px);
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

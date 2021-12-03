@@ -1,0 +1,37 @@
+.ibexa-modal--search-dam {
+    z-index: 1060;
+
+    .modal-dialog {
+        max-width: initial;
+        margin: calculateRem(16px);
+        height: calc(100vh - #{calculateRem(32px)});
+        width: calc(100vw - #{calculateRem(32px)});
+    }
+
+    .modal-content {
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .modal-header {
+        padding: calculateRem(24px) calculateRem(48px);
+    }
+
+    .tab-content {
+        height: calc(100% - #{calculateRem(144px)});
+    }
+
+    .tab-pane {
+        height: 100%;
+    }
+
+    .modal-body {
+        height: calc(100% - #{calculateRem(120px)});
+        padding: calculateRem(24px) calculateRem(32px);
+    }
+
+    .ibexa-tabs__additional-label {
+        margin-left: calculateRem(8px);
+    }
+}
