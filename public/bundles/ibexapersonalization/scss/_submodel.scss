@@ -1,0 +1,12 @@
+.ibexa-perso-submodel-type {
+    max-width: calculateRem(450px);
+    margin-bottom: calculateRem(16px);
+}
+
+.ibexa-perso-submodel {
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin: calculateRem(32px) 0;
+    }
+}

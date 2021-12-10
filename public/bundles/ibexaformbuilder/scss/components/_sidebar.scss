@@ -1,0 +1,6 @@
+.c-ibexa-fb-sidebar {
+    @include sidebar-drag-items;
+
+    margin: 0 auto;
+    max-height: calc(100vh - #{calculateRem(150px)});
+}

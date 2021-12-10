@@ -1,0 +1,28 @@
+.ibexa-tag {
+    border-radius: calculateRem(18px);
+    background: $ibexa-color-light-300;
+    font-size: $ibexa-text-font-size-small;
+    padding: calculateRem(2px) calculateRem(28px) calculateRem(2px) calculateRem(8px);
+    display: inline-block;
+    position: relative;
+
+    &__content {
+        line-height: calculateRem(22px);
+    }
+
+    &__spinner {
+        height: calculateRem(22px);
+        line-height: 0;
+    }
+
+    &__remove-btn {
+        position: absolute;
+        top: calc(50% - #{calculateRem(8px)});
+        right: calculateRem(6px);
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        outline: none;
+        line-height: 0;
+    }
+}

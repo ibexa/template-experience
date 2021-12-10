@@ -1,0 +1,20 @@
+.ibexa-perso-submodel-group {
+    display: flex;
+    flex-direction: column;
+    border-radius: $ibexa-border-radius-small;
+    background-color: $ibexa-color-white;
+    padding: calculateRem(8px) calculateRem(32px) calculateRem(32px);
+    margin: calculateRem(24px) 0;
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        margin-top: calculateRem(8px);
+    }
+}

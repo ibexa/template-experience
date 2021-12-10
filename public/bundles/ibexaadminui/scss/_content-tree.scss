@@ -1,0 +1,30 @@
+.ez-content-view,
+.ez-bookmark-list-view,
+.ez-search-view,
+.ez-trash-list-view,
+.ez-drafts-list-view {
+    .ez-content-container {
+        min-width: 0;
+    }
+
+    .ibexa-content-tree-container {
+        position: relative;
+        top: 0;
+        flex: 0 0 auto;
+        background: $ibexa-white;
+        color: inherit;
+
+        &__root {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    }
+
+    .ez-view-container {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+}

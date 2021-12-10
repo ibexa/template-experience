@@ -1,0 +1,17 @@
+.c-tt-list-item {
+    &__link {
+        width: 100%;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        background: none;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
