@@ -1,0 +1,19 @@
+.ibexa-extra-actions-container {
+    .c-content-create {
+        top: 0;
+        height: 100vh;
+
+        &__confirm-wrapper {
+            display: flex;
+            margin-top: calculateRem(20px);
+        }
+
+        &__confirm-button {
+            margin-right: calculateRem(16px);
+        }
+
+        .ibexa-extra-actions__section-content {
+            width: 75%;
+        }
+    }
+}

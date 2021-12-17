@@ -1,0 +1,22 @@
+.ibexa-pc-data-grid {
+    margin-top: calculateRem(32px);
+
+    &__delete-button {
+        .ibexa-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+
+    &__image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(64px);
+        height: calculateRem(64px);
+    }
+
+    &__image {
+        max-width: calculateRem(64px);
+        max-height: calculateRem(64px);
+    }
+}

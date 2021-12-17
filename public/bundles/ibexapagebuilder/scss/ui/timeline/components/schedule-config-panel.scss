@@ -1,0 +1,31 @@
+.c-pb-schedule-config-panel {
+    &__body {
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+
+    &__switch-view-mode-btn {
+        .ibexa-icon {
+            margin-right: 0;
+            margin-left: calculateRem(12px);
+        }
+    }
+
+    &__top-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calculateRem(14px);
+    }
+
+    &__content {
+        padding: 0 calculateRem(24px) 0 calculateRem(24px);
+        overflow: auto;
+    }
+
+    &__calendar-wrapper {
+        padding: calculateRem(12px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-light;
+    }
+}

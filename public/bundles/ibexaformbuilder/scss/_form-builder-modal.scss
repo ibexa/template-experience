@@ -1,0 +1,71 @@
+.ibexa-fb-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    padding: 0;
+    outline: 0;
+    opacity: 0;
+    transition: opacity $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        height: calculateRem(81px);
+        background-color: $ibexa-color-dark;
+    }
+
+    &__header-close-btn-wrapper {
+        padding: calculateRem(16px) 0;
+        border-right: calculateRem(1px) solid rgba($ibexa-color-info, 0.4);
+    }
+
+    &__header-title-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: calculateRem(16px) calculateRem(40px);
+    }
+
+    &__header-context-menu-wrapper {
+        padding: calculateRem(16px);
+    }
+
+    &__title {
+        margin: 0;
+        color: $ibexa-color-white;
+        font-weight: 500;
+    }
+
+    &__body {
+        @include drag-module-backdrop-background;
+
+        height: 100%;
+    }
+
+    &--visible {
+        z-index: 1150;
+        opacity: 1;
+        display: block;
+
+        .ibexa-fb-modal {
+            &__dialog {
+                transform: translate(0, 0);
+            }
+        }
+
+        .c-config-popup:before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $ibexa-black;
+            opacity: 0.5;
+        }
+    }
+}

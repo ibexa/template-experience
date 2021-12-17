@@ -1,0 +1,42 @@
+.ibexa-modal--scheduling {
+    .modal-header {
+        border-bottom: none;
+        padding: calculateRem(15px) calculateRem(15px) 0 calculateRem(15px);
+        position: relative;
+        min-height: calculateRem(40px);
+    }
+
+    .modal-body {
+        padding: calculateRem(15px) calculateRem(30px);
+
+        .flatpickr-wrapper {
+            width: calculateRem(250px);
+        }
+    }
+
+    .modal-footer {
+        border-top: none;
+        justify-content: center;
+    }
+
+    .ez-scheduling-modal {
+        &__input-label {
+            display: block;
+            font-weight: bold;
+            margin-top: calculateRem(20px);
+        }
+
+        &__btn {
+            display: flex;
+        }
+
+        &__btn-spinner {
+            margin-right: calculateRem(8px);
+            display: none;
+
+            &--visible {
+                display: initial;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.c-tb-list-placeholder {
+    background-color: $ibexa-color-info-100;
+    border: calculateRem(1px) dashed $ibexa-color-info;
+    border-radius: $ibexa-border-radius;
+    margin: calculateRem(-1px);
+    display: flex;
+    align-items: center;
+
+    &__checkbox {
+        background-color: $ibexa-color-info-300;
+        border-radius: calculateRem(2px);
+        margin-top: calculateRem(-2px);
+        margin-left: calculateRem(16px);
+        height: calculateRem(18px);
+        width: calculateRem(18px);
+    }
+
+    &__content {
+        background-color: $ibexa-color-info-300;
+        border-radius: calculateRem(2px);
+        width: 100%;
+        height: 100%;
+    }
+}

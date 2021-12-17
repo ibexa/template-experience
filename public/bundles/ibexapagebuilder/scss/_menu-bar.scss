@@ -1,0 +1,38 @@
+.ibexa-pb-menu-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $ibexa-color-dark;
+
+    &__page-builder {
+        display: flex;
+        align-items: center;
+    }
+
+    &__back-btn-wrapper {
+        padding: calculateRem(10px);
+        margin-right: calculateRem(32px);
+        border-right: calculateRem(1px) solid rgba($ibexa-color-info, 0.4);
+    }
+
+    &__page-builder-name {
+        color: $ibexa-color-white;
+        font-family: $headings-font-family;
+        font-size: calculateRem(28px);
+        font-weight: 600;
+        letter-spacing: calculateRem(0.12px);
+        line-height: calculateRem(42px);
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    &__autosave-wrapper {
+        margin-left: calculateRem(48px);
+        padding-top: calculateRem(4px);
+    }
+
+    &__menu {
+        z-index: 650;
+        padding: calculateRem(10px);
+        width: calc(100vw - #{calculateRem(450px)});
+    }
+}

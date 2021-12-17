@@ -1,0 +1,19 @@
+.ibexa-pc-edit {
+    &__form-field {
+        margin-bottom: calculateRem(24px);
+
+        .ibexa-dropdown,
+        .ibexa-input--textarea,
+        .ibexa-input-text-wrapper {
+            width: 80%;
+        }
+    }
+
+    .ibexa-edit-header {
+        &__row {
+            &--bottom {
+                min-height: calculateRem(110px);
+            }
+        }
+    }
+}

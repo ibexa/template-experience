@@ -1,0 +1,15 @@
+.c-tree {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .m-tree {
+        border-radius: $ibexa-border-radius;
+    }
+
+    .c-list-item__prefix-actions-item {
+        .c-udw-toggle-selection {
+            margin-right: calculateRem(8px);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.ibexa-field-edit--ezprofiledata {
+    .ibexa-field-edit__data {
+        padding: calculateRem(24px);
+    }
+
+    .ibexa-card {
+        &__header {
+            .ibexa-label {
+                margin: calculateRem(8px) 0;
+            }
+        }
+    }
+
+    .ibexa-collapse {
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-dark-200;
+        padding: calculateRem(16px);
+        margin-bottom: calculateRem(16px);
+
+        &__header {
+            height: auto;
+
+            .ibexa-label {
+                margin: calculateRem(8px) 0;
+            }
+        }
+    }
+
+    .ibexa-data-source {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: calculateRem(32px);
+
+        &__input-wrapper {
+            .ibexa-input {
+                margin-bottom: 0;
+            }
+        }
+
+        &__label-wrapper {
+            .ibexa-label {
+                margin-top: calculateRem(16px);
+            }
+        }
+    }
+
+    .ibexa-data-source__label {
+        &.required {
+            @include label-required();
+        }
+    }
+}

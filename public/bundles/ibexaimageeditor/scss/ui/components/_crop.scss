@@ -1,0 +1,89 @@
+.c-image-editor-crop {
+    &__btn-ratio {
+        border: calculateRem(1px) solid $ibexa-color-base;
+        margin-left: calculateRem(8px);
+
+        &:first-of-type {
+            margin-left: calculateRem(16px);
+        }
+
+        &--active,
+        &:focus,
+        &:hover {
+            color: $ibexa-color-info;
+            border-color: $ibexa-color-info;
+            box-shadow: none;
+        }
+    }
+
+    &__ratio {
+        display: flex;
+        align-items: center;
+    }
+
+    &__size {
+        display: flex;
+        align-items: center;
+        margin-top: calculateRem(8px);
+    }
+
+    &__input-wrapper {
+        margin-left: calculateRem(8px);
+        position: relative;
+
+        &:first-of-type {
+            margin-left: calculateRem(16px);
+        }
+    }
+
+    &__input-label {
+        color: $ibexa-color-font-pale;
+        position: absolute;
+        top: 50%;
+        right: calculateRem(4px);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__input {
+        height: calculateRem(30px);
+        padding: calculateRem(4px);
+        border-color: $ibexa-color-base;
+        width: 8ch;
+        -moz-appearance: textfield;
+        border-radius: $ibexa-border-radius-small;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            -moz-appearance: initial;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: inner-spin-button;
+                margin-left: calculateRem(2px);
+            }
+
+            & + .c-image-editor-crop__input-label {
+                display: none;
+            }
+        }
+    }
+
+    .ibexa-alert {
+        display: flex;
+        font-size: calculateRem(12px);
+        padding: calculateRem(8px);
+        margin-bottom: calculateRem(8px);
+
+        .ibexa-icon {
+            margin-right: calculateRem(4px);
+        }
+    }
+}
