@@ -1,0 +1,15 @@
+.ibexa-field-edit--ezurl {
+    .ibexa-field-edit__data {
+        background-color: $ibexa-white;
+    }
+
+    .ibexa-data-source {
+        display: flex;
+
+        &__field {
+            &--link {
+                margin-right: calculateRem(52px);
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.ibexa-fb-form-field-config-fieldset__validator-input {
+    &--number {
+        width: calculateRem(84px);
+        height: calculateRem(48px);
+        padding: calculateRem(6px) calculateRem(12px);
+    }
+}

@@ -1,0 +1,9 @@
+.ibexa-perso-submodel-sidebar {
+    @include sidebar-drag-items;
+
+    margin-left: calculateRem(32px);
+}
+
+.ibexa-perso-submodel-sidebar-item {
+    @include sidebar-drag-item;
+}
