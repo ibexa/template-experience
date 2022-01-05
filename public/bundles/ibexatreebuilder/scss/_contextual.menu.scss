@@ -1,0 +1,48 @@
+.c-tb-contextual-menu {
+    &__toggler {
+        cursor: pointer;
+
+        &--disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    }
+
+    &--burger {
+        position: relative;
+        display: none;
+    }
+
+    &--expanded {
+        display: block;
+    }
+
+    &--portal {
+        position: relative;
+        bottom: calculateRem(-32px);
+        min-width: calculateRem(215px);
+        background-color: $ibexa-white;
+        box-shadow: 0 0 calculateRem(3px) calculateRem(1px) $ibexa-color-base-dark;
+        z-index: 1000;
+
+        .c-tb-action-list {
+            &__list {
+                list-style: none;
+                margin-bottom: 0;
+                padding: calculateRem(6px) 0;
+
+                & + .c-tb-action-list__list {
+                    border-top: calculateRem(1px) solid $ibexa-color-base-medium;
+                }
+            }
+
+            &__item {
+                padding: calculateRem(8px) calculateRem(20px);
+
+                &:hover {
+                    background-color: $ibexa-color-base-medium;
+                }
+            }
+        }
+    }
+}

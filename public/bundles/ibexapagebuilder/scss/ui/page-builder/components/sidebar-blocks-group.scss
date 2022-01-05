@@ -1,0 +1,7 @@
+.c-pb-sidebar-blocks-group {
+    @include sidebar-drag-items-group;
+
+    &__title-bar {
+        cursor: pointer;
+    }
+}
