@@ -1,0 +1,25 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+.ibexa-modal--reschedule-publish-later,
+.ibexa-modal--reschedule-future-hide {
+    .modal-dialog {
+        width: calculateRem(355px);
+    }
+
+    .ibexa-reschedule-publish-later-modal {
+        &__input-wrapper {
+            position: relative;
+        }
+
+        &__clear-input {
+            position: absolute;
+            top: calculateRem(4px);
+            right: calculateRem(4px);
+
+            .ibexa-icon {
+                fill: $ibexa-color-base-dark;
+            }
+        }
+    }
+}

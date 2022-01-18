@@ -1,0 +1,72 @@
+.dbp-publish-later {
+    .ibexa-extra-actions__content {
+        max-height: inherit;
+        padding: calculateRem(32px);
+        width: 75%;
+    }
+
+    &__pick {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__pick-input {
+        margin-bottom: calculateRem(2px);
+
+        &[readonly] {
+            background-color: $ibexa-white;
+        }
+    }
+
+    &__pick-label {
+        font-weight: bold;
+    }
+
+    &__input-wrapper {
+        position: relative;
+
+        .dbp-publish-later__clear-input-schedule {
+            position: absolute;
+            top: calculateRem(4px);
+            right: calculateRem(4px);
+            border: none;
+            outline: none;
+
+            .ibexa-icon {
+                fill: $ibexa-color-font;
+                width: calculateRem(16px);
+                height: calculateRem(16px);
+            }
+        }
+    }
+}
+
+.ibexa-context-menu {
+    .ibexa-extra-actions-container {
+        .dbp-publish-later {
+            &__actions {
+                display: flex;
+
+                .ibexa-btn--confirm-schedule {
+                    font-size: calculateRem(14px);
+                    width: calculateRem(200px);
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.ibexa-dropdown {
+    .dbp-publish-later {
+        border-color: $ibexa-color-primary;
+        background-color: $ibexa-color-primary;
+
+        &:after {
+            background-color: $ibexa-color-primary;
+        }
+
+        .ibexa-extra-actions__content {
+            padding: calculateRem(16px);
+        }
+    }
+}

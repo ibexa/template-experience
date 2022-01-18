@@ -1,0 +1,128 @@
+@import 'custom';
+@import 'functions/calculate.rem';
+@import 'mixins/image-preview';
+@import 'mixins/type-icon';
+@import 'mixins/inputs';
+@import 'mixins/general';
+@import 'mixins/tags';
+@import 'mixins/modals';
+@import 'mixins/togglers';
+@import 'mixins/pagination';
+@import 'mixins/font';
+@import 'mixins/containers';
+@import 'mixins/drag-and-drop';
+
+@mixin datetime-field() {
+    .ibexa-data-source__input-wrapper {
+        max-width: 30ch;
+        position: relative;
+    }
+
+    .ibexa-data-source__btn--clear-input {
+        position: absolute;
+        top: 50%;
+        right: calculateRem(32px);
+        transform: translate(0, -50%);
+        background: none;
+        border: 0;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        line-height: calculateRem(8px);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        outline: none;
+
+        .ibexa-icon {
+            transition: fill $ibexa-admin-transition-duration $ibexa-admin-transition;
+            width: calculateRem(8px);
+            height: calculateRem(8px);
+        }
+
+        &:hover,
+        &:focus {
+            .ibexa-icon {
+                fill: $ibexa-color-base-deep;
+            }
+        }
+    }
+
+    .ibexa-icon--date {
+        position: absolute;
+        top: 50%;
+        right: calculateRem(12px);
+        transform: translate(0, -50%);
+    }
+
+    .flatpickr-input {
+        &.is-invalid.form-control[readonly] {
+            @include input-invalid();
+        }
+    }
+}
+
+@mixin label-required() {
+    &.required {
+        &:after {
+            content: '* ';
+        }
+    }
+}
+
+@mixin ibexa-btn-preview-action {
+    padding: 0;
+    border: 0 none;
+    border-radius: 50%;
+    height: calculateRem(40px);
+    width: calculateRem(40px);
+    line-height: calculateRem(40px);
+    cursor: pointer;
+    transition: background 0.3s $ibexa-admin-transition;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ibexa-icon {
+        height: calculateRem(24px);
+        width: calculateRem(24px);
+    }
+}
+
+@mixin map-input-invalid() {
+    &.is-invalid {
+        .ibexa-data-source__label {
+            color: $ibexa-color-danger;
+        }
+
+        .ibexa-data-source__input {
+            border: calculateRem(1px) solid $ibexa-color-danger;
+            background: $ibexa-color-warning-pale;
+        }
+    }
+}
+
+@mixin exclamation-mark-error {
+    position: relative;
+
+    &:before {
+        content: '!';
+        position: absolute;
+        top: calculateRem(10px);
+        left: calculateRem(-10px);
+        color: $ibexa-color-danger;
+        text-align: center;
+        font-size: calculateRem(24px);
+        width: calculateRem(20px);
+        height: calculateRem(36px);
+    }
+}
+
+@mixin nav-item-active-hover {
+    background-color: $ibexa-white;
+    border-top-color: $ibexa-white;
+    border-right-color: $ibexa-white;
+    border-bottom-color: $ibexa-color-primary;
+    border-left-color: $ibexa-white;
+}

@@ -1,0 +1,293 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+
+.droppable-placeholder {
+    width: 100%;
+    flex: 0 0 100%;
+    min-height: calculateRem(64px);
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s $ibexa-admin-transition, background 0.3s $ibexa-admin-transition;
+    font-family: $font-family-sans-serif;
+    outline: calculateRem(1px) solid $ibexa-white;
+    outline-offset: calculateRem(-8px);
+    padding: 0;
+
+    & > * {
+        display: none;
+    }
+
+    & + [data-ez-block-id] {
+        margin-top: calculateRem(12px);
+    }
+
+    &--dragover {
+        background: rgba($ibexa-color-base-dark, 0.25);
+    }
+
+    &:before {
+        color: $ibexa-color-base-dark;
+        font-style: italic;
+        font-size: calculateRem(20px);
+        line-height: 1;
+        content: attr(data-drop-here-message);
+        flex: 1;
+    }
+
+    &.droppable-placeholder--removing {
+        opacity: 0;
+        background: rgba($ibexa-color-danger, 0.75);
+
+        &:before {
+            color: $ibexa-white;
+        }
+    }
+}
+
+[data-ibexa-zone-id] {
+    min-height: calculateRem(250px);
+    outline: calculateRem(1px) solid $ibexa-white;
+
+    &.m-page-builder__zone {
+        &:after {
+            content: attr(data-call-to-action-text);
+            display: block;
+            margin-bottom: calculateRem(12px);
+            font-style: italic;
+            font-size: calculateRem(20px);
+            text-align: center;
+            padding: calculateRem(22px) 0;
+            font-family: $font-family-sans-serif;
+            line-height: 1;
+            color: $ibexa-color-base-dark;
+            flex: 1;
+        }
+
+        &--dragover {
+            &:after {
+                display: none;
+            }
+
+            .droppable-placeholder {
+                display: flex;
+            }
+        }
+    }
+}
+
+[data-ez-block-id] {
+    margin-bottom: calculateRem(12px);
+    border: calculateRem(2px) dotted $ibexa-color-info;
+    border-radius: $ibexa-border-radius;
+
+    &:focus {
+        outline: none;
+    }
+
+    .c-pb-block-preview {
+        min-height: calculateRem(16px);
+        overflow: auto;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--empty {
+            font-style: italic;
+            font-size: calculateRem(20px);
+            text-align: center;
+            padding: calculateRem(16px) 0;
+            color: $ibexa-color-base-dark;
+            background: rgba($ibexa-color-base-dark, 0.15);
+        }
+
+        &--invalid {
+            background: rgba($ibexa-color-danger, 0.5);
+        }
+
+        &--unavailable {
+            position: relative;
+            background: none;
+            min-height: 160px;
+
+            .c-pb-block-preview {
+                position: relative;
+            }
+        }
+
+        &__unavailable-mask {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: calculateRem(10px);
+            background: rgba($ibexa-color-base-medium, 0.9);
+        }
+
+        &__unavailable-mask-title {
+            font-size: $ibexa-text-font-size-extra-large;
+            text-align: center;
+        }
+
+        &__unavailable-mask-content {
+            margin-top: calculateRem(8px);
+            font-size: calculateRem(18px);
+            text-align: center;
+            margin-bottom: calculateRem(24px);
+        }
+
+        &__delete-unavailable-block {
+            background: $ibexa-color-base-dark;
+            color: $ibexa-white;
+            padding: calculateRem(8px) calculateRem(16px);
+            font-size: calculateRem(14px);
+            border-radius: calculateRem(4px);
+            cursor: pointer;
+        }
+    }
+
+    &:hover .c-pb-block-preview:not(&--unavailable),
+    .c-pb-block-preview--action-menu-visible:not(&--unavailable) {
+        * {
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+
+    .c-pb-action-menu {
+        all: initial;
+        box-sizing: border-box;
+        display: none;
+        background: $ibexa-color-info;
+        color: $ibexa-white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: calculateRem(-3px);
+        margin-left: calculateRem(-3px);
+        z-index: 99999;
+        width: calculateRem(368px);
+        height: calculateRem(40px);
+        max-width: calc(100% + #{calculateRem(6px)});
+        align-items: center;
+        font-family: $headings-font-family;
+        font-size: $ibexa-text-font-size;
+        border-radius: $ibexa-border-radius;
+
+        .ibexa-btn {
+            display: inline-flex;
+            white-space: nowrap;
+            padding: calculateRem(15px);
+            outline: none;
+            border: calculateRem(1px) solid transparent;
+            border-radius: $ibexa-border-radius;
+            text-decoration: none;
+            font-size: calculateRem(14px);
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+            &:focus {
+                box-shadow: $ibexa-btn-focus-box-shadow;
+            }
+
+            &--ghost {
+                color: $ibexa-color-dark;
+                background: transparent;
+                fill: $ibexa-color-dark;
+
+                &:hover {
+                    color: $ibexa-color-primary;
+                    fill: $ibexa-color-primary;
+                }
+
+                &:focus {
+                    border-color: $ibexa-color-primary;
+                }
+
+                &:disabled {
+                    color: $ibexa-color-dark-300;
+                    fill: $ibexa-color-dark-300;
+                }
+            }
+
+            &--small {
+                padding-top: calculateRem(7px);
+                padding-bottom: calculateRem(7px);
+                height: calculateRem(32px);
+
+                &.ibexa-btn--primary {
+                    padding-top: calculateRem(8px);
+                    padding-bottom: calculateRem(8px);
+                }
+            }
+
+            &--no-text {
+                &.ibexa-btn--small {
+                    padding-left: calculateRem(7px);
+                    padding-right: calculateRem(7px);
+                }
+            }
+        }
+
+        .ibexa-icon {
+            transition: fill $ibexa-admin-transition $ibexa-admin-transition;
+
+            &--small {
+                width: calculateRem(16px);
+                height: calculateRem(16px);
+            }
+        }
+
+        .c-pb-action-menu {
+            &__name {
+                flex: 1 1 auto;
+                padding-left: calculateRem(16px);
+                font-size: calculateRem(15px);
+                font-weight: 700;
+                line-height: calculateRem(40px);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                cursor: grab;
+            }
+
+            &__actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: calculateRem(10px);
+                margin: 0 calculateRem(10px);
+
+                .ibexa-icon {
+                    fill: $ibexa-color-white;
+                }
+            }
+        }
+    }
+
+    &:hover .c-pb-action-menu,
+    &:not(:hover) .c-pb-action-menu.c-pb-action-menu--keep-visible {
+        display: flex;
+    }
+
+    &.c-pb-preview-block--action-menu-to-right {
+        &:hover {
+            .c-pb-action-menu {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .c-pb-action-menu.c-pb-action-menu--keep-visible {
+            left: auto;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.ibexa-perso-list-more-items {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: calculateRem(24px);
+    height: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius-small;
+    font-size: $ibexa-text-font-size-small;
+    user-select: none;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &:hover {
+        color: $ibexa-color-primary;
+        border-color: $ibexa-color-primary;
+    }
+}

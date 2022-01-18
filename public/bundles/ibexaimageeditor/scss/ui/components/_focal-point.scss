@@ -1,0 +1,95 @@
+.c-image-editor-focal-point {
+    &__settings {
+        display: flex;
+        margin-top: calculateRem(8px);
+    }
+
+    &__settings-title {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-right: calculateRem(16px);
+    }
+
+    &__input-wrapper {
+        margin-right: calculateRem(8px);
+        position: relative;
+    }
+
+    &__input-label {
+        color: $ibexa-color-font-pale;
+        position: absolute;
+        top: 50%;
+        right: calculateRem(4px);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__input {
+        height: calculateRem(30px);
+        padding: calculateRem(4px);
+        border-color: $ibexa-color-base;
+        width: 8ch;
+        -moz-appearance: textfield;
+        border-radius: $ibexa-border-radius-small;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            -moz-appearance: initial;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: inner-spin-button;
+                margin-left: calculateRem(2px);
+            }
+
+            & + .c-image-editor-focal-point__input-label {
+                display: none;
+            }
+        }
+    }
+
+    &__btn-remove {
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ibexa-icon {
+            fill: $ibexa-color-danger;
+        }
+
+        &--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__btn-toggle {
+        border: calculateRem(1px) solid $ibexa-color-base;
+        padding: calculateRem(6px) calculateRem(16px);
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &--active,
+        &:focus,
+        &:hover {
+            color: $ibexa-color-info;
+            border-color: $ibexa-color-info;
+            box-shadow: none;
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+    }
+}

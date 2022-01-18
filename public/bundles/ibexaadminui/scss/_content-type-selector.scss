@@ -1,0 +1,32 @@
+.ibexa-content-type-selector {
+    &__group {
+        margin-top: calculateRem(8px);
+    }
+
+    &__group-title {
+        .accordion-button {
+            border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+            padding-left: 0;
+            font-size: $ibexa-text-font-size-medium;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        margin-top: calculateRem(12px);
+
+        .form-check {
+            display: block;
+        }
+    }
+
+    &__show-more {
+        display: inline-block;
+        margin-top: calculateRem(12px);
+    }
+}

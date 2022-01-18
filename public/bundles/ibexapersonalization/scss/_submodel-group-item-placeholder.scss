@@ -1,0 +1,5 @@
+.ibexa-perso-submodel-group-item-placeholder {
+    @include drag-item-placeholder;
+
+    height: calculateRem(50px);
+}

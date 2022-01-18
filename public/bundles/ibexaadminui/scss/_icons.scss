@@ -1,0 +1,109 @@
+.ibexa-icon {
+    width: calculateRem(32px);
+    height: calculateRem(32px);
+    transition: fill 0.3s $ibexa-admin-transition;
+
+    &--tiny {
+        width: calculateRem(8px);
+        height: calculateRem(8px);
+    }
+
+    &--tiny-small {
+        width: calculateRem(12px);
+        height: calculateRem(12px);
+    }
+
+    &--small {
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+    }
+
+    &--small-medium {
+        width: calculateRem(20px);
+        height: calculateRem(20px);
+    }
+
+    &--medium {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+    }
+
+    &--medium-large {
+        width: calculateRem(38px);
+        height: calculateRem(38px);
+    }
+
+    &--large {
+        width: calculateRem(48px);
+        height: calculateRem(48px);
+    }
+
+    &--extra-large {
+        width: calculateRem(64px);
+        height: calculateRem(64px);
+    }
+
+    &--dark {
+        fill: $ibexa-black;
+    }
+
+    &--light {
+        fill: $ibexa-white;
+    }
+
+    &--base-dark {
+        fill: $ibexa-color-base-dark;
+    }
+
+    &--primary {
+        fill: $ibexa-color-primary;
+    }
+
+    &--secondary {
+        fill: $ibexa-black;
+    }
+}
+
+.ibexa-btn--extra-actions {
+    .ibexa-icon {
+        pointer-events: none;
+    }
+}
+
+.ibexa-icon--logo {
+    width: calculateRem(128px);
+    height: calculateRem(112px);
+    display: block;
+    margin: 0 auto;
+}
+
+.ibexa-preview__action {
+    .ibexa-icon {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        fill: $ibexa-color-base-dark;
+    }
+
+    &:hover,
+    &:focus {
+        .ibexa-icon {
+            fill: $ibexa-white;
+        }
+    }
+
+    &.ibexa-preview__action--selected {
+        .ibexa-icon {
+            fill: $ibexa-white;
+        }
+    }
+}
+
+.ibexa-btn--content-tree-expanded {
+    .ibexa-icon {
+        fill: $ibexa-black;
+    }
+}
+
+.ibexa-icon--hidden {
+    display: none;
+}
