@@ -1,0 +1,13 @@
+.c-pb-preview-block--empty {
+    padding: 1rem;
+}
+
+.c-pb-preview-block__actions-bar {
+    position: absolute;
+    transform: translate(0, -100%);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: calculateRem(600px);
+    background: #ddd;
+}

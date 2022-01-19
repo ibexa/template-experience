@@ -1,0 +1,80 @@
+.ibexa-perso-scenario-preview-response-code {
+    display: grid;
+    border-top: calculateRem(1px) solid $ibexa-color-dark-200;
+    margin-top: calculateRem(32px);
+
+    &__toggler {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        font-size: $ibexa-text-font-size-medium;
+        padding-right: calculateRem(50px);
+        margin-bottom: calculateRem(28px);
+        cursor: pointer;
+
+        &--rolled-up {
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            .ibexa-perso-scenario-preview-response-code {
+                &__toggler-show {
+                    display: unset;
+                }
+
+                &__toggler-hide {
+                    display: none;
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: calculateRem(24px);
+            bottom: calc(50% - #{calculateRem(2px)});
+            border-left: calculateRem(5px) solid transparent;
+            border-right: calculateRem(5px) solid transparent;
+            border-top: calculateRem(5px) solid $ibexa-color-black;
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        }
+    }
+
+    &__toggler-show {
+        display: none;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        border: calculateRem(1px) solid $ibexa-color-dark-200;
+        border-radius: $ibexa-border-radius;
+        overflow: hidden;
+        max-height: calculateRem(500px);
+        min-height: calculateRem(100px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+
+    &__code {
+        @include drag-module-backdrop-background();
+
+        flex-grow: 1;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    &__card-header,
+    &__code {
+        padding: calculateRem(4px) calculateRem(14px);
+    }
+}

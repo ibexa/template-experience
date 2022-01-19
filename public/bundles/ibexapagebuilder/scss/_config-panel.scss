@@ -1,0 +1,85 @@
+.ibexa-pb-config-panel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calculateRem(139px);
+    width: calculateRem(653px);
+    z-index: 300;
+    height: calc(100vh - #{calculateRem(139px)});
+    background-color: $ibexa-color-white;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: $ibexa-edit-header-box-shadow;
+
+    &--closed {
+        display: none;
+    }
+
+    &--right {
+        right: 0;
+    }
+
+    &--with-backdrop {
+        z-index: 660;
+    }
+
+    &--fields {
+        .card {
+            background: none;
+        }
+    }
+
+    &__backdrop.ibexa-backdrop.ibexa-backdrop {
+        z-index: 650;
+    }
+
+    &__header {
+        display: grid;
+        grid-column-gap: calculateRem(20px);
+        grid-template-columns: 1fr auto;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        padding: calculateRem(10px) calculateRem(16px);
+
+        &--with-back-btn {
+            grid-template-columns: auto 1fr;
+        }
+    }
+
+    &__headline {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 0;
+        letter-spacing: 0.12px;
+        line-height: calculateRem(36px);
+    }
+
+    &__body {
+        flex-grow: 1;
+        overflow: auto;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+        &--with-shadow {
+            box-shadow: inset calculateRem(4px) calculateRem(-47px) calculateRem(47px) calculateRem(-47px) rgba($ibexa-color-info, 0.15);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        height: calculateRem(120px);
+        z-index: 10;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+
+        .ibexa-btn {
+            margin-left: calculateRem(16px);
+        }
+    }
+}
