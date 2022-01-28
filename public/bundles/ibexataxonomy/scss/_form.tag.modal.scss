@@ -1,0 +1,21 @@
+.ibexa-modal--taxonomy-tree-modal {
+    .modal-content {
+        height: calculateRem(650px);
+    }
+
+    .modal-body {
+        padding-bottom: 0;
+    }
+
+    #select-parent-modal-tree {
+        height: calculateRem(450px);
+    }
+
+    .c-tb-width-container {
+        background-color: transparent;
+    }
+
+    .c-tb-list-item__row {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,13 @@
+.ibexa-pc-edit-form-number {
+    display: flex;
+    align-items: center;
+
+    .ibexa-input {
+        max-width: calculateRem(140px);
+        margin-right: calculateRem(12px);
+    }
+
+    .ibexa-input-text-wrapper {
+        width: 100%;
+    }
+}

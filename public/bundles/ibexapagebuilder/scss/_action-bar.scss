@@ -1,0 +1,80 @@
+.ibexa-pb-timeline-visible {
+    & .ibexa-pb-action-bar {
+        margin-bottom: calculateRem(144px);
+    }
+}
+
+.ibexa-pb-action-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    border-width: calculateRem(1px) 0;
+    border-style: solid;
+    border-color: $ibexa-color-light;
+    background-color: $ibexa-color-white;
+    box-shadow: $ibexa-edit-header-box-shadow;
+    z-index: 1;
+    margin-bottom: calculateRem(48px);
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition,
+        margin-bottom $ibexa-admin-transition-duration $ibexa-admin-transition;
+    transition-delay: 0s, 0.1s;
+
+    &__left {
+        display: flex;
+    }
+
+    &__center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: calculateRem(16px);
+    }
+
+    &__siteaccess {
+        display: flex;
+        align-items: center;
+    }
+
+    &__siteaccess-name {
+        @include ibexa-font-sans-serif();
+
+        font-size: calculateRem(16px);
+        font-weight: 600;
+        width: calculateRem(200px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__content-action-info,
+    &__siteaccess,
+    &__action-btns {
+        border-right: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__content-action-info,
+    &__siteaccess,
+    &__center {
+        padding: calculateRem(10px) calculateRem(32px);
+    }
+
+    &__content-action-info {
+        overflow: hidden;
+        min-width: calculateRem(150px);
+    }
+
+    &__action-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: calculateRem(10px) 0 calculateRem(10px) calculateRem(16px);
+
+        .ibexa-btn--selector {
+            margin-right: calculateRem(16px);
+        }
+    }
+}

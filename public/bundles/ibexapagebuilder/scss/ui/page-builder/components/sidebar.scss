@@ -1,0 +1,35 @@
+.c-pb-sidebar {
+    @include sidebar-drag-items;
+
+    max-height: calc(100vh - #{calculateRem(150px)});
+
+    &__action-bar {
+        cursor: grab;
+    }
+
+    &__toggler {
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__icon-wrapper {
+        display: flex;
+    }
+
+    &--collapsed {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    &__infobar-toggler {
+        .ibexa-icon {
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        }
+
+        &--collapsed {
+            .ibexa-icon {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}

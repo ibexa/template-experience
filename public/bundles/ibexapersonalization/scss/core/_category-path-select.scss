@@ -1,0 +1,25 @@
+.ibexa-perso-category-path-select {
+    &--disabled {
+        opacity: 0.5;
+    }
+
+    &__body {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__or {
+        line-height: calculateRem(48px);
+    }
+
+    &__custom-path {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .ibexa-input-text-wrapper {
+        margin-right: calculateRem(8px);
+    }
+}
