@@ -1,0 +1,11 @@
+.ibexa-modal {
+    &--content-reveal-confirmation {
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+    }
+}

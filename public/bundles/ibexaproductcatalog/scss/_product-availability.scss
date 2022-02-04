@@ -1,0 +1,7 @@
+.ibexa-pc-product-availability {
+    &__table-header-cell {
+        &--available {
+            width: calculateRem(250px);
+        }
+    }
+}

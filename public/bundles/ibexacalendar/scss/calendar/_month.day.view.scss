@@ -1,0 +1,27 @@
+.c-month-day-view {
+    display: grid;
+    grid-template-columns: calculateRem(32px) 1fr;
+    grid-template-rows: calculateRem(78px);
+    border-radius: $ibexa-border-radius-small;
+    border: calculateRem(1px) solid $ibexa-color-white;
+
+    &--past {
+        @include past-tile();
+    }
+
+    &--today {
+       @include today-tile();
+    }
+
+    &--disabled {
+        @include disabled-tile();
+    }
+
+    &--selected {
+        @include selected-tile();
+    }
+
+    &__day {
+        margin-left: calculateRem(4px);
+    }
+}
