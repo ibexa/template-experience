@@ -1,0 +1,43 @@
+.ibexa-pb-event-item {
+    @include ibexa-font-sans-serif();
+
+    display: flex;
+    padding: calculateRem(24px) calculateRem(16px);
+    color: $ibexa-color-dark;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    margin-bottom: calculateRem(8px);
+
+    &:hover {
+        border-color: $ibexa-color-dark;
+    }
+
+    .ibexa-icon {
+        fill: $ibexa-color-info;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        margin-top: calculateRem(4px);
+        margin-right: calculateRem(16px);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__event-name {
+        font-size: calculateRem(16px);
+        font-weight: 600;
+    }
+
+    &__event-block-name {
+        font-size: calculateRem(12px);
+        margin-bottom: calculateRem(30px);
+    }
+
+    &__event-date {
+        font-size: calculateRem(12px);
+    }
+}

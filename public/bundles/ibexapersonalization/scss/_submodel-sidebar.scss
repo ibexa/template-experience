@@ -1,0 +1,13 @@
+.ibexa-perso-submodel-sidebar {
+    @include sidebar-drag-items;
+
+    position: sticky;
+    top: calculateRem(-40px);
+    margin-left: calculateRem(32px);
+    margin-bottom: auto;
+    max-height: calc(100vh - #{calculateRem(250px)});
+}
+
+.ibexa-perso-submodel-sidebar-item {
+    @include sidebar-drag-item;
+}
