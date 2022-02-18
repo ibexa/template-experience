@@ -1,0 +1,37 @@
+.c-tb-toggler {
+    height: 100%;
+    width: calculateRem(16px);
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: calculateRem(4px) 0 calculateRem(4px) calculateRem(8px);
+        border-color: transparent transparent transparent $ibexa-color-black;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: calculateRem(8px);
+        transform: translateY(-50%);
+        transform-origin: center center;
+    }
+
+    &:hover {
+        &::before {
+            border-color: transparent transparent transparent $ibexa-color-primary;
+        }
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    + &--light {
+        &::before {
+            border-color: transparent transparent transparent $ibexa-color-white;
+        }
+    }
+}

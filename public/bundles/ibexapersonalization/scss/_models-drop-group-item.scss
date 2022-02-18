@@ -1,0 +1,20 @@
+.ibexa-perso-models-drop-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    background-color: $ibexa-color-white;
+    box-shadow: $ibexa-content-type-edit-field-shadow;
+    padding-left: calculateRem(20px);
+    margin-bottom: calculateRem(8px);
+
+    &__icon {
+        display: flex;
+        margin-right: calculateRem(10px);
+    }
+
+    &__remove-btn {
+        margin-left: auto;
+    }
+}

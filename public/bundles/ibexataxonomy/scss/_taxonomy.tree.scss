@@ -1,0 +1,14 @@
+.ibexa-taxonomy-tree-container {
+    position: relative;
+    top: 0;
+    flex: 0 0 auto;
+    background: $ibexa-color-white;
+    color: inherit;
+
+    &__root {
+        position: sticky;
+        top: 0;
+        height: 100%;
+        overflow: auto;
+    }
+}
