@@ -1,0 +1,14 @@
+.ibexa-perso-segment-sidebar-group {
+    @include sidebar-drag-items-group;
+
+    &__segments {
+        &--inactive-segments {
+            .ibexa-perso-segment-sidebar-item {
+                background: $ibexa-color-light-300;
+                border-color: $ibexa-color-light-300;
+                color: $ibexa-color-dark-300;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

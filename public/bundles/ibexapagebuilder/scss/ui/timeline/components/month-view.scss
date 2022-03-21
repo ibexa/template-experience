@@ -1,0 +1,27 @@
+.c-pb-month-view {
+    @include ibexa-font-sans-serif();
+
+    color: $ibexa-color-dark;
+
+    &__headers {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: calculateRem(14px) calculateRem(9px) calculateRem(13px) calculateRem(9px);
+        border-radius: $ibexa-border-radius;
+        background: $ibexa-color-light-400;
+        margin-bottom: calculateRem(19px);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        font-size: calculateRem(14px);
+        font-weight: 600;
+    }
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: calculateRem(4px);
+    }
+}
