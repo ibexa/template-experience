@@ -1,0 +1,24 @@
+/* Landingpage Blocks CSS */
+
+/* Banner */
+
+.ibexa-banner {
+  margin-bottom: 30px;
+}
+
+.ibexa-banner figure {
+  margin: 0;
+}
+
+.ibexa-banner img {
+  width: 100%;
+}
+
+ /* Map */
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Landing Page blocks */

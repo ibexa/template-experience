@@ -1,0 +1,13 @@
+.ibexa-multiline-label {
+    display: flex;
+    flex-direction: column;
+
+    &__line {
+        display: flex;
+        align-items: center;
+        
+        .form-control {
+            margin-bottom: 0;
+        }
+   }
+}
