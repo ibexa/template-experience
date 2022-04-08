@@ -1,0 +1,47 @@
+.c-pb-timeline {
+    display: grid;
+    grid-template-areas: 'close-btn calendar events-list slider';
+    grid-template-columns: calculateRem(80px) calculateRem(180px) calculateRem(200px) auto;
+    background-color: $ibexa-color-white;
+    grid-gap: calculateRem(16px);
+
+    border: calculateRem(1px) solid $ibexa-color-light;
+    height: calculateRem(76px);
+    border-radius: $ibexa-border-radius;
+    box-shadow: $ibexa-edit-header-box-shadow;
+
+    &__close-btn-wrapper,
+    &__timeline-calendar-wrapper,
+    &__list-wrapper,
+    &__slider-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__close-btn-wrapper {
+        grid-area: close-btn;
+        justify-content: center;
+    }
+
+    &__timeline-calendar-wrapper {
+        grid-area: calendar;
+        justify-content: left;
+    }
+
+    &__list-wrapper {
+        grid-area: events-list;
+        justify-content: left;
+    }
+
+    &__close-btn-wrapper,
+    &__timeline-calendar-wrapper,
+    &__list-wrapper {
+        border-right: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__slider-wrapper {
+        grid-area: slider;
+        position: relative;
+        margin: 0 calculateRem(48px);
+    }
+}

@@ -1,0 +1,56 @@
+.ibexa-measurement-form-number {
+    display: flex;
+    align-items: center;
+
+    &--range {
+        .ibexa-measurement-form-number {
+            &__input-wrapper {
+                display: flex;
+                width: calculateRem(225px);
+            }
+
+            &__input-separator {
+                flex: 0 0 calculateRem(25px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }            
+        }
+
+        &.ibexa-measurement-form-number {
+            &--default-value {
+                .ibexa-measurement-form-number {
+                    &__input-wrapper {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .ibexa-input-text-wrapper--type-number {
+            width: calculateRem(100px);
+
+            .ibexa-input {
+                width: calculateRem(100px);
+            }
+        }
+    }
+
+    &__input-wrapper {
+        width: calculateRem(100px);
+
+        .ibexa-input-text-wrapper {
+            &.ibexa-input-text-wrapper--type-number {
+                width: 100%;
+            }
+        }
+    }
+
+    &__unit-wrapper {
+        margin-left: calculateRem(8px);
+    }
+
+    .ibexa-input {
+        margin-bottom: 0;
+    }
+}
