@@ -1,0 +1,34 @@
+.ibexa-sf-form-languages {
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+
+    &__info {
+        @include ibexa-font-sans-serif();
+
+        font-size: $ibexa-text-font-size-medium;
+        color: $ibexa-color-black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__items {
+        list-style: none;
+        max-width: calculateRem(400px);
+        margin-top: calculateRem(16px);
+        min-height: calculateRem(36px);
+        padding: 0;
+
+        &--hidden {
+            display: none;
+        }
+
+        &--placeholder {
+            display: block;
+            height: calculateRem(40px);
+            background-color: rgba($ibexa-color-white, 0.25);
+            pointer-events: none;
+        }
+    }
+}

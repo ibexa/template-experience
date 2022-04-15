@@ -1,0 +1,8 @@
+.ibexa-search-criteria-tags {
+    border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    padding-bottom: calculateRem(8px);
+
+    &__tag {
+        margin-right: calculateRem(10px);
+    }
+}
