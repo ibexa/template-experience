@@ -1,0 +1,29 @@
+.ibexa-perso-segment-sidebar {
+    @include sidebar-drag-items;
+
+    position: sticky;
+    top: calculateRem(-40px);
+    margin-left: calculateRem(32px);
+    margin-bottom: auto;
+    max-height: calc(100vh - #{calculateRem(250px)});
+
+    &__title-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.ibexa-perso-segment-sidebar-item {
+    @include sidebar-drag-item;
+
+    &:last-of-type {
+        margin-bottom: calculateRem(8px);
+    }
+
+    &--hidden {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

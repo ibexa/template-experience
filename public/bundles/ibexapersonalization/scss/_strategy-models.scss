@@ -1,0 +1,45 @@
+.ibexa-perso-strategy-models {
+    position: relative;
+    margin-bottom: calculateRem(50px);
+    border-radius: $ibexa-border-radius;
+    padding: 0 calculateRem(24px);
+
+    &:not(:last-of-type) {
+        &::after {
+            content: url('/bundles/ibexapersonalization/img/next-strategy-arrow.svg');
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%) translateY(calc(100% - #{calculateRem(15px)}));
+        }
+    }
+
+    &:first-of-type {
+        background: $ibexa-color-light-300;
+        padding: calculateRem(24px);
+        border-radius: $ibexa-border-radius;
+
+        .ibexa-perso-strategy-models__wrapper {
+            border-color: transparent;
+        }
+    }
+
+    &__wrapper {
+        min-width: calculateRem(640px);
+        padding: calculateRem(14px) calculateRem(20px);
+        border: calculateRem(1px) dashed $ibexa-color-dark-300;
+        border-radius: $ibexa-border-radius;
+        background-color: $ibexa-color-white;
+    }
+
+    &__title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+}

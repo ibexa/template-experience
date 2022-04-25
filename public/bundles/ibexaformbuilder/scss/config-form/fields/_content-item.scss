@@ -1,0 +1,22 @@
+.ibexa-fb-form-field-config-content-item {
+    padding: calculateRem(24px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+
+    &__headline {
+        font-size: $ibexa-text-font-size-medium;
+        margin-bottom: calculateRem(24px);
+    }
+
+    .ibexa-fb-form-field-config-selected-item {
+        border-top: calculateRem(1px) solid $ibexa-color-dark-200;
+
+        .ibexa-table__body .ibexa-table__cell {
+            font-size: $ibexa-text-font-size-medium;
+        }
+
+        &--hidden {
+            display: none;
+        }
+    }
+}
