@@ -1,0 +1,9 @@
+.ibexa-perso-scenario-strategy-placeholder {
+    @include drag-item-placeholder;
+
+    height: calculateRem(86px);
+
+    &--hidden {
+        display: none;
+    }
+}

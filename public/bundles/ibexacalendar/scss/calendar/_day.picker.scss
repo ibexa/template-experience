@@ -1,0 +1,86 @@
+.c-day-picker {
+    $cols: 7;
+    $rows: 6;
+
+    padding: calculateRem(4px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+
+    &__paginator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calculateRem(40px);
+
+        .ibexa-btn {
+            align-items: center;
+        }
+    }
+
+    &__paginator-date {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__week-days {
+        @include calendar-header();
+        
+        grid-template-columns: repeat($cols, 1fr);
+        grid-column-gap: calculateRem(2px);
+        height: calculateRem(40px);
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__day-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat($cols, 1fr);
+        grid-template-rows: repeat($rows, calculateRem(38px));
+        grid-column-gap: calculateRem(2px);
+        grid-row-gap: calculateRem(2px);
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__day {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $ibexa-border-radius-small;
+        border: calculateRem(1px) solid $ibexa-color-white;
+
+        &--disabled {
+            @include disabled-tile();
+        }
+
+        &--today {
+            @include today-tile();
+
+            &:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                bottom: calculateRem(4px);
+                left: calc(50% - #{calculateRem(2px)});
+                width: calculateRem(4px);
+                height: calculateRem(4px);
+                border-radius: $ibexa-border-radius;
+                background: $ibexa-color-info;
+            }
+        }
+
+        &--selected {
+            @include selected-tile();
+        }
+
+        &--selectable:hover {
+            cursor: pointer;
+            border-color: $ibexa-color-primary;
+        }
+    }
+}
