@@ -1,0 +1,17 @@
+.ibexa-sf-list-actions {
+    display: flex;
+
+    &__view-action {
+        display: flex;
+        align-items: center;
+        margin-left: calculateRem(8px);
+        padding: 0 calculateRem(12px) 0 calculateRem(19px);
+        border-left: calculateRem(2px) solid $ibexa-color-light;
+    }
+
+    &__label {
+        margin-right: calculateRem(7px);
+        padding-top: calculateRem(2px);
+        font-size: $ibexa-text-font-size-small;
+    }
+}

@@ -1,0 +1,11 @@
+.c-list {
+    margin: 0;
+    padding: 0 0 0 calculateRem(12px);
+    list-style: none;
+
+    &__no-items-message {
+        padding: calculateRem(10px);
+        font-size: $ibexa-text-font-size-small;
+        color:$ibexa-color-dark-400;
+    }
+}
