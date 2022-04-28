@@ -1,0 +1,14 @@
+.ibexa-pc-product-details {
+    &__preview-language-form {
+        display: flex;
+        align-items: center;
+
+        .ibexa-label {
+            margin: 0 calculateRem(12px) 0 0;
+        }
+    }
+
+    &__preview-language-dropdown {
+        min-width: calculateRem(220px);
+    }
+}

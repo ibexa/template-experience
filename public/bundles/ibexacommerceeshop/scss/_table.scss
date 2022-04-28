@@ -1,0 +1,10 @@
+.ibexa-table {
+    &--price-management,
+    &--stock-update {
+        margin-bottom: calculateRem(24px);
+
+        .ibexa-icon--trash {
+            fill: $ibexa-color-primary;
+        }
+    }
+}

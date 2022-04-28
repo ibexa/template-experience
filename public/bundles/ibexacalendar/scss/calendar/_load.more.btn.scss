@@ -1,0 +1,8 @@
+.c-load-more-btn {
+    display: flex;
+
+    &__spinner {
+        fill: $ibexa-color-white;
+        margin-right: calculateRem(10px);
+    }
+}
