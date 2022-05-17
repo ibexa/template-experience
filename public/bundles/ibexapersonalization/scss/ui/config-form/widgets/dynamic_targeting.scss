@@ -1,0 +1,102 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-personalization {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: calculateRem(10px);
+    padding: calculateRem(16px);
+
+    .ibexa-table-header {
+        margin-top: 0;
+    }
+
+    &__labels {
+        margin-bottom: calculateRem(-20px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__label {
+        &--segment-group {
+            margin-left: calculateRem(44px);
+        }
+
+        &--segment {
+            margin-left: calculateRem(36px);
+        }
+
+        &--content {
+            margin-left: calculateRem(74px);
+        }
+    }
+
+    &__items {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: flex;
+        border-radius: $ibexa-border-radius;
+        background-color: $ibexa-color-white;
+        padding: calculateRem(16px);
+        align-items: center;
+        margin-bottom: calculateRem(8px);
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+
+        &--placeholder {
+            display: block;
+            height: calculateRem(40px);
+            background-color: $ibexa-color-light-300;
+            pointer-events: none;
+        }
+
+        &--no-configuration {
+            cursor: default;
+            color: $ibexa-color-dark-400;
+            font-style: italic;
+        }
+
+        &:nth-child(2n) {
+            background-color: $ibexa-color-light-300;
+        }
+    }
+
+    &__item-drag {
+        display: flex;
+
+        .ibexa-icon {
+            fill: $ibexa-color-dark-200;
+        }
+    }
+
+    &__select-wrapper {
+        display: flex;
+    }
+
+    &__select-group {
+        width: calculateRem(124px);
+        margin-left: calculateRem(16px);
+
+        .ibexa-dropdown {
+            min-width: 0;
+        }
+
+        &--scenario {
+            width: calculateRem(160px);
+        }
+    }
+
+    &__content-wrapper {
+        margin-left: calculateRem(16px);
+    }
+
+    &__item-actions {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,16 @@
+.c-pb-calendar-paginator {
+    @include ibexa-font-sans-serif();
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calculateRem(8px);
+    margin-bottom: calculateRem(10px);
+    font-size: $ibexa-text-font-size-medium;
+
+    &__caret {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
