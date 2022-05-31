@@ -1,0 +1,29 @@
+.ibexa-perso-models-list {
+    &__name-link {
+        display: inline-block;
+    }
+
+    .ibexa-table {
+        &__cell {
+            &--model-name {
+                max-width: calculateRem(300px);
+
+                .ibexa-icon {
+                    &:hover {
+                        fill: $ibexa-color-primary;
+                    }
+                }
+            }
+
+            &--model-scenario {
+                word-break: break-all;
+                max-width: calculateRem(300px);
+                min-width: calculateRem(150px);
+            }
+
+            .list-unstyled {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
