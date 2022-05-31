@@ -1,0 +1,34 @@
+.ibexa-modal--taxonomy-tree-modal {
+    .modal-content {
+        height: calculateRem(650px);
+    }
+
+    .modal-body {
+        padding-bottom: 0;
+    }
+
+    .ibexa-taxonomy-tree {
+        height: calculateRem(450px);
+    }
+
+    .c-tb-width-container {
+        background-color: transparent;
+    }
+
+    .c-tb-tree {
+        position: relative;
+    }
+
+    .c-tb-list-item__row {
+        cursor: pointer;
+    }
+
+    .ibexa-modal__subheader {
+        display: flex;
+        align-items: center;
+
+        .ibexa-icon {
+            margin-right: calculateRem(4px);
+        }
+    }
+}

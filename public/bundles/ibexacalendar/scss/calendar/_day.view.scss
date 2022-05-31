@@ -1,0 +1,42 @@
+.c-day-view {
+    &__header {
+        @include calendar-header();
+
+        grid-template-columns: calculateRem(20px) 1fr;
+        align-items: center;
+        height: calculateRem(48px);
+        padding-left: calculateRem(32px);
+    }
+
+    &__hour {
+        height: calculateRem(90px);
+        padding: calculateRem(12px) calculateRem(32px);
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+
+        &:first-child {
+            border: none;
+        }
+
+        &--first-pm {
+            position: relative;
+            border-top-color: $ibexa-color-dark;
+
+            &:after {
+                content: attr(data-time-pm-symbol);
+                position: absolute;
+                right: 0;
+                top: calculateRem(-10px);
+                display: block;
+                width: calculateRem(32px);
+                height: calculateRem(20px);
+                padding-left: calculateRem(10px);
+                background-color: $ibexa-color-white;
+                font-size: $ibexa-text-font-size-medium;
+            }
+        }
+    }
+
+    &__hour-label {
+        font-size: $ibexa-text-font-size-medium;
+    }
+}

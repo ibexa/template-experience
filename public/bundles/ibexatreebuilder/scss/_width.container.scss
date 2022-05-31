@@ -1,0 +1,26 @@
+.c-tb-width-container {
+    padding: 0 calculateRem(3px) calculateRem(30px) 0;
+    width: 100%;
+    height: 100%;
+    background: $ibexa-color-light-200;
+
+    &__resize-handler {
+        width: calculateRem(3px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $ibexa-color-light-200;
+        border-right: calculateRem(1px) solid $ibexa-color-light;
+        cursor: col-resize;
+    }
+
+    &__scrollable-wrapper {
+        height: 100%;
+        overflow: auto;
+    }
+
+    &--collapsed &__scrollable-wrapper {
+        overflow: hidden;
+    }
+}

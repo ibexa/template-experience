@@ -1,0 +1,81 @@
+.ibexa-perso-strategy-model {
+    @include drag-item-placeholder;
+
+    display: flex;
+    height: calculateRem(86px);
+    padding: calculateRem(16px);
+    margin-bottom: calculateRem(8px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    background-color: $ibexa-color-white;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    cursor: grab;
+    box-shadow: $ibexa-content-type-edit-field-shadow;
+
+    &--hidden {
+        display: none;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        margin-right: calculateRem(12px);
+        fill: $ibexa-color-light;
+    }
+
+    &--dragged-success {
+        background: rgba($ibexa-color-success, 0.2);
+    }
+
+    &--dragged-fail {
+        background: rgba($ibexa-color-danger, 0.2);
+    }
+
+    &__name {
+        font-size: $ibexa-text-font-size;
+        font-weight: 600;
+        white-space: nowrap;
+        margin-right: calculateRem(10px);
+        width: calculateRem(200px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__settings {
+        flex: 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .ibexa-label {
+            margin: 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__select-context-container {
+        width: calculateRem(150px);
+    }
+
+    &__select-context {
+        max-width: calculateRem(200px);
+    }
+
+    .form-group {
+        width: calculateRem(150px);
+        margin-right: calculateRem(8px);
+    }
+
+    .ibexa-form-error {
+        position: absolute;
+        top: calculateRem(120px);
+    }
+
+    .ibexa-dropdown {
+        min-width: initial;
+    }
+}

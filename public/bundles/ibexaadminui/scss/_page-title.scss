@@ -1,0 +1,28 @@
+.ibexa-page-title {
+    &__top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    &__content-name {
+        font-weight: normal;
+        font-size: calculateRem(26px);
+        width: calc(100% - #{calculateRem(36px)});
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__title {
+        display: flex;
+    }
+
+    .ibexa-tag {
+        max-height: calculateRem(28px);
+        margin-left: calculateRem(8px);
+        padding: calculateRem(2px) calculateRem(12px);
+
+        &__content {
+            font-weight: normal;
+            font-size: $ibexa-text-font-size-medium;
+        }
+    }
+}
