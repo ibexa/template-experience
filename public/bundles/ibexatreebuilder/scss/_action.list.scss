@@ -1,0 +1,10 @@
+.c-tb-action-list {
+    &__item {
+        cursor: pointer;
+
+        &--disabled {
+            color: $ibexa-color-light-500;
+            cursor: not-allowed;
+        }
+    }
+}

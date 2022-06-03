@@ -1,0 +1,37 @@
+.ibexa-perso-segment-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    background-color: $ibexa-color-white;
+    box-shadow: $ibexa-content-type-edit-field-shadow;
+    padding-left: calculateRem(20px);
+    margin-bottom: calculateRem(8px);
+
+    &__icon {
+        display: flex;
+        margin-right: calculateRem(10px);
+    }
+
+    &__name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__status {
+        margin-left: auto;
+        padding: 0 calculateRem(8px);
+        border-radius: calculateRem(12px);
+
+        &--active {
+            color: $ibexa-color-success;
+            background-color: $ibexa-color-success-200;
+        }
+
+        &--inactive {
+            color: $ibexa-color-danger;
+            background-color: $ibexa-color-danger-200;
+        }
+    }
+}

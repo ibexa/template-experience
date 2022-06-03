@@ -1,0 +1,25 @@
+$wf-d-table: '.ibexa-workflow-dashboard-table';
+
+#{$wf-d-table} {
+    .ibexa-btn--workflow-chart {
+        #{$wf-d-table} {
+            &__icon {
+                &--history {
+                    fill: $ibexa-color-dark-300;
+                    transition: fill 0.3s $ibexa-admin-transition;
+                }
+            }
+        }
+    }
+
+    .ibexa-btn--workflow-chart:hover,
+    .ibexa-btn--workflow-chart:focus {
+        #{$wf-d-table} {
+            &__icon {
+                &--history {
+                    fill: darken($ibexa-color-dark-300, 15%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.ibexa-extra-actions {
+    &--schedule-hide {
+        .ibexa-extra-actions__content {
+            padding: calculateRem(32px);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        padding-top: calculateRem(16px);
+
+        .ibexa-btn.ibexa-btn--wide {
+            font-size: calculateRem(14px);
+            border-radius: calculateRem(4px);
+        }
+    }
+}
