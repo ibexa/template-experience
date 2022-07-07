@@ -1,0 +1,32 @@
+.ibexa-ca-company-tab-company-profile {
+    &__top-wrapper {
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+    }
+
+    &__billing-address-wrapper,
+    &__contact-person-wrapper {
+        display: flex;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        padding: 0 calculateRem(24px);
+
+        .ibexa-details {
+            margin-top: calculateRem(-16px);
+            width: 100%;
+        }
+    }
+
+    &__billing-address-wrapper {
+        flex-grow: 2;
+    }
+
+    &__contact-person-wrapper {
+        flex-grow: 0;
+        margin-left: calculateRem(16px);
+        padding-bottom: calculateRem(8px);
+    }
+}

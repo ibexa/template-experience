@@ -1,0 +1,31 @@
+.ibexa-pc-edit-catalog-products {
+    &__header {
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__preview-wrapper {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__list-filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: calculateRem(12px);
+    }
+
+    &__search {
+        width: calculateRem(280px);
+        margin: calculateRem(16px) 0;
+
+        .ibexa-input-text-wrapper {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        border-top: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+}

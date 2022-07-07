@@ -1,0 +1,5 @@
+.ibexa-ca-registration-confirmation-modal {
+    &__message:not(:first-child) {
+        margin-top: calculateRem(32px);
+    }
+}

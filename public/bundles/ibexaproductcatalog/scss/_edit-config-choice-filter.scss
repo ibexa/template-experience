@@ -1,0 +1,31 @@
+.ibexa-pc-edit-config-choice-filter {
+    &__action-toggle-selection {
+        border: none;
+        outline: none;
+        font-size: $ibexa-text-font-size-medium;
+        text-decoration: underline;
+    }
+
+    &__list {
+        height: calc(100vh - #{calculateRem(200px)});
+        margin: 0 calculateRem(6px);
+        padding: 0;
+        list-style: none;
+        font-size: $ibexa-text-font-size-medium;
+        overflow: auto;
+
+        .ibexa-input--checkbox {
+            margin-right: calculateRem(4px);
+        }
+    }
+
+    &__list-item {
+        margin: calculateRem(8px) 0;
+    }
+
+    .ibexa-pc-config-panel {
+        &__body {
+            padding: calculateRem(16px) 0 calculateRem(16px) calculateRem(32px);
+        }
+    }
+}
