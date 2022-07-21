@@ -1,0 +1,8 @@
+.c-events {
+    &__expand {
+        padding: calculateRem(4px);
+        font-size: $ibexa-text-font-size-small;
+        border-radius: $ibexa-border-radius-small;
+        float: right;
+    }
+}

@@ -1,0 +1,18 @@
+.ibexa-ca-registration-form {
+    max-width: calculateRem(1200px);
+    padding: 0 calculateRem(64px);
+    margin: calculateRem(64px) auto;
+
+    &__title {
+        margin: calculateRem(48px) 0;
+    }
+
+    &__subtitle {
+        margin: calculateRem(32px) 0;
+    }
+
+    &__separator {
+        width: 100%;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+}

@@ -1,0 +1,9 @@
+.ibexa-ca-user-status-change-btn {
+    &.ibexa-popup-menu__item-content {
+        color: $ibexa-color-danger;
+
+        &:hover {
+            color: $ibexa-color-danger;
+        }
+    }
+}

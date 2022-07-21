@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="354px" height="263px" viewBox="0 0 354 263" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <defs>
+        <rect id="path-1" x="68" y="121" width="178" height="32" rx="16"></rect>
+        <filter x="-43.8%" y="-187.5%" width="192.1%" height="612.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="4" dy="22" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="23.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.247058824   0 0 0 0 1  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="35" y="31" width="234" height="42" rx="20"></rect>
+        <filter x="-33.3%" y="-142.9%" width="170.1%" height="490.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="4" dy="22" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="23.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.247058824   0 0 0 0 1  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flow_7" transform="translate(-911.000000, -425.000000)">
+            <g id="ilu_placeholder" transform="translate(857.000000, 460.000000)">
+                <g id="Group-2" transform="translate(81.000000, 0.000000)">
+                    <circle id="Oval-Copy" fill="#E0E0E8" transform="translate(6.000000, 20.000000) scale(-1, 1) translate(-6.000000, -20.000000) " cx="6" cy="20" r="6"></circle>
+                    <circle id="Oval-Copy-5" fill="#E0E0E8" transform="translate(202.000000, 181.000000) scale(-1, 1) translate(-202.000000, -181.000000) " cx="202" cy="181" r="3"></circle>
+                    <circle id="Oval-Copy-14" fill="#E0E0E8" transform="translate(59.000000, 55.000000) scale(-1, 1) translate(-59.000000, -55.000000) " cx="59" cy="55" r="3"></circle>
+                    <circle id="Oval-Copy-7" fill="#E0E0E8" transform="translate(267.000000, 33.000000) scale(-1, 1) translate(-267.000000, -33.000000) " cx="267" cy="33" r="2"></circle>
+                    <circle id="Oval-Copy-6" fill="#E0E0E8" transform="translate(15.000000, 78.000000) scale(-1, 1) translate(-15.000000, -78.000000) " cx="15" cy="78" r="3"></circle>
+                    <circle id="Oval-Copy-8" fill="#E0E0E8" transform="translate(237.000000, 9.000000) scale(-1, 1) translate(-237.000000, -9.000000) " cx="237" cy="9" r="2"></circle>
+                    <circle id="Oval-Copy-9" fill="#E0E0E8" transform="translate(186.000000, 165.000000) scale(-1, 1) translate(-186.000000, -165.000000) " cx="186" cy="165" r="2"></circle>
+                    <circle id="Oval-Copy-10" fill="#E0E0E8" transform="translate(42.000000, 22.000000) scale(-1, 1) translate(-42.000000, -22.000000) " cx="42" cy="22" r="2"></circle>
+                    <circle id="Oval-Copy-12" fill="#E0E0E8" transform="translate(88.000000, 2.000000) scale(-1, 1) translate(-88.000000, -2.000000) " cx="88" cy="2" r="2"></circle>
+                    <circle id="Oval-Copy-15" fill="#E0E0E8" transform="translate(271.000000, 79.000000) scale(-1, 1) translate(-271.000000, -79.000000) " cx="271" cy="79" r="2"></circle>
+                    <rect id="Rectangle-Copy-3" fill="#F3F3F6" transform="translate(140.000000, 85.000000) rotate(-7.000000) translate(-140.000000, -85.000000) " x="22" y="66" width="236" height="38" rx="19"></rect>
+                    <rect id="Rectangle-Copy-5" fill="#FFFFFF" transform="translate(78.836542, 91.502418) rotate(-7.000000) translate(-78.836542, -91.502418) " x="38.3365423" y="83.5024185" width="81" height="16" rx="8"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#FFFFFF" transform="translate(201.912265, 76.390620) rotate(-7.000000) translate(-201.912265, -76.390620) " x="192.412265" y="68.3906199" width="19" height="16" rx="8"></rect>
+                    <rect id="Rectangle-Copy-7" fill="#FFFFFF" transform="translate(231.688650, 72.734540) rotate(-7.000000) translate(-231.688650, -72.734540) " x="222.18865" y="64.7345396" width="19" height="16" rx="8"></rect>
+                    <g id="Rectangle-Copy-3" transform="translate(157.000000, 137.000000) rotate(-358.000000) translate(-157.000000, -137.000000) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#E0E0E8" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <rect id="Rectangle-Copy-5" fill="#F3F3F6" transform="translate(111.876285, 135.424245) rotate(-358.000000) translate(-111.876285, -135.424245) " x="81.0518951" y="128.072894" width="61.6487805" height="14.7027027" rx="7.35135135"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#F3F3F6" transform="translate(186.503967, 138.030301) rotate(-358.000000) translate(-186.503967, -138.030301) " x="174.782016" y="130.67895" width="23.4439024" height="14.7027027" rx="7.35135135"></rect>
+                    <rect id="Rectangle-Copy-7" fill="#F3F3F6" transform="translate(221.214517, 139.242420) rotate(-358.000000) translate(-221.214517, -139.242420) " x="209.492566" y="131.891069" width="23.4439024" height="14.7027027" rx="7.35135135"></rect>
+                    <g id="Rectangle-Copy-3" transform="translate(152.000000, 52.000000) rotate(-345.000000) translate(-152.000000, -52.000000) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use stroke="#E0E0E8" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                    <rect id="Rectangle-Copy-5" fill="#F3F3F6" transform="translate(94.656823, 36.117304) rotate(-345.000000) translate(-94.656823, -36.117304) " x="54.1568229" y="26.6173039" width="81" height="19" rx="9.5"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#F3F3F6" transform="translate(189.317554, 61.481570) rotate(-345.000000) translate(-189.317554, -61.481570) " x="173.817554" y="51.9815703" width="31" height="19" rx="9.5"></rect>
+                    <rect id="Rectangle-Copy-7" fill="#F3F3F6" transform="translate(233.750142, 73.387246) rotate(-345.000000) translate(-233.750142, -73.387246) " x="218.250142" y="63.8872464" width="31" height="19" rx="9.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

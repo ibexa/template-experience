@@ -1,0 +1,30 @@
+.ibexa-pc-edit-config-radio-filter {
+    &__action-clear-checked {
+        border: none;
+        outline: none;
+        font-size: $ibexa-text-font-size-medium;
+        text-decoration: underline;
+    }
+
+    &__list {
+        height: calc(100vh - #{calculateRem(200px)});
+        margin: 0 calculateRem(6px);
+        padding: 0;
+        list-style: none;
+        font-size: $ibexa-text-font-size-medium;
+
+        .form-check {
+            margin: calculateRem(8px) 0;
+
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    .ibexa-pc-config-panel {
+        &__body {
+            padding: calculateRem(16px) 0 calculateRem(16px) calculateRem(32px);
+        }
+    }
+}
