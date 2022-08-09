@@ -1,0 +1,49 @@
+.ibexa-modal {
+    &--strategy-edit {
+        .ibexa-input-text-wrapper {
+            width: initial;
+
+            .ibexa-input--text {
+                max-width: initial;
+            }
+        }
+
+        .ibexa-input-text-wrapper--type-number {
+            max-width: calculateRem(96px);
+        }
+
+        .ibexa-modal {
+            .modal-dialog {
+                max-width: calculateRem(600px);
+            }
+
+            &__row-input {
+                margin-bottom: calculateRem(16px);
+
+                .ibexa-label {
+                    display: inline;
+                }
+            }
+
+            &__sub-row-input {
+                margin-top: calculateRem(8px);
+
+                .ibexa-label {
+                    font-size: $ibexa-text-font-size-medium;
+                }
+
+                &--first-level {
+                    margin-left: calculateRem(32px);
+                }
+
+                &--second-level {
+                    margin-left: calculateRem(64px);
+                }
+
+                &--inactive {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}
