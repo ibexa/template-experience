@@ -1,0 +1,24 @@
+.ibexa-ca-company-create-edit {
+    &__billing-address-header {
+        margin-top: calculateRem(48px);
+    }
+
+    .ibexa-field-edit--ibexa_address {
+        .ibexa-field-edit__label-wrapper {
+            display: none;
+        }
+
+        .ibexa-field-edit__data {
+            border: none;
+            padding: 0;
+        }
+
+        .ibexa-input--small,
+        .ibexa-dropdown--small .ibexa-dropdown__selection-info {
+            height: calculateRem(48px);
+            padding-top: calculateRem(6px);
+            padding-bottom: calculateRem(6px);
+            border-radius: $ibexa-border-radius;
+        }
+    }
+}

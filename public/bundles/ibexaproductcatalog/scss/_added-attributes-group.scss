@@ -1,0 +1,108 @@
+.ibexa-pc-added-attributes-group {
+    margin-bottom: calculateRem(8px);
+
+    &__drop-zone {
+        padding: calculateRem(1px);
+    }
+
+    &__list {
+        background-color: transparent;
+    }
+
+    &__list-head-cell {
+        &--icon {
+            width: 9%;
+        }
+
+        &--name {
+            width: 22%;
+        }
+
+        &--type {
+            width: 22%;
+        }
+
+        &--required-bool {
+            width: 16%;
+        }
+
+        &--discriminator {
+            width: 24%;
+        }
+
+        &--action {
+            width: 7%;
+        }
+    }
+
+    &--active {
+        box-shadow: 0 0 0 calculateRem(1px) $ibexa-color-info-400;
+    }
+
+    &--highlight-drop {
+        box-shadow: 0 0 0 calculateRem(1px) $ibexa-color-info-400;
+        background: $ibexa-color-info-100;
+
+        .ibexa-icon {
+            fill: $ibexa-color-info;
+        }
+
+        .ibexa-table {
+            &__header-cell,
+            &__cell {
+                color: $ibexa-color-info;
+            }
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+
+        .ibexa-collapse {
+            &__header {
+                background: $ibexa-color-info-100;
+                border-bottom-color: $ibexa-color-info-400;
+            }
+
+            &__header-label {
+                color: $ibexa-color-info;
+            }
+        }
+    }
+
+    .ibexa-collapse {
+        &__header {
+            box-shadow: $ibexa-content-type-edit-field-shadow;
+        }
+
+        &__extra-action-button {
+            &--remove-attributes-group {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .ibexa-table {
+        table-layout: fixed;
+
+        &__header-cell {
+            padding: calculateRem(16px);
+            background-color: transparent;
+        }
+
+        &__row {
+            background-color: transparent;
+
+            &:nth-child(odd),
+            &:nth-child(even) {
+                .ibexa-table__cell.ibexa-pc-assigned-attribute__item {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &.ibexa-collapse--hidden {
+        margin-bottom: 0;
+    }
+}

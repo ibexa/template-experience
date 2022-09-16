@@ -1,0 +1,13 @@
+.ibexa-pb-fields-config-panel {
+    &--full-screen-field-opened {
+        &.ibexa-pb-config-panel {
+            z-index: 2000;
+        }
+    }
+
+    .ibexa-pb-config-panel {
+        &__body {
+            padding: 0 calculateRem(12px);
+        }
+    }
+}

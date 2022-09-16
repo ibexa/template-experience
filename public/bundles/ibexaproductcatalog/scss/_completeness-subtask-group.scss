@@ -1,0 +1,78 @@
+.ibexa-pc-completeness-subtask-group {
+    position: relative;
+    margin: calculateRem(4px) 0 calculateRem(18px) calculateRem(12px);
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        margin-right: calculateRem(12px);
+        background: radial-gradient($ibexa-color-white 50%, transparent 60%),
+            conic-gradient(transparent 0% 5%, $ibexa-color-success 50% 100%);
+        border: none;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-right: calculateRem(12px);
+        font-size: $ibexa-text-font-size-medium;
+        font-weight: bold;
+    }
+
+    &__status {
+        padding-top: calculateRem(3px);
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__body {
+        margin: calculateRem(6px) 0 calculateRem(6px) calculateRem(36px);
+    }
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: calculateRem(7px);
+        left: calculateRem(5px);
+        display: none;
+        width: calculateRem(14px);
+        height: calculateRem(7px);
+        border-left: calculateRem(1px) solid $ibexa-color-white;
+        border-bottom: calculateRem(1px) solid $ibexa-color-white;
+        transform: rotate(-60deg);
+    }
+
+    &--not-started {
+        .ibexa-pc-completeness-subtask-group {
+            &__icon-wrapper {
+                background: transparent;
+                border: calculateRem(3px) solid $ibexa-color-light;
+            }
+        }
+    }
+
+    &--completed {
+        &::before {
+            display: block;
+        }
+
+        .ibexa-pc-completeness-subtask-group {
+            &__icon-wrapper {
+                background: $ibexa-color-success;
+                border: calculateRem(3px) solid $ibexa-color-success;
+
+                .ibexa-icon {
+                    display: inline-block;
+                    fill: $ibexa-color-white;
+                }
+            }
+        }
+    }
+}
