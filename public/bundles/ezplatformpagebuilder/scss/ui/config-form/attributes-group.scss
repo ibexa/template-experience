@@ -1,0 +1,52 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-block-attributes-group {
+    border-top: calculateRem(1px) solid $ibexa-color-base;
+
+    &__toggler {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        padding: calculateRem(12px) calculateRem(8px);
+
+        &:not(.collapsed) {
+            background-color: $ibexa-color-base-medium;
+
+            & + .ez-btn--remove-group {
+                background-color: $ibexa-color-base-medium;
+            }
+
+            .ez-icon {
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .ez-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        .ez-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+
+    .ez-btn--remove-group {
+        padding-right: calculateRem(8px);
+    }
+
+    &__items {
+        padding: 0 calculateRem(32px) calculateRem(24px);
+        background: $ibexa-color-base-light;
+    }
+
+    &__label {
+        display: flex;
+    }
+}
