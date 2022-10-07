@@ -1,0 +1,111 @@
+.ibexa-pc-product-variants {
+    .ibexa-generate-variants {
+        &__info {
+            font-size: $ibexa-text-font-size-small;
+            color: $ibexa-color-dark-500;
+
+            &--secondary {
+                margin: calculateRem(16px) 0 0 calculateRem(8px);
+            }
+        }
+
+        &__form-spinner {
+            display: none;
+            width: 100%;
+            min-height: calculateRem(150px);
+        }
+
+        &__form {
+            &--sent {
+                .ibexa-generate-variants {
+                    &__form-spinner {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &__form-content {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .modal-dialog {
+            max-width: calculateRem(800px);
+        }
+
+        .modal-body {
+            max-width: calculateRem(800px);
+            padding-bottom: 0;
+        }
+
+        .modal-footer {
+            padding-top: calculateRem(16px);
+            margin-left: calculateRem(8px);
+        }
+
+        .ibexa-table-header {
+            padding-bottom: calculateRem(6px);
+
+            &__headline {
+                font-size: $ibexa-text-font-size-medium;
+            }
+        }
+
+        .ibexa-table-header,
+        .ibexa-scrollable-wrapper {
+            margin-left: calculateRem(8px);
+            margin-right: calculateRem(8px);
+        }
+
+        .ibexa-scrollable-wrapper {
+            max-height: calc(100vh - #{calculateRem(450px)});
+            padding-right: calculateRem(16px);
+        }
+
+        .ibexa-table {
+            margin-top: 0;
+            border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+
+            &__row {
+                > .ibexa-table__cell:first-child {
+                    width: 33%;
+                }
+
+                > .ibexa-table__cell:last-child {
+                    width: 67%;
+                }
+
+                &:last-child {
+                    .ibexa-table__cell {
+                        padding-bottom: calculateRem(38px);
+                    }
+                }
+            }
+
+            &__header-cell {
+                padding-bottom: 0;
+            }
+
+            &__cell {
+                background-color: transparent;
+
+                .ibexa-label {
+                    font-size: $h4-font-size;
+                    color: $ibexa-color-dark;
+                }
+            }
+
+            &__header-cell,
+            &__cell {
+                padding-left: 0;
+                padding-right: 0;
+
+                .ibexa-label {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

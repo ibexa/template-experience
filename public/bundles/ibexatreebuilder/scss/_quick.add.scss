@@ -1,0 +1,13 @@
+.c-tb-quick-add {
+    position: relative;
+    padding: calculateRem(8px);
+    padding-left: calculateRem(24px);
+    margin-left: calculateRem(-2px);
+    z-index: 1000;
+
+    .ibexa-icon {
+        background-color: $ibexa-color-white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
