@@ -1,0 +1,69 @@
+.ibexa-field-edit {
+    &__label {
+        @include label-required();
+    }
+
+    &__data {
+        &--compound {
+            border: calculateRem(1px) solid $ibexa-color-dark-200;
+            border-radius: $ibexa-border-radius;
+            padding: 0 calculateRem(23px) calculateRem(26px);
+        }
+    }
+
+    &__error {
+        color: $ibexa-color-danger;
+    }
+
+    .ibexa-input-text-wrapper {
+        width: auto;
+    }
+
+    .ibexa-form-error {
+        min-height: calculateRem(18px);
+        margin: calculateRem(4px) 0;
+        flex-direction: column;
+    }
+
+    &--nontranslatable,
+    &--disabled {
+        pointer-events: none;
+
+        .ibexa-label {
+            color: $ibexa-color-black-300;
+        }
+
+        &__data {
+            &--compound {
+                border-color: $ibexa-color-light-400;
+            }
+        }
+    }
+}
+
+.ibexa-content-edit {
+    .ibexa-field-edit {
+        padding: calculateRem(24px) 0;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+
+        &__label-wrapper {
+            flex: 0 0 calculateRem(200px);
+
+            .ibexa-field-edit__label {
+                margin: 0;
+                font-size: calculateRem(16px);
+                font-weight: normal;
+                color: $ibexa-color-dark-300;
+            }
+        }
+
+        .ibexa-data-source__label {
+            margin-bottom: calculateRem(10px);
+            color: $ibexa-color-dark-300;
+        }
+
+        &__data {
+            flex: 0 0 calc(100% - #{calculateRem(200px)});
+        }
+    }
+}

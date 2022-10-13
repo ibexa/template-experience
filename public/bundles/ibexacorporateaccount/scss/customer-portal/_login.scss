@@ -1,0 +1,100 @@
+.ibexa-ca-login {
+    height: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    background-image: url('/bundles/ibexacorporateaccount/img/login-background.png');
+    background-position: center;
+    background-size: cover;
+
+    &__info-col {
+        color: $ibexa-color-white;
+        display: flex;
+        flex-direction: column;
+        padding-right: calculateRem(24px);
+        max-height: 90vh;
+    }
+
+    &__info-headline {
+        font-size: calculateRem(60px);
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__actions-col-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: calculateRem(8px) 0 calculateRem(80px) calculateRem(120px);
+    }
+
+    &__actions-col {
+        max-width: calculateRem(350px);
+    }
+
+    &__action-name {
+        padding-bottom: calculateRem(24px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__content-row {
+        justify-content: center;
+        padding: calculateRem(48px) 0;
+    }
+
+    &__headline-bar {
+        width: calculateRem(100px);
+        height: calculateRem(4px);
+        background-image: $ibexa-gradient-danger-primary;
+        margin-top: calculateRem(32px);
+    }
+
+    &__errors-container {
+        margin-top: calculateRem(32px);
+
+        & + .has-error {
+            .ibexa-label {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: calculateRem(16px);
+
+        &--register,
+        &--sign-in {
+            width: 100%;
+            justify-content: center;
+            margin-top: calculateRem(40px);
+        }
+
+        &--back {
+            position: absolute;
+            top: calculateRem(-50px);
+            left: calculateRem(50px);
+            display: flex;
+            align-items: center;
+        }
+
+        &--reset-password {
+            margin-top: calculateRem(32px);
+        }
+    }
+
+    &__link-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: calculateRem(14px);
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__forgot-password-form {
+        margin-top: calculateRem(16px);
+    }
+}

@@ -1,0 +1,6 @@
+.ibexa-pc-product-assets {
+    &__create-collection-modal-attributes-list {
+        max-height: calc(100vh - #{calculateRem(300px)});
+        overflow: auto;
+    }
+}

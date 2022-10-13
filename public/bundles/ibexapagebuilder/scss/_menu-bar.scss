@@ -1,0 +1,65 @@
+.ibexa-pb-menu-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $ibexa-color-dark;
+
+    &__page-builder {
+        display: flex;
+        align-items: center;
+    }
+
+    &__close-btn-wrapper {
+        padding: calculateRem(10px);
+        margin-right: calculateRem(32px);
+        border-right: calculateRem(1px) solid rgba($ibexa-color-info, 0.4);
+    }
+
+    &__page-builder-name {
+        color: $ibexa-color-white;
+        font-family: $headings-font-family;
+        font-size: calculateRem(28px);
+        font-weight: 600;
+        line-height: calculateRem(42px);
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    &__autosave-wrapper {
+        margin-left: calculateRem(48px);
+        padding-top: calculateRem(4px);
+    }
+
+    &__menu {
+        z-index: 650;
+        padding: calculateRem(10px);
+        width: calc(100vw - #{calculateRem(450px)});
+    }
+
+    .ibexa-btn--secondary {
+        color: $ibexa-color-white;
+        fill: $ibexa-color-white;
+        background-color: $ibexa-color-dark;
+        border-color: $ibexa-color-dark;
+
+        &:hover {
+            color: $ibexa-color-white;
+            fill: $ibexa-color-white;
+            background-color: $ibexa-color-dark;
+            box-shadow: 0 0 0 transparent, $ibexa-btn-hover-box-shadow-dark;
+
+            &:focus {
+                box-shadow: $ibexa-btn-focus-box-shadow, $ibexa-btn-hover-box-shadow-dark;
+            }
+        }
+
+        &.disabled,
+        &[disabled],
+        &:disabled {
+            color: $ibexa-color-dark-400;
+            fill: $ibexa-color-dark-400;
+            background-color: $ibexa-color-light;
+            border-color: $ibexa-color-light;
+            box-shadow: none;
+        }
+    }
+}
