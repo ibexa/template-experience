@@ -1,0 +1,103 @@
+.ibexa-pc-progress-bar {
+    display: flex;
+    height: calculateRem(22px);
+    align-items: center;
+
+    &__value {
+        position: relative;
+        width: 100%;
+        height: calculateRem(8px);
+        margin-right: calculateRem(12px);
+        border-radius: $ibexa-border-radius-small;
+        background: linear-gradient(90deg, $ibexa-color-warning 0%, $ibexa-color-accent 50%, $ibexa-color-success 100%);
+        overflow: hidden;
+    }
+
+    &__value-mask {
+        position: absolute;
+        top: 0;
+        right: calculateRem(-1px);
+        height: calculateRem(8px);
+        border-radius: $ibexa-border-radius-small;
+        background-image: radial-gradient(
+            circle at calculateRem(4px) calculateRem(4px),
+            rgba($ibexa-color-black, 0) 0,
+            rgba($ibexa-color-black, 0) calculateRem(4px),
+            $ibexa-color-light calculateRem(4px)
+        );
+    }
+
+    &__label {
+        white-space: nowrap;
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__completed-msg-wrapper {
+        display: none;
+
+        .ibexa-icon {
+            fill: $ibexa-color-success;
+        }
+    }
+
+    &__completed-msg {
+        color: $ibexa-color-success;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &--task {
+        .ibexa-pc-progress-bar {
+            &__value {
+                height: calculateRem(4px);
+            }
+
+            &__value-mask {
+                height: calculateRem(4px);
+                background-image: radial-gradient(
+                    circle at calculateRem(2px) calculateRem(2px),
+                    rgba($ibexa-color-black, 0) 0,
+                    rgba($ibexa-color-black, 0) calculateRem(2px),
+                    $ibexa-color-light calculateRem(2px)
+                );
+            }
+        }
+    }
+
+    &--collapsed-task {
+        height: calculateRem(4px);
+
+        .ibexa-pc-progress-bar {
+            &__value {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    &--completed {
+        .ibexa-pc-progress-bar {
+            &__value,
+            &__label {
+                display: none;
+            }
+
+            &__completed-msg-wrapper {
+                display: block;
+            }
+        }
+    }
+
+    &--not-started {
+        .ibexa-pc-progress-bar {
+            &__value {
+                background: none;
+            }
+
+            &__value-mask {
+                background-image: none;
+                background-color: $ibexa-color-light;
+            }
+        }
+    }
+}
