@@ -1,0 +1,122 @@
+.ibexa-pc-edit-catalog-filters {
+    &__configured {
+        margin-top: calculateRem(12px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        background: $ibexa-color-white;
+
+        &--list-rolled-up {
+            .ibexa-pc-edit-catalog-filters {
+                &__configured-header {
+                    border-bottom: 0;
+                }
+
+                &__configured-list {
+                    padding: 0;
+                    height: 0;
+                    min-height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    &__configured-header {
+        display: flex;
+        justify-content: space-between;
+        padding: calculateRem(8px) calculateRem(23px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        font-weight: 600;
+    }
+
+    &__configured-header-title-tooltip {
+        margin-left: calculateRem(12px);
+    }
+
+    &__configured-header-actions {
+        display: flex;
+
+        .ibexa-dropdown {
+            width: initial;
+            min-width: initial;
+
+            &__selection-info {
+                padding: 0;
+                border: 0;
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__selected-item {
+                margin: 0;
+            }
+        }
+    }
+
+    &__dropdown-items {
+        .ibexa-dropdown__item-check {
+            display: none;
+        }
+
+        .ibexa-input-text-wrapper--search {
+            max-width: calculateRem(200px);
+        }
+    }
+
+    &__dropdown-filter-item {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__configured-header-title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__configured-header-actions-separator {
+        width: calculateRem(1px);
+        height: calculateRem(48px);
+        margin: 0 calculateRem(16px) 0 calculateRem(23px);
+        background: $ibexa-color-light;
+    }
+
+    &__configured-header-toggler {
+        position: relative;
+        border: none;
+        outline: none;
+        padding-right: calculateRem(18px);
+        font-size: $ibexa-text-font-size-medium;
+
+        &--list-rolled-up {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: calculateRem(20px);
+            right: 0;
+            border-left: calculateRem(5px) solid transparent;
+            border-right: calculateRem(5px) solid transparent;
+            border-top: calculateRem(5px) solid $ibexa-color-black;
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        }
+    }
+
+    &__configured-list {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: calculateRem(48px);
+        padding: calculateRem(8px) calculateRem(23px) calculateRem(23px);
+    }
+
+    &__available {
+        position: relative;
+    }
+}

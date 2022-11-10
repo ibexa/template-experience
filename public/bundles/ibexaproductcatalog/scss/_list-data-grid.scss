@@ -1,0 +1,48 @@
+.ibexa-pc-data-grid {
+    margin-top: calculateRem(32px);
+    margin-bottom: calculateRem(72px);
+
+    &__delete-button {
+        .ibexa-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+
+    &__image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(64px);
+        height: calculateRem(64px);
+    }
+
+    &__image {
+        max-width: calculateRem(64px);
+        max-height: calculateRem(64px);
+    }
+
+    &__availability-info {
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+        border-radius: 50%;
+        background-color: $ibexa-color-success;
+
+        &--not-available {
+            background-color: $ibexa-color-light-600;
+        }
+    }
+
+    &__sort-order {
+        border-left: calculateRem(2px) solid $ibexa-color-light;
+        padding-left: calculateRem(21px);
+    }
+
+    &__sort-order-dropdown {
+        width: calculateRem(200px);
+
+        .ibexa-dropdown__selection-info {
+            padding-left: 0;
+            border: none;
+        }
+    }
+}

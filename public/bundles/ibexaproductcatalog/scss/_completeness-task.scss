@@ -1,0 +1,114 @@
+.ibexa-pc-completeness-task {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    width: 50%;
+    min-width: calculateRem(510px);
+    max-width: calculateRem(820px);
+    border-radius: $ibexa-border-radius;
+    margin-bottom: calculateRem(16px);
+
+    &__header {
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(19px) calculateRem(-10px) rgba($ibexa-color-info, 0.05);
+        overflow: hidden;
+    }
+
+    &__header-top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: calculateRem(6px) calculateRem(24px);
+    }
+
+    &__header-label {
+        display: flex;
+    }
+
+    &__header-title {
+        margin-right: calculateRem(8px);
+        font-size: $ibexa-text-font-size-medium;
+        font-weight: bold;
+    }
+
+    &__header-status {
+        display: flex;
+        align-items: center;
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+        font-weight: normal;
+        opacity: 0;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &__header-progress-tasks-counter {
+        display: flex;
+        align-items: center;
+        margin-right: calculateRem(8px);
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__header-bottom-row {
+        height: calculateRem(4px);
+        overflow: hidden;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &__body-progress-wrapper {
+        padding: calculateRem(8px) calculateRem(30px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__body-tasks-wrapper {
+        padding: calculateRem(8px) calculateRem(30px);
+    }
+
+    .ibexa-pc-progress-bar--collapsed-task {
+        opacity: 0;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &.ibexa-collapse--collapsed {
+        border-bottom: none;
+        overflow: hidden;
+
+        .ibexa-pc-progress-bar--collapsed-task {
+            opacity: 1;
+        }
+    }
+
+    &--not-started,
+    &--completed {
+        &.ibexa-collapse--collapsed {
+            .ibexa-pc-completeness-task {
+                &__header-status {
+                    opacity: 1;
+                }
+
+                &__header-bottom-row {
+                    height: 0;
+                }
+            }
+        }
+    }
+
+    &--completed {
+        .ibexa-pc-completeness-task__header-status {
+            color: $ibexa-color-success;
+        }
+    }
+
+    &:not(.ibexa-collapse--collapsed) {
+        .ibexa-pc-completeness-task {
+            &__header-bottom-row {
+                height: 0;
+            }
+
+            &__toggle-btn {
+                .ibexa-icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
