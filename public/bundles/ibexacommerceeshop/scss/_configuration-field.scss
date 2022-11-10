@@ -1,0 +1,9 @@
+.ibexa-configuration-field {
+    &--boolean {
+        .ibexa-data-source {
+            &__value {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<svg width="378" height="269" viewBox="0 0 378 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ilu_empty table">
+<rect id="Rectangle Copy 3" y="65" width="236" height="38" rx="19" fill="#F3F3F6"/>
+<rect id="Rectangle Copy 5" x="16" y="75" width="81" height="16" rx="8" fill="white"/>
+<rect id="Rectangle Copy 6" x="171" y="75" width="19" height="16" rx="8" fill="white"/>
+<rect id="Rectangle Copy 7" x="201" y="75" width="19" height="16" rx="8" fill="white"/>
+<g id="Rectangle" filter="url(#filter0_d_0_90)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56.9789 100.309C54.2273 95.5303 55.8629 89.4262 60.635 86.6638L141.212 40.0211C146 37.2498 152.128 38.8918 154.888 43.6854L209.021 137.691C211.773 142.47 210.137 148.574 205.365 151.336L124.788 197.979C120 200.75 113.872 199.108 111.112 194.314L56.9789 100.309Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56.9789 100.309C54.2273 95.5303 55.8629 89.4262 60.635 86.6638L141.212 40.0211C146 37.2498 152.128 38.8918 154.888 43.6854L209.021 137.691C211.773 142.47 210.137 148.574 205.365 151.336L124.788 197.979C120 200.75 113.872 199.108 111.112 194.314L56.9789 100.309Z" stroke="#E0E0E8"/>
+</g>
+<path id="Rectangle Copy 4" fill-rule="evenodd" clip-rule="evenodd" d="M284.021 89.3087C286.773 84.5303 285.137 78.4262 280.365 75.6638L199.788 29.0211C195 26.2498 188.872 27.8918 186.112 32.6854L167.883 64.3415L167.808 158.959L216.212 186.979C221 189.75 227.128 188.108 229.888 183.314L284.021 89.3087Z" fill="#ECECF1"/>
+<path id="Rectangle Copy 2" fill-rule="evenodd" clip-rule="evenodd" d="M74.434 104.808C71.6824 100.029 73.318 93.9252 78.0902 91.1627L136.915 57.1116C141.702 54.3404 147.83 55.9823 150.591 60.776L179.078 110.247C181.83 115.025 180.194 121.129 175.422 123.892L116.597 157.943C111.81 160.714 105.682 159.072 102.922 154.278L74.434 104.808Z" fill="#ECECF1"/>
+<path id="Rectangle Copy 8" fill-rule="evenodd" clip-rule="evenodd" d="M264.078 93.8076C266.83 89.0292 265.194 82.9252 260.422 80.1627L201.597 46.1116C196.81 43.3404 190.682 44.9823 187.922 49.776L167.637 85.001L167.474 115.429L221.915 146.943C226.702 149.714 232.83 148.072 235.591 143.278L264.078 93.8076Z" fill="white"/>
+<g id="Rectangle Copy 3_2" filter="url(#filter1_d_0_90)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.732 145H310C318.836 145 326 152.163 326 161C326 169.837 318.836 177 310 177H167.835L167.732 145Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.732 145H310C318.836 145 326 152.163 326 161C326 169.837 318.836 177 310 177H167.835L167.732 145Z" stroke="#E0E0E8"/>
+</g>
+<path id="Rectangle Copy 5_2" d="M167.5 153.649H215.322C219.382 153.649 222.673 156.94 222.673 161C222.673 165.06 219.382 168.351 215.322 168.351H167.5V153.649Z" fill="#F3F3F6"/>
+<rect id="Rectangle Copy 6_2" x="254.8" y="153.649" width="23.4439" height="14.7027" rx="7.35135" fill="#F3F3F6"/>
+<rect id="Rectangle Copy 7_2" x="289.532" y="153.649" width="23.4439" height="14.7027" rx="7.35135" fill="#F3F3F6"/>
+<g id="Line">
+<mask id="path-13-inside-1_0_90" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M168 0L167.5 241.5L168 0Z"/>
+</mask>
+<path d="M167 -0.00207039L166.5 241.498L168.5 241.502L169 0.00207039L167 -0.00207039Z" fill="#E0E0E8" mask="url(#path-13-inside-1_0_90)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_90" x="12.1431" y="13.1739" width="249.714" height="255.652" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="22"/>
+<feGaussianBlur stdDeviation="23.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.247059 0 0 0 0 1 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_90"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_90" result="shape"/>
+</filter>
+<filter id="filter1_d_0_90" x="124.231" y="119.5" width="253.269" height="127" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="22"/>
+<feGaussianBlur stdDeviation="23.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.247059 0 0 0 0 1 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_90"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_90" result="shape"/>
+</filter>
+</defs>
+</svg>

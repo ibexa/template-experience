@@ -1,0 +1,38 @@
+.ibexa-pc-edit-config-number-range-filter {
+    &__widget {
+        display: flex;
+        width: 80%;
+    }
+
+    &__field {
+        flex: 1;
+
+        .ibexa-label {
+            margin-top: 0;
+        }
+
+        .ibexa-pc-edit__form-field {
+            margin-bottom: 0;
+        }
+
+        .ibexa-input-text-wrapper {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__separator {
+        display: inline-flex;
+        align-items: flex-end;
+        width: calculateRem(30px);
+        margin-bottom: calculateRem(4px);
+    }
+
+    &__separator-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calculateRem(32px);
+        width: calculateRem(30px);
+    }
+}
