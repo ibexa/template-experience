@@ -1,0 +1,12 @@
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-pb-block-radio-field {
+    .form-check {
+        display: flex;
+    }
+
+    .form-check-input {
+        margin-right: calculateRem(4px);
+    }
+}
