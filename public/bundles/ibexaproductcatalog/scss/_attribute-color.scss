@@ -1,0 +1,18 @@
+.ibexa-attribute-edit--color {
+    .ibexa-attribute-edit {
+        &__input-wrapper {
+            display: flex;
+        }
+
+        &__hex-value {
+            display: flex;
+            align-items: center;
+            height: calculateRem(42px);
+            margin-left: calculateRem(8px);
+        }
+    }
+
+    .ibexa-input {
+        min-width: calculateRem(90px);
+    }
+}
