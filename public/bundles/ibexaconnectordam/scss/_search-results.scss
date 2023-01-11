@@ -1,0 +1,43 @@
+.ibexa-dam-search-results {
+    margin: calculateRem(16px) 0;
+    height: calc(100% - #{calculateRem(128px)});
+    overflow-y: auto;
+
+    &__content {
+        margin-top: calculateRem(24px);
+        column-gap: calculateRem(16px);
+        column-fill: initial;
+        column-width: calculateRem(256px);
+
+        & > * {
+            margin-bottom: calculateRem(16px);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ibexa-dam-search-result__item {
+            background-color: $ibexa-color-primary;
+            cursor: pointer;
+
+            img {
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    &--error {
+        height: initial;
+
+        .ibexa-dam-search-results__content {
+            font-style: italic;
+            color: $ibexa-color-warning;
+            font-size: $ibexa-text-font-size;
+        }
+    }
+}

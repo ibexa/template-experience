@@ -1,0 +1,7 @@
+.ibexa-perso-submodel {
+    &__content {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin: calculateRem(32px) 0;
+    }
+}

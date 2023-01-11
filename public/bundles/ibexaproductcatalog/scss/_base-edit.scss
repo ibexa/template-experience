@@ -1,0 +1,24 @@
+.ibexa-pc-edit {
+    &__form-field {
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__product-availability-row {
+        max-width: calculateRem(400px);
+        padding-bottom: calculateRem(32px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__product-stock-row {
+        margin-bottom: calculateRem(4px);
+    }
+
+    .ibexa-dropdown,
+    .ibexa-input--textarea {
+        width: 80%;
+    }
+
+    .ibexa-input-text-wrapper {
+        width: 80%;
+    }
+}

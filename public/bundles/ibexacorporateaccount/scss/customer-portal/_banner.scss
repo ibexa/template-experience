@@ -1,0 +1,10 @@
+.ibexa-ca-banner {
+    background-image: url('/bundles/ibexacorporateaccount/img/registration-banner-background.png');
+    background-size: cover;
+    background-position: bottom;
+    color: $ibexa-color-white;
+
+    &__container {
+        display: flex;
+    }
+}

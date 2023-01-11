@@ -1,0 +1,5 @@
+.ibexa-perso-segment-group-item-placeholder {
+    @include drag-item-placeholder-full;
+
+    height: calculateRem(50px);
+}
