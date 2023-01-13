@@ -1,0 +1,13 @@
+.ibexa-sf-edit-widget {
+    &.is-invalid {
+        .ibexa-tag-view-select,
+        .ibexa-sf-form-languages {
+            border: calculateRem(1px) solid $ibexa-color-danger;
+            background-color: $ibexa-color-danger-100;
+
+            &__info {
+                color: $ibexa-color-danger;
+            }
+        }
+    }
+}

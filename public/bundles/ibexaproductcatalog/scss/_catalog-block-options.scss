@@ -1,0 +1,87 @@
+.ibexa-catalog-block-options {
+    display: flex;
+    flex-direction: column;
+    padding: calculateRem(24px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+
+    &__toolbar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: calculateRem(12px);
+        padding-bottom: calculateRem(18px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+
+    &__toolbar-title {
+        display: flex;
+        align-items: center;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__list-labels {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: calculateRem(12px);
+        padding: 0 calculateRem(48px);
+        margin-bottom: calculateRem(8px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__toolbar-actions {
+        display: inline-flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    &__list-label {
+        font-size: $ibexa-text-font-size-small;
+        margin-left: calculateRem(5px);
+    }
+
+    &__option {
+        display: grid;
+        grid-template-columns: calculateRem(40px) repeat(1, 1fr) calculateRem(40px);
+        align-items: center;
+        column-gap: calculateRem(8px);
+        margin-bottom: calculateRem(4px);
+        padding: calculateRem(8px) 0;
+        border-radius: $ibexa-border-radius-small;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        list-style: none;
+
+        &--added {
+            background: $ibexa-color-info-100;
+
+            .ibexa-input {
+                border-color: $ibexa-color-info;
+            }
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+    }
+
+    &__option-checkbox-container {
+        display: flex;
+        justify-content: center;
+        padding-top: calculateRem(2px);
+    }
+
+    &__option-value-input {
+        display: flex;
+
+        & .form-group {
+            width: 100%;
+
+            &:first-child {
+                margin-right: calculateRem(12px);
+            }
+        }
+    }
+}
