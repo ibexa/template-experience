@@ -1,0 +1,19 @@
+.ibexa-configuration-field-array {
+    &__item {
+        display: flex;
+    }
+
+    &__inputs {
+        width: calc(100% - #{calculateRem(38px)});
+        display: flex;
+    }
+
+    &__input {
+        min-width: calculateRem(220px);
+        padding-right: calculateRem(4px);
+    }
+
+    &__actions {
+        width: calculateRem(38px);
+    }
+}
