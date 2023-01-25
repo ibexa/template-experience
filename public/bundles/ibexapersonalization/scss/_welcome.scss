@@ -1,0 +1,221 @@
+.ibexa-main-container--perso-welcome {
+    background-image: url('/bundles/ibexapersonalization/img/welcome-background.svg');
+    background-size: cover;
+}
+
+.ibexa-modal--terms-and-condition {
+    .modal-dialog {
+        max-height: 90vh;
+    }
+
+    .ibexa-modal {
+        &__left-sidebar {
+            background-color: $ibexa-color-light-100;
+            padding: 0;
+            border-right: calculateRem(1px) solid $ibexa-color-light;
+        }
+
+        &__close-button {
+            margin: calculateRem(16px) calculateRem(22px) 0 0;
+            opacity: 1;
+        }
+
+        &__close-btn-wrapper {
+            height: calculateRem(86px);
+            display: flex;
+            align-items: center;
+            padding-left: calculateRem(24px);
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+
+        &__content {
+            padding: 0;
+        }
+
+        &__content-container {
+            padding: 0;
+        }
+
+        &__content-terms {
+            max-height: 56vh;
+            overflow: auto;
+            margin-left: calculateRem(64px);
+        }
+
+        &__content-title {
+            margin: calculateRem(30px) 0 calculateRem(24px) calculateRem(64px);
+        }
+
+        &__table-of-contents {
+            padding: calculateRem(24px);
+            background: $ibexa-color-light-200;
+        }
+
+        &__table-of-contents-title {
+            color: $ibexa-color-dark-400;
+            font-size: $ibexa-text-font-size-medium;
+            margin-left: calculateRem(24px);
+            margin-bottom: calculateRem(20px);
+            display: inline-block;
+        }
+
+        &__table-of-contents-list-item {
+            display: flex;
+            align-items: center;
+            padding: calculateRem(6px) 0;
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                height: calculateRem(2px);
+                width: calculateRem(16px);
+                background-color: $ibexa-color-dark;
+                margin-right: calculateRem(10px);
+                opacity: 0;
+                transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+            }
+
+            &--active {
+                &::before {
+                    opacity: 1;
+                }
+
+                .ibexa-modal__table-of-contents-list-link {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__table-of-contents-list-link {
+            text-decoration: none;
+
+            &:focus {
+                color: $ibexa-color-dark;
+            }
+        }
+
+        &__content-terms {
+            padding-right: calculateRem(32px);
+        }
+
+        &__content-terms-section-title {
+            font-size: $ibexa-text-font-size;
+            margin-bottom: calculateRem(16px);
+        }
+
+        &__content-terms-subsection-title {
+            font-size: $ibexa-text-font-size;
+        }
+
+        &__content-terms-description {
+            margin-bottom: calculateRem(42px);
+        }
+
+        &__content-actions {
+            display: flex;
+            border-top: calculateRem(1px) solid $ibexa-color-light;
+            height: calculateRem(96px);
+            align-items: center;
+            padding-left: calculateRem(64px);
+            padding-right: calculateRem(16px);
+            box-shadow: calculateRem(4px) calculateRem(2px) calculateRem(17px) 0 rgba($ibexa-color-black, 0.05);
+        }
+
+        &__cancel-btn {
+            margin-left: calculateRem(16px);
+        }
+
+        &__download-btn {
+            margin-left: auto;
+        }
+    }
+}
+
+.ibexa-perso-welcome {
+    display: flex;
+    width: 100%;
+    overflow-y: auto;
+    font-size: $ibexa-text-font-size-medium;
+    padding: calculateRem(32px);
+
+    &__container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: calculateRem(800px);
+    }
+
+    &__actions {
+        display: flex;
+        margin-right: calculateRem(64px);
+        color: $ibexa-color-dark;
+        border-radius: $ibexa-border-radius;
+        border: solid calculateRem(1px) $ibexa-color-light;
+        background-color: $ibexa-color-white;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.05);
+        padding: calculateRem(65px) calculateRem(40px) calculateRem(46px) calculateRem(40px);
+
+        .ibexa-input-text-wrapper {
+            max-width: calculateRem(320px);
+        }
+    }
+
+    &__title-row {
+        margin-bottom: calculateRem(70px);
+    }
+
+    &__description-row {
+        margin-bottom: calculateRem(40px);
+    }
+
+    &__activation-status-title,
+    &__activation-status-subtitle,
+    &__activation-status-question,
+    &__invalid-key-title,
+    &__form-title {
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__form-subtitle {
+        width: 90%;
+    }
+
+    &__activation-status-question {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__terms-description {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-300;
+    }
+
+    &__accept-terms-container {
+        display: flex;
+        margin-top: calculateRem(12px);
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__accept-terms-checkbox {
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+        margin-right: calculateRem(8px);
+    }
+
+    &__send-button {
+        margin-top: calculateRem(24px);
+    }
+
+    &__find-out-more {
+        .ibexa-link {
+            display: inline-flex;
+        }
+    }
+
+    &__separator {
+        margin: calculateRem(32px) 0;
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+}

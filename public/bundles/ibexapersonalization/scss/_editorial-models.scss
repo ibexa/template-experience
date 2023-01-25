@@ -1,0 +1,34 @@
+.ibexa-perso-editorial-models {
+    margin-top: calculateRem(16px);
+
+    &__actions-wrapper {
+        padding: calculateRem(16px) calculateRem(30px);
+        border: calculateRem(1px) solid $ibexa-color-dark-200;
+        border-radius: $ibexa-border-radius;
+    }
+
+    &__search-input {
+        margin-top: calculateRem(16px);
+    }
+
+    &__field-label {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__btn {
+        margin: calculateRem(12px) 0 calculateRem(24px);
+    }
+
+    &__no-items {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__items {
+        margin-top: calculateRem(8px);
+    }
+
+    &__item {
+        display: inline-block;
+    }
+}
