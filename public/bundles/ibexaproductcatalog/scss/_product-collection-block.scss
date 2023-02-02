@@ -1,0 +1,130 @@
+.ibexa-pb-block-config--product-collection {
+    .ibexa-field-edit__label-wrapper {
+        display: flex;
+    }
+}
+
+.ibexa-pb-product-collection {
+    display: flex;
+    flex-direction: column;
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(24px) calculateRem(22px);
+
+    &__actions-container {
+        width: 100%;
+    }
+
+    &__title {
+        margin-left: calculateRem(3px);
+        font-size: $ibexa-text-font-size-medium;
+        color: $ibexa-color-dark;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        padding-top: calculateRem(25px);
+
+        .ibexa-input-text-wrapper {
+            flex-grow: 1;
+        }
+    }
+
+    &__product-code-input {
+        padding-right: calculateRem(80px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__or {
+        padding: calculateRem(18px);
+    }
+
+    &__error {
+        margin-bottom: calculateRem(-18px);
+
+        &--hidden {
+            display: none;
+        }
+
+        &--already-added,
+        .ibexa-alert {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list-container {
+        margin-top: calculateRem(18px);
+        padding: 0 calculateRem(17px) calculateRem(15px);
+        background-color: $ibexa-color-light-100;
+        border-radius: $ibexa-border-radius;
+    }
+
+    &__list-wrapper {
+        border-top: calculateRem(1px) solid $ibexa-color-dark-200;
+
+        & > .ibexa-pb-product-collection__no-products {
+            display: none;
+        }
+
+        &--no-items {
+            & > .ibexa-pb-product-collection__no-products {
+                display: flex;
+            }
+
+            & > :not(.ibexa-pb-product-collection__no-products) {
+                display: none;
+            }
+        }
+    }
+
+    &__list-header {
+        font-size: $ibexa-text-font-size-medium;
+        color: $ibexa-color-dark;
+        margin: calculateRem(8px) calculateRem(3px);
+    }
+
+    &__list-labels {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: calculateRem(20px);
+        padding: calculateRem(20px) calculateRem(48px) calculateRem(10px);
+    }
+
+    &__list-label {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-400;
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__hidden-inputs-list {
+        padding: 0;
+        display: none;
+    }
+
+    &__no-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: calculateRem(20px);
+    }
+
+    &__no-products-image {
+        width: calculateRem(200px);
+    }
+
+    &__no-products-label {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+        width: calculateRem(165px);
+        margin-left: calculateRem(20px);
+    }
+}

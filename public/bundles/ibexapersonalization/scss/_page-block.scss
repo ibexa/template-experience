@@ -1,0 +1,32 @@
+.ibexa-personalized-block,
+.ibexa-dynamic-targeting-block,
+.ibexa-last-viewed-block,
+.ibexa-last-purchased-block,
+.ibexa-recently-added-block {
+    .ibexa-recommendation {
+        border: 0 none;
+        display: flex;
+
+        &--horizontal {
+            .block {
+                min-height: calculateRem(110px);
+                width: 33.3333%;
+                border: calculateRem(1px) solid $ibexa-color-light-500;
+                padding: 0;
+                margin: calculateRem(5px);
+            }
+        }
+
+        &__thumbnail {
+            background: $ibexa-color-light center;
+            background-size: cover;
+        }
+
+        &__data-placeholder {
+            background: $ibexa-color-white url('/bundles/ibexapersonalization/images/placeholder.png') left no-repeat;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
