@@ -1,0 +1,17 @@
+.ibexa-pb-iframe-backdrop {
+    display: none;
+}
+
+.ibexa-pb-app--iframe-backdrop-visible {
+    -webkit-user-select: none; // fix for safari to not select element in background while dragging.
+
+    .ibexa-pb-iframe-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 490;
+    }
+}

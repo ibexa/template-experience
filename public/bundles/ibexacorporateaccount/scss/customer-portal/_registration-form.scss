@@ -1,0 +1,30 @@
+.ibexa-ca-registration-form {
+    max-width: calculateRem(1200px);
+    padding: 0 calculateRem(64px);
+    margin: calculateRem(64px) auto;
+
+    &__fields {
+        max-width: calculateRem(650px);
+    }
+
+    &__title {
+        margin-top: calculateRem(64px);
+    }
+
+    &__submit-btn {
+        margin-top: calculateRem(32px);
+    }
+
+    .ibexa-field-edit--ibexa_address {
+        @include ibexa-address-edit-styles;
+    }
+
+    .ibexa-field-edit .ibexa-form-error {
+        min-height: 0;
+    }
+
+    .ibexa-label.ibexa-field-edit__label,
+    .ibexa-label.ibexa-data-source__label {
+        margin-top: 0;
+    }
+}

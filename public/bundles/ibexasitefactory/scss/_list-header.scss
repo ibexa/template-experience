@@ -1,0 +1,25 @@
+.ibexa-site-factory-header {
+    display: flex;
+    margin-bottom: calculateRem(24px);
+
+    &__col {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        &--create {
+            justify-content: flex-end;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                color: $ibexa-color-primary;
+                text-decoration: none;
+            }
+
+            .ibexa-icon {
+                margin-right: calculateRem(3px);
+            }
+        }
+    }
+}
