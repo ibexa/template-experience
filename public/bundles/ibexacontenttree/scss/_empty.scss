@@ -1,0 +1,19 @@
+.c-ct-empty {
+    background-color: rgba($ibexa-color-info-100, 0.8);
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(16px);
+    display: flex;
+
+    &__badge {
+        padding: calculateRem(12px);
+    }
+
+    &__content {
+        padding-left: calculateRem(16px);
+        color: $ibexa-color-info;
+    }
+
+    .c-tb-width-container--collapsed & {
+        display: none;
+    }
+}

@@ -1,0 +1,61 @@
+.ibexa-perso-details {
+    &__intro {
+        margin-bottom: calculateRem(20px);
+    }
+
+    &__credentials {
+        padding: calculateRem(20px) calculateRem(25px) calculateRem(5px);
+        background-color: $ibexa-color-light-300;
+        border-radius: $ibexa-border-radius;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        list-style: none;
+        margin-bottom: calculateRem(20px);
+    }
+
+    &__text {
+        display: inline-flex;
+        align-items: center;
+        height: calculateRem(32px);
+    }
+
+    &__subtitle {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+        margin-bottom: calculateRem(4px);
+    }
+
+    &__key {
+        font-size: $ibexa-text-font-size;
+        font-weight: $ibexa-font-weight-bold;
+        margin-bottom: 0;
+        margin-right: calculateRem(5px);
+    }
+
+    &__copy-button {
+        .ibexa-perso-details__text--copied > & {
+            display: none;
+        }
+    }
+
+    &__copy-confirmation-icon,
+    &__copy-confirmation-text {
+        display: none;
+
+        .ibexa-perso-details__text--copied > & {
+            display: block;
+        }
+    }
+
+    &__copy-confirmation-text {
+        color: $ibexa-color-success;
+        margin-bottom: 0;
+    }
+
+    &__copy-confirmation-icon {
+        fill: $ibexa-color-success;
+        margin: calculateRem(-4px) calculateRem(10px) 0;
+    }
+}

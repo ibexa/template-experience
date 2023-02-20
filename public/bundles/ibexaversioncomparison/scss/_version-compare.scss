@@ -1,0 +1,95 @@
+.ibexa-version-compare {
+    display: flex;
+    padding: calculateRem(8px) 0 0;
+    margin-top: calculateRem(-8px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-top: 0;
+
+    &__content-wrapper {
+        width: 50%;
+
+        &--first {
+            background-color: $ibexa-color-light-200;
+
+            .ibexa-table-header,
+            .table {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .ibexa-icon {
+        &--removed {
+            fill: $ibexa-color-version-compare-removed;
+        }
+
+        &--added {
+            fill: $ibexa-color-version-compare-added;
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+        .ibexa-content-field {
+            .ibexa-content-field-name {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__field-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: calculateRem(8px);
+
+        & > .ibexa-icon {
+            flex-basis: calculateRem(72px);
+        }
+
+        .ibexa-content-field {
+            flex-basis: 100%;
+        }
+
+        &--changed {
+            background-color: $ibexa-color-info-100;
+
+            & > .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+
+        &--was-empty {
+            background-color: $ibexa-color-success-100;
+
+            & > .ibexa-icon {
+                fill: $ibexa-color-success;
+            }
+        }
+
+        &--is-empty {
+            background-color: $ibexa-color-light-400;
+        }
+    }
+
+    &__no-version-selected {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: $ibexa-color-dark-400;
+    }
+
+    &__no-version-info-text {
+        margin-bottom: calculateRem(16px);
+        font-weight: $headings-font-weight;
+        font-family: $headings-font-family;
+        font-size: $ibexa-text-font-size-extra-large;
+    }
+
+    &__no-version-action-text {
+        margin-bottom: calculateRem(16px);
+    }
+}
