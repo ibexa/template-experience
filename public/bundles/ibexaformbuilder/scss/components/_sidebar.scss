@@ -1,0 +1,16 @@
+.c-ibexa-fb-sidebar {
+    @include sidebar-drag-items;
+
+    margin: 0 auto;
+    height: calc(100vh - #{calculateRem(81px)});
+
+    &__search-bar {
+        position: relative;
+
+        .ibexa-icon {
+            position: absolute;
+            top: 37%;
+            right: calculateRem(45px);
+        }
+    }
+}
