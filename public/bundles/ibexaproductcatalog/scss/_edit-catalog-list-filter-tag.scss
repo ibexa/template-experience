@@ -1,0 +1,19 @@
+.ibexa-pc-edit-catalog-list-filter-tag {
+    display: inline-block;
+    margin-right: calculateRem(4px);
+    padding: calculateRem(2px) calculateRem(32px) calculateRem(2px) calculateRem(8px);
+
+    .ibexa-tag {
+        &__content {
+            white-space: nowrap;
+        }
+
+        &__remove-btn {
+            top: calculateRem(8px);
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}
