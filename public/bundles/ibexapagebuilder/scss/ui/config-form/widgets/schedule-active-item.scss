@@ -1,0 +1,48 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-pb-schedule-active-item {
+    @include drag-item;
+
+    margin-bottom: calculateRem(8px);
+
+    &__label {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__left-col {
+        flex-wrap: wrap;
+    }
+
+    &__error {
+        flex-basis: 100%;
+        color: $ibexa-color-danger;
+        font-size: $ibexa-text-font-size-small;
+        display: none;
+    }
+
+    &--is-unavailable {
+        .ibexa-pb-schedule-active-item__error {
+            display: block;
+        }
+
+        .ibexa-pb-schedule-active-item__change-airtime {
+            .ibexa-btn--change-airtime {
+                cursor: not-allowed;
+            }
+
+            .ibexa-icon {
+                fill: $ibexa-color-dark-300;
+            }
+        }
+    }
+
+    &--drag-disabled {
+        cursor: auto;
+
+        .ibexa-pb-schedule-active-item__drag .ibexa-icon {
+            fill: $ibexa-color-white;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.c-pb-schedule-config-panel-no-events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+        color: $ibexa-color-dark-400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: $ibexa-text-font-size-extra-large;
+    }
+}
