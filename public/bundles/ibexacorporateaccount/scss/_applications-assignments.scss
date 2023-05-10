@@ -1,0 +1,19 @@
+.ibexa-ca-applications-assignments {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: calculateRem(10px);
+    padding: calculateRem(24px);
+
+    .ibexa-table-header {
+        margin-top: 0;
+    }
+
+    .ibexa-details {
+        &__items {
+            padding-top: calculateRem(24px);
+        }
+
+        &__item {
+            flex-grow: 1;
+        }
+    }
+}
