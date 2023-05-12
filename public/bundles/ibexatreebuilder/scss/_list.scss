@@ -1,0 +1,13 @@
+.c-tb-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--dragging {
+        cursor: pointer;
+
+        .c-tb-list-item-single__label:hover {
+            color: $ibexa-color-dark;
+        }
+    }
+}
