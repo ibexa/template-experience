@@ -1,0 +1,34 @@
+.ibexa-ca-company-tab-summary {
+    &__basic-wrapper {
+        display: flex;
+        margin-top: calculateRem(24px);
+    }
+
+    &__basic-information-wrapper {
+        flex-grow: 1;
+        border-radius: $ibexa-border-radius;
+        padding: 0 calculateRem(24px) calculateRem(24px) calculateRem(24px);
+        margin-right: calculateRem(24px);
+        background: $ibexa-color-light-200;
+    }
+
+    &__stats {
+        display: flex;
+    }
+
+    &__stat-label {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(20px) calculateRem(24px);
+        width: calculateRem(300px);
+        margin-top: calculateRem(12px);
+        margin-right: calculateRem(12px);
+    }
+}

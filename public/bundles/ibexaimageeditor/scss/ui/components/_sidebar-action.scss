@@ -1,0 +1,45 @@
+.c-image-editor-sidebar-action {
+    font-size: $ibexa-text-font-size-medium;
+    padding: calculateRem(16px) calculateRem(24px);
+    border-bottom: calculateRem(1px) solid $ibexa-color-light;
+
+    &__header {
+        cursor: pointer;
+        display: grid;
+        grid-template-areas: 'icon label toggler';
+        grid-template-columns: calculateRem(20px) 1fr calculateRem(20px);
+        align-items: center;
+        gap: calculateRem(16px);
+    }
+
+    &__icon {
+        grid-area: icon;
+    }
+
+    &__label {
+        grid-area: label;
+        margin-bottom: 0;
+    }
+
+    &__toggler {
+        grid-area: toggler;
+    }
+
+    &__component {
+        padding: calculateRem(24px) 0;
+    }
+
+    &--collapsed {
+        .c-image-editor-sidebar-action {
+            &__component {
+                transform: scaleY(0);
+                height: 0;
+                padding: 0;
+            }
+
+            &__toggler {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

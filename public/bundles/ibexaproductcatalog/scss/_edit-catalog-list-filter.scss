@@ -1,0 +1,33 @@
+.ibexa-pc-edit-catalog-list-filter {
+    position: relative;
+    display: flex;
+    margin-right: calculateRem(14px);
+    padding: calculateRem(4px) calculateRem(4px) calculateRem(4px) 0;
+
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__tags {
+        display: flex;
+        margin-left: calculateRem(5px);
+    }
+
+    &__tags-toggler-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: calculateRem(26px);
+        width: calculateRem(20px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}

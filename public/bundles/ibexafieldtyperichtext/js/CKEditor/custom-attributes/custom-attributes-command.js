@@ -1,0 +1,52 @@
+import Command from '@ckeditor/ckeditor5-core/src/command';
+
+import { getCustomAttributesConfig, getCustomClassesConfig } from './helpers/config-helper';
+
+class IbexaCustomAttributesCommand extends Command {
+    cleanAttributes(modelElement, attributes) {
+        Object.entries(attributes).forEach(([elementName, config]) => {
+            if (elementName === modelElement.name) {
+                return;
+            }
+
+            this.editor.model.change((writer) => {
+                Object.keys(config).forEach((name) => {
+                    if (attributes[modelElement.name]?.[name]) {
+                        return;
+                    }
+
+                    writer.removeAttribute(name, modelElement);
+                });
+            });
+        });
+    }
+
+    cleanClasses(modelElement, classes) {
+        Object.keys(classes).forEach((elementName) => {
+            if (elementName === modelElement.name || classes[modelElement.name]) {
+                return;
+            }
+
+            this.editor.model.change((writer) => {
+                writer.removeAttribute('custom-classes', modelElement);
+            });
+        });
+    }
+
+    refresh() {
+        const { selection } = this.editor.model.document;
+        const parentElement = selection.getSelectedElement() ?? selection.getFirstPosition().parent;
+        const customAttributesConfig = getCustomAttributesConfig();
+        const customClassesConfig = getCustomClassesConfig();
+        const parentElementAttributesConfig = customAttributesConfig[parentElement.name];
+        const parentElementClassesConfig = customClassesConfig[parentElement.name];
+        const isEnabled = parentElementAttributesConfig || parentElementClassesConfig;
+
+        this.isEnabled = !!isEnabled;
+
+        this.cleanAttributes(parentElement, customAttributesConfig);
+        this.cleanClasses(parentElement, customClassesConfig);
+    }
+}
+
+export default IbexaCustomAttributesCommand;
