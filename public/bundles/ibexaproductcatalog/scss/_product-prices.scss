@@ -1,0 +1,25 @@
+.ibexa-pc-product-prices {
+    &__actions {
+        display: flex;
+    }
+
+    &__actions-edit {
+        display: flex;
+        align-items: center;
+        height: calculateRem(32px);
+        padding: 0 calculateRem(12px);
+        border-right: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+
+    &__actions-currency {
+        padding-left: calculateRem(12px);
+    }
+
+    &__main-price {
+        margin-bottom: calculateRem(64px);
+    }
+
+    &__actions-currency-dropdown {
+        min-width: calculateRem(100px);
+    }
+}

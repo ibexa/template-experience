@@ -1,0 +1,206 @@
+.ibexa-extra-actions {
+    @include container-box-shadow-left;
+
+    background-color: $ibexa-color-white;
+    padding: calculateRem(16px) 0;
+    width: calculateRem(700px);
+
+    &__action {
+        display: block;
+        background: none;
+        border: 0 none;
+        width: 100%;
+        text-align: left;
+        border-radius: calculateRem(4px);
+        padding: 0 calculateRem(16px);
+        line-height: calculateRem(45px);
+        background: $ibexa-color-white;
+        color: $ibexa-color-primary;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s $ibexa-admin-transition;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+            background: $ibexa-color-light;
+        }
+
+        &:active {
+            background: $ibexa-color-primary;
+            color: $ibexa-color-white;
+        }
+    }
+
+    &__action + &__action {
+        margin-top: calculateRem(8px);
+    }
+
+    &__header {
+        padding: calculateRem(8px) calculateRem(32px) calculateRem(24px);
+        font-weight: bold;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__header-subtitle {
+        width: 100%;
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size;
+        font-weight: normal;
+    }
+
+    &__content {
+        padding: calculateRem(32px) 25% calculateRem(32px) calculateRem(32px);
+        max-height: calc(100% - #{calculateRem(90px)});
+        overflow: auto;
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        &--create {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__btns {
+        margin-top: calculateRem(42px);
+        display: flex;
+
+        .ibexa-btn + .ibexa-btn {
+            margin-left: calculateRem(16px);
+        }
+    }
+
+    &--edit-user,
+    &--edit {
+        .form-check {
+            padding-left: 0;
+        }
+
+        .ibexa-label {
+            background: $ibexa-color-white;
+            display: flex;
+            width: 100%;
+            padding: calculateRem(13px) calculateRem(10px);
+            border: calculateRem(1px) solid $ibexa-color-light;
+            border-radius: $ibexa-border-radius;
+            box-shadow: calculateRem(4px) calculateRem(2px) calculateRem(17px) 0 rgba($ibexa-color-info, 0.05);
+            transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $ibexa-color-dark;
+                transform: scale(1.02) translateX(-10px);
+                box-shadow: calculateRem(4px) calculateRem(10px) calculateRem(17px) 0 rgba($ibexa-color-info, 0.2);
+            }
+        }
+
+        .ibexa-input[type='radio'] {
+            display: none;
+        }
+    }
+
+    &__section-content {
+        padding-bottom: calculateRem(32px);
+        background: $ibexa-color-white;
+        font-size: calculateRem(16px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+
+        select {
+            display: inline-block;
+            width: 75%;
+        }
+    }
+
+    &--create {
+        .ibexa-extra-actions {
+            &__content {
+                max-height: calc(100% - #{calculateRem(89px)});
+                overflow: auto;
+            }
+
+            &__section-content--content-type {
+                padding: 0;
+                border: none;
+            }
+        }
+
+        .form-check {
+            cursor: pointer;
+            transition: all 0.2s $ibexa-admin-transition;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            &:active,
+            &:hover,
+            &:focus {
+                color: $ibexa-color-primary;
+            }
+        }
+
+        .form-check-label {
+            display: block;
+            margin: 0 0 0 calculateRem(42px);
+        }
+
+        .form-check-input[type='radio'] {
+            display: none;
+        }
+
+        .form-group {
+            button.btn {
+                &[type='submit'] {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.ibexa-extra-actions-container {
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 150;
+        background-color: rgba($ibexa-color-dark, 0.4);
+    }
+
+    .ibexa-extra-actions {
+        height: calc(100vh - #{calculateRem(73px)});
+        position: fixed;
+        top: calculateRem(73px);
+        right: 0;
+        z-index: 200;
+        transform: translate(0, 0) scaleX(1);
+        transform-origin: right center;
+        transition: $ibexa-admin-widget-open-transition;
+
+        &--hidden {
+            transform: translate(calc(100%), 0) scaleX(0);
+            transition: $ibexa-admin-widget-close-transition;
+        }
+    }
+}
+
+.ibexa-main-container {
+    &--edit-container {
+        .ibexa-extra-actions {
+            top: calculateRem(16px);
+            height: calc(100vh - #{calculateRem(16px)});
+        }
+    }
+}
