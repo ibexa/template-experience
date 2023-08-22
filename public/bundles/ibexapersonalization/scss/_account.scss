@@ -1,0 +1,58 @@
+.ibexa-perso-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    font-size: $ibexa-text-font-size-medium;
+    padding: calculateRem(32px);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: calculateRem(750px);
+        border-radius: $ibexa-border-radius;
+        border: solid calculateRem(1px) $ibexa-color-light;
+        background-color: $ibexa-color-white;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.05);
+        margin-top: calculateRem(100px);
+    }
+
+    &__step {
+        justify-content: center;
+
+        .ibexa-step__wrapper {
+            width: 100%;
+            max-width: calculateRem(450px);
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: calculateRem(450px);
+    }
+
+    &__separator {
+        width: 100%;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__actions {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: calculateRem(45px) calculateRem(20px) calculateRem(60px);
+    }
+
+    &__item {
+        margin-right: calculateRem(16px);
+        list-style: none;
+    }
+
+    & .ibexa-btn.ibexa-btn--primary {
+        margin-top: calculateRem(34px);
+    }
+}

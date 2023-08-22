@@ -1,0 +1,12 @@
+@import './public/bundles/ibexaadminui/scss/_custom.scss';
+
+.ibexa-pb-block-checkbox-field {
+    .form-check {
+        display: flex;
+        height: 100%;
+    }
+
+    .ibexa-input {
+        margin-right: calculateRem(4px);
+    }
+}

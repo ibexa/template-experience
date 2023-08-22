@@ -1,0 +1,35 @@
+.c-ct-list-item {
+    &__link {
+        width: 100%;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        background: none;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__icon {
+        height: calculateRem(20px);
+        display: inline-flex;
+        align-items: center;
+        margin-right: calculateRem(4px);
+    }
+
+    &.c-tb-list-item {
+        &--destination {
+            .c-ct-list-item {
+                &__icon {
+                    .ibexa-icon {
+                        fill: $ibexa-color-info;
+                    }
+                }
+            }
+        }
+    }
+}
