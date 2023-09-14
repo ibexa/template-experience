@@ -1,0 +1,10 @@
+.ibexa-fb-field-config-location {
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+
+    &__location-name {
+        padding-bottom: calculateRem(16px);
+        font-size: $ibexa-text-font-size-medium;
+    }
+}

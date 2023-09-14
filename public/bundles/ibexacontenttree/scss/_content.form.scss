@@ -1,0 +1,18 @@
+.ibexa-content-tree-content-form-container {
+    display: none;
+
+    &--translation,
+    &--create,
+    &--edit {
+        display: block;
+    }
+}
+
+.ibexa-extra-actions--create {
+    &.ibexa-content-tree-content-form-container,
+    .ibexa-content-tree-content-form-container {
+        &__hidden-element {
+            display: none;
+        }
+    }
+}

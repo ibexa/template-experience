@@ -1,0 +1,8 @@
+.ibexa-pb-alerts-tray {
+    padding: 0 calculateRem(30px);
+
+    &:not(:empty) {
+        margin-top: calculateRem(-30px);
+        margin-bottom: calculateRem(20px);
+    }
+}
