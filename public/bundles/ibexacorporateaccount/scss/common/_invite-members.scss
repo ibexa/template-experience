@@ -1,0 +1,10 @@
+.ibexa-ca-invite-members {
+    .ibexa-user-invitation-modal__labels,
+    .ibexa-user-invitation-modal__entry {
+        grid-template-columns: 1fr 1fr calculateRem(48px);
+    }
+
+    &__entry-email-wrapper {
+        margin-right: calculateRem(16px);
+    }
+}

@@ -1,0 +1,63 @@
+.ibexa-perso-segments-sidebar {
+    @include sidebar-drag-items;
+
+    position: sticky;
+    top: calculateRem(-40px);
+    margin-left: calculateRem(32px);
+    margin-bottom: auto;
+    max-height: calc(100vh - #{calculateRem(250px)});
+
+    &__list {
+        padding: calculateRem(5px) calculateRem(16px);
+    }
+
+    &__title-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list--hidden {
+        display: none;
+    }
+
+    &__list-empty {
+        margin-top: calculateRem(-15px);
+        padding-bottom: calculateRem(25px);
+        text-align: center;
+        display: none;
+        line-height: calculateRem(33px);
+        color: $ibexa-color-dark;
+        font-size: $ibexa-text-font-size-large;
+        font-weight: 600;
+
+        &--visible {
+            display: block;
+        }
+    }
+
+    &__list-empty-image {
+        display: block;
+        margin-bottom: calculateRem(15px);
+    }
+}
+
+.ibexa-perso-segments-sidebar-item {
+    @include sidebar-drag-item;
+
+    word-break: break-all;
+
+    &__content {
+        box-shadow: $ibexa-content-type-edit-field-shadow;
+    }
+
+    &:last-of-type {
+        margin-bottom: calculateRem(8px);
+    }
+
+    &--hidden {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

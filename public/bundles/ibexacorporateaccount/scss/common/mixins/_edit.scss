@@ -1,0 +1,22 @@
+@mixin ibexa-address-edit-styles {
+    .ibexa-field-edit {
+        &__label-wrapper {
+            display: none;
+        }
+    }
+
+    .ibexa-field-edit {
+        &__data {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    .ibexa-input--small,
+    .ibexa-dropdown--small .ibexa-dropdown__selection-info {
+        height: calculateRem(48px);
+        padding-top: calculateRem(6px);
+        padding-bottom: calculateRem(6px);
+        border-radius: $ibexa-border-radius;
+    }
+}
