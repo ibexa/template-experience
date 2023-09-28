@@ -1,0 +1,89 @@
+form:not(.form-inline) {
+    .ez-field-edit__label {
+        font-weight: 700;
+        font-size: calculateRem(16px);
+        color: $ibexa-black;
+        margin-bottom: 0;
+        margin-top: calculateRem(20px);
+
+        &:after {
+            content: ': ';
+        }
+
+        &:not(.ez-data-source__label) {
+            @include label-required();
+        }
+    }
+
+    .col-form-legend {
+        @include label-required();
+
+        font-weight: 700;
+        font-size: calculateRem(16px);
+        color: $ibexa-black;
+        margin-bottom: 0;
+        margin-top: calculateRem(20px);
+    }
+
+    .form-control {
+        background-color: $ibexa-white;
+    }
+
+    .form-control[readonly] {
+        background-color: $ibexa-white;
+    }
+
+    .form-control:focus {
+        @include input-active;
+    }
+}
+
+.ez-form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    &--align-left {
+        justify-content: flex-start;
+    }
+
+    .col-form-label,
+    .form-control,
+    .ez-field-edit__label {
+        margin-right: calculateRem(8px);
+    }
+}
+
+.ez-table--no-border {
+    .ez-form-inline {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+}
+
+.ez-field {
+    .ez-field__label {
+        @include label-required();
+    }
+
+    .ez-data-source__input {
+        &.is-invalid {
+            @include input-invalid;
+        }
+    }
+
+    &__error {
+        @include error-under-label();
+    }
+}
+
+.ez-trash-with-asset-checkbox-list {
+    .form-check-input {
+        position: absolute;
+    }
+}
+
+.ez-content-create[readonly] {
+    pointer-events: none;
+}
