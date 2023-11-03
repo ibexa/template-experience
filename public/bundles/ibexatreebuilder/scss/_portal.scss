@@ -1,0 +1,23 @@
+.c-tb-portal {
+    position: absolute;
+    z-index: 1000;
+
+    &.c-tb-portal--hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.c-tb-portal--top {
+        transform: translateY(-100%);
+
+        .c-tb-action-list {
+            &__list {
+                display: flex;
+            }
+        }
+    }
+}
+
+.c-tb-drag-and-drop-portal {
+    pointer-events: none;
+}

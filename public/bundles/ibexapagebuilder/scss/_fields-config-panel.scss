@@ -1,0 +1,29 @@
+.ibexa-pb-fields-config-panel {
+    &--full-screen-field-opened {
+        &.ibexa-pb-config-panel {
+            z-index: 2000;
+        }
+    }
+
+    .ibexa-pb-config-panel {
+        &__body {
+            display: flex;
+            padding: 0 calculateRem(12px) calculateRem(12px);
+
+            .ibexa-edit-content {
+                padding: 0;
+                border: none;
+
+                .ibexa-anchor-navigation-menu {
+                    &__header {
+                        display: none;
+                    }
+
+                    &__section-groups {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
