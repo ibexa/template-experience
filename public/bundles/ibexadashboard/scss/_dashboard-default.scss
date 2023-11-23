@@ -1,0 +1,38 @@
+.ibexa-db-default {
+    display: flex;
+    padding: calculateRem(16px);
+
+    &__card {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin-right: calculateRem(40px);
+        padding: calculateRem(32px) calculateRem(16px);
+        border-radius: $ibexa-border-radius;
+        background-color: $ibexa-color-light-300;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__desc {
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__go-to-builder {
+        margin-top: calculateRem(32px);
+    }
+
+    &__graph-img-wrapper {
+        position: relative;
+    }
+
+    &__graph-img {
+        position: absolute;
+        right: calculateRem(-56px);
+    }
+}

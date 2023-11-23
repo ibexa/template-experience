@@ -1,0 +1,62 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+.ibexa-db-quick-actions {
+    &__tiles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calculateRem(16px);
+    }
+
+    &__tile {
+        display: flex;
+        flex-direction: column;
+        gap: calculateRem(12px);
+        width: calculateRem(288px);
+        padding: calculateRem(16px);
+        border-radius: calculateRem(12px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgb($ibexa-color-info-600, 0.05);
+    }
+
+    &__tile-icon-wrapper {
+        width: calculateRem(56px);
+        height: calculateRem(56px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $ibexa-color-light-300;
+        border-radius: 50%;
+    }
+
+    &__tile-content {
+        display: flex;
+        flex-direction: column;
+        gap: calculateRem(4px);
+    }
+
+    &__tile-action {
+        padding: 0;
+        color: $ibexa-color-primary;
+        text-decoration: none;
+        font-weight: 600;
+        border: none;
+
+        .ibexa-icon {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__tile-description {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    .ibexa-card__body {
+        padding: 0;
+    }
+}

@@ -1,0 +1,14 @@
+.ibexa-db-main-container {
+    & > .ibexa-main-container__content-column > .container {
+        padding: 0;
+
+        & > .ibexa-page-header-wrapper {
+            padding: calculateRem(20px);
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+    }
+}
+
+.container {
+    max-width: none;
+}

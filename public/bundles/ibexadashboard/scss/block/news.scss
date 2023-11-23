@@ -1,0 +1,70 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+.ibexa-db-news {
+    &__header {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        padding: calculateRem(12px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        background-color: $ibexa-color-white;
+        border-radius: $ibexa-border-radius;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba(52, 116, 204, 0.05);
+        margin-bottom: calculateRem(12px);
+    }
+
+    &__img {
+        width: calculateRem(120px);
+        height: calculateRem(72px);
+        border-radius: calculateRem(8px);
+    }
+
+    &__content {
+        padding: 0 calculateRem(16px);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        color: $ibexa-color-dark;
+        line-height: calculateRem(24px);
+        margin: 0 0 calculateRem(8px) 0;
+    }
+
+    &__date {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-400;
+        line-height: calculateRem(18px);
+    }
+    &__anchor-wrapper {
+        height: 100%;
+        padding: calculateRem(4px) calculateRem(8px);
+
+        &:hover {
+            cursor: pointer;
+
+            .ibexa-db-news__anchor {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__anchor {
+        text-decoration: none;
+        color: $ibexa-color-primary;
+        margin-right: calculateRem(4px);
+    }
+
+    &__icon-back {
+        fill: $ibexa-color-primary;
+        height: calculateRem(12px);
+        width: calculateRem(12px);
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,14 @@
+.ibexa-db-zones {
+    &__row {
+        display: flex;
+        gap: calculateRem(24px);
+    }
+
+    &__zone {
+        flex-grow: 1;
+
+        &--small {
+            flex-basis: 33%;
+        }
+    }
+}

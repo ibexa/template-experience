@@ -1,0 +1,66 @@
+.ibexa-al-data-grid {
+    padding: 0 calculateRem(24px) calculateRem(24px);
+
+    &__search-bar {
+        padding: calculateRem(24px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        margin: calculateRem(-1px) calculateRem(-25px) 0 calculateRem(-25px);
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0px rgba($ibexa-color-info-600, 0.05);
+
+        .ibexa-input-text-wrapper--search {
+            width: calculateRem(450px);
+        }
+    }
+
+    &__data-row-header {
+        padding: calculateRem(8px) 0;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        color: $ibexa-color-dark-400;
+        font-weight: 600;
+    }
+
+    &__data-row {
+        display: flex;
+        margin: calculateRem(8px) 0;
+        padding: calculateRem(8px) 0;
+        align-items: flex-start;
+    }
+
+    &__data-column {
+        display: flex;
+        align-items: flex-start;
+
+        &--date {
+            width: 10%;
+            min-width: calculateRem(150px);
+            max-width: calculateRem(300px);
+            color: $ibexa-color-dark-400;
+            font-weight: 400;
+        }
+
+        &--avatar {
+            margin: 0 calculateRem(10px);
+        }
+
+        &--description {
+            gap: calculateRem(5px);
+            flex-flow: wrap;
+        }
+    }
+
+    .ibexa-table-header {
+        border: none;
+    }
+
+    &__data-cell {
+        &--username {
+            font-weight: bold;
+        }
+    }
+
+    .ibexa-table-header {
+        margin: 0;
+        padding: calculateRem(24px) 0 calculateRem(16px);
+    }
+}

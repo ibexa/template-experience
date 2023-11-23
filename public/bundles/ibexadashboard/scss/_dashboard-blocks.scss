@@ -1,0 +1,13 @@
+.ibexa-db-blocks {
+    padding: calculateRem(16px);
+
+    .landing-page__block {
+        margin-bottom: calculateRem(16px);
+    }
+
+    .ibexa-db-news {
+        &__card:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

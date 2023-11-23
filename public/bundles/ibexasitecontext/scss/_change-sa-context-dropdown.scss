@@ -1,0 +1,103 @@
+.ibexa-change-sa-context-dropdown {
+    margin: 0 calculateRem(30px);
+    min-width: auto;
+
+    .ibexa-dropdown {
+        &__selection-info {
+            color: $ibexa-color-light;
+            border-color: transparent;
+            padding-right: calculateRem(24px);
+
+            &::before,
+            &::after {
+                background-color: $ibexa-color-light;
+                width: calculateRem(7px);
+                margin-top: calculateRem(-1px);
+            }
+
+            &::before {
+                right: calculateRem(6px);
+            }
+
+            &::after {
+                right: calculateRem(11px);
+            }
+        }
+
+        :not(&--disabled) &__selected-item:not(&__selected-placeholder) {
+            color: $ibexa-color-light;
+            margin-right: 0;
+        }
+    }
+
+    &.ibexa-dropdown {
+        &:not(.ibexa-dropdown--disabled):not(.is-invalid) {
+            .ibexa-dropdown {
+                &__selection-info {
+                    &:hover {
+                        border-color: transparent;
+
+                        &::before,
+                        &::after {
+                            background-color: $ibexa-color-info;
+                        }
+
+                        .ibexa-dropdown__selected-item:not(.ibexa-dropdown__selected-placeholder) {
+                            color: $ibexa-color-info;
+                        }
+
+                        .ibexa-icon {
+                            fill: $ibexa-color-info;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__items {
+        max-width: calculateRem(430px);
+
+        .ibexa-dropdown {
+            &__items-list-header {
+                & + .ibexa-dropdown__items-list {
+                    padding-top: calculateRem(12px);
+                }
+            }
+
+            &__items-list {
+                padding: calculateRem(16px);
+            }
+
+            &__item {
+                margin: 0;
+
+                &[data-value=''] {
+                    margin-bottom: calculateRem(24px);
+
+                    &:after {
+                        bottom: calculateRem(-13px);
+                    }
+                }
+
+                & + .ibexa-dropdown__item {
+                    margin-top: calculateRem(12px);
+                }
+
+                &:hover {
+                    background-color: transparent;
+                }
+
+                &--selected {
+                    &:hover {
+                        background-color: $ibexa-color-light-300;
+                    }
+                }
+
+                &--hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// Remove this file after btns upgrade
+.ibexa-db-btn {
+    &--link {
+        display: inline-flex;
+        align-items: center;
+        border: none;
+        color: $ibexa-color-primary;
+        font-size: $ibexa-text-font-size-medium;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & .ibexa-icon {
+        fill: $ibexa-color-primary;
+        margin-right: calculateRem(4px);
+    }
+}

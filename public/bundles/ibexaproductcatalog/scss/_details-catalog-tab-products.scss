@@ -1,0 +1,17 @@
+.ibexa-pc-details-catalog-tab-products {
+    &__filter-settings-title {
+        margin-bottom: calculateRem(8px);
+
+        .ibexa-table-header {
+            &__headline {
+                font-size: $ibexa-text-font-size-extra-large;
+            }
+        }
+    }
+
+    .ibexa-pc-edit-catalog-list-filter {
+        &__name {
+            font-weight: bold;
+        }
+    }
+}
