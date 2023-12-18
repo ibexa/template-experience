@@ -1,0 +1,27 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+
+:root {
+    --ibexa-primary-color: #{$ibexa-color-info};
+}
+
+@import 'ui/page-builder/components/block-preview';
+@import 'ui/page-builder/components/sidebar-blocks-group';
+@import 'ui/page-builder/components/toolbox-blocks-group';
+@import 'ui/page-builder/components/sidebar-block';
+@import 'ui/page-builder/components/toolbox-block';
+@import 'ui/page-builder/components/toolbox-structure';
+@import 'ui/page-builder/components/config-popup';
+@import 'ui/page-builder/components/block-config-panel';
+@import 'ui/page-builder/components/sidebar';
+@import 'ui/page-builder/components/toolbox';
+@import 'ui/page-builder/components/notification';
+@import 'ui/page-builder/components/layout-selector';
+@import 'ui/page-builder/components/settings-modal';
+@import 'ui/page-builder/components/iframe';
+@import 'ui/page-builder/components/date-picker';
+@import 'ui/page-builder/components/hidden-blocks';
+@import 'ui/page-builder/components/hidden-block';
+@import 'ui/page-builder/components/structure-block.scss';
+@import 'ui/page-builder/page-builder';

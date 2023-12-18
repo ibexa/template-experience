@@ -1,0 +1,121 @@
+.ibexa-pb-app-wrapper {
+    .ibexa-pb-app--has-error & {
+        position: relative;
+    }
+
+    .ibexa-pb-right-sidebar {
+        position: fixed;
+        top: calculateRem(60px);
+        right: calculateRem(-80px);
+        height: 100vh;
+        margin: calculateRem(8px) calculateRem(15px) 0;
+        opacity: 0;
+        transition:
+            right 0.2s ease-out,
+            opacity 0.2s ease-out,
+            transform 0.3s linear;
+
+        &--expanded {
+            right: 0;
+            opacity: 1;
+            transition:
+                right 0.4s ease-in,
+                opacity 0.4s ease-in,
+                transform 0.3s linear;
+        }
+
+        .ibexa-pb-timeline-visible & {
+            transform: translate3d(0, calculateRem(56px), 0);
+        }
+
+        .ibexa-btn__label {
+            min-width: calculateRem(72px);
+            width: -webkit-min-content;
+            width: -moz-min-content;
+            width: min-content;
+        }
+    }
+
+    .ibexa-extra-actions-container {
+        .ibexa-extra-actions {
+            top: 0;
+        }
+    }
+
+    .ibexa-context-menu {
+        &--expanded {
+            z-index: 200;
+        }
+    }
+}
+
+.ibexa-pb-app--preview,
+.ibexa-pb-app--create,
+.ibexa-pb-app--edit {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .ibexa-main-container {
+        @include drag-module-backdrop-background;
+
+        height: 100vh;
+    }
+
+    .ibexa-backdrop {
+        z-index: 550;
+    }
+}
+
+.ibexa-pb-app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    &__landingpage {
+        flex: 0 0 100vw;
+    }
+
+    &__preview {
+        width: 100%;
+        height: calc(100vh - #{calculateRem(160px)});
+        border: none;
+        margin: auto;
+        display: block;
+    }
+
+    &__loading-wrapper {
+        display: none;
+    }
+
+    &__error-screen {
+        position: absolute;
+        background: $ibexa-color-white;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &--is-preview-loading {
+        .ibexa-pb-app__preview {
+            display: none;
+        }
+
+        .ibexa-pb-app__loading-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - #{calculateRem(160px)});
+        }
+    }
+}
