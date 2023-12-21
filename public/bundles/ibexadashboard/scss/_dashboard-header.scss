@@ -1,0 +1,14 @@
+.ibexa-db-header {
+    &__date {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size;
+    }
+
+    &__actions {
+        justify-self: flex-end;
+
+        &--hidden {
+            display: none;
+        }
+    }
+}

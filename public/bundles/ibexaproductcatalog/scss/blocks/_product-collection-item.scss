@@ -1,0 +1,34 @@
+.ibexa-pb-product-collection-item {
+    @include drag-item();
+
+    margin-bottom: calculateRem(8px);
+
+    &__middle {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: calculateRem(20px);
+        width: 100%;
+        margin-left: calculateRem(5px);
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__label {
+        font-size: $ibexa-text-font-size-medium;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &:hover:not(.ibexa-pb-product-collection-item--is-non-interactive) {
+        .ibexa-pb-product-collection-item__content {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.ibexa-pb-product-collection-placeholder {
+    @include drag-item-placeholder();
+}

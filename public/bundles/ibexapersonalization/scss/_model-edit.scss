@@ -1,0 +1,22 @@
+.ibexa-perso-model-edit {
+    &__submodels {
+        .ibexa-dropdown {
+            max-width: calculateRem(820px);
+        }
+    }
+
+    .ibexa-edit-header__title {
+        .ibexa-badge {
+            margin-left: calculateRem(10px);
+            align-self: center;
+        }
+    }
+
+    &.ibexa-main-container--edit-container.ibexa-main-container--with-anchor-menu-items {
+        .ibexa-main-container__side-column {
+            width: calculateRem(290px);
+            max-width: calculateRem(290px);
+            min-width: calculateRem(290px);
+        }
+    }
+}

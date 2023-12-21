@@ -1,0 +1,40 @@
+.ibexa-db-main-container {
+    &.ibexa-db-preview {
+        height: 100vh;
+
+        .ibexa-db-header__actions {
+            pointer-events: none;
+        }
+
+        .ibexa-back-to-top-scroll-container {
+            padding-bottom: 0;
+        }
+
+        & ~ .ibexa-back-to-top {
+            display: none;
+        }
+    }
+
+    & > .ibexa-main-container__content-column > .container {
+        padding: 0;
+
+        & > .ibexa-page-header-wrapper {
+            padding: calculateRem(16px);
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+        .ibexa-page-title__title {
+            margin-bottom: 0;
+        }
+    }
+
+    .ibexa-page-header-wrapper {
+        background-image: url('/bundles/ibexadashboard/img/header-dashboard-background.png');
+        background-position: right calculateRem(100px) top 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.container {
+    max-width: none;
+}

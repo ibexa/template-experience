@@ -1,0 +1,8 @@
+.c-tb-list-placeholder-source {
+    background-color: $ibexa-color-light-300;
+    border: calculateRem(1px) dashed $ibexa-color-dark-300;
+    border-radius: $ibexa-border-radius;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+}

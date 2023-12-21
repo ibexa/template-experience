@@ -1,0 +1,31 @@
+.ibexa-preview-popover {
+    max-width: initial;
+    width: calculateRem(420px);
+    box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.1);
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        max-height: calculateRem(570px);
+        min-height: calculateRem(480px);
+
+        iframe {
+            min-height: calculateRem(480px);
+            aspect-ratio: 16/9;
+        }
+    }
+
+    &__loader {
+        margin: auto;
+        align-self: center;
+
+        @include spinner(calculateRem(80px), calculateRem(8px), $ibexa-color-primary);
+    }
+
+    .popover-body {
+        max-width: initial;
+        width: calculateRem(420px);
+        padding: calculateRem(8px);
+    }
+}

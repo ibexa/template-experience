@@ -1,0 +1,31 @@
+.ibexa-db-zones {
+    &__block {
+        margin-bottom: calculateRem(30px);
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: calculateRem(16px);
+
+        &--double {
+            --columns: 3;
+        }
+
+        &--triple {
+            --columns: 2;
+        }
+    }
+
+    &__zone {
+        &--small {
+            grid-column: span 1;
+            --columns: 2;
+        }
+
+        &--big {
+            grid-column: span 2;
+            --columns: 3;
+        }
+    }
+}
