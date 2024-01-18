@@ -1,0 +1,17 @@
+.c-tb-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--dragging {
+        cursor: grab;
+
+        .c-tb-list-item-single > .c-tb-list-item-single__element > .c-tb-list-item-single__label {
+            cursor: grab;
+
+            &:hover {
+                color: var(--ibexa-tb-text-color);
+            }
+        }
+    }
+}

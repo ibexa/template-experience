@@ -1,0 +1,31 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+.ibexa-db-product-category {
+    &__header {
+        margin-bottom: calculateRem(16px);
+    }
+}
+
+.ibexa-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calculateRem(16px);
+
+    &__item-wrapper {
+        list-style-type: none;
+    }
+
+    &__item {
+        display: flex;
+        color: $ibexa-color-dark-500;
+        margin-right: calculateRem(16px);
+        font-size: $ibexa-text-font-size-medium;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+
+    &__label {
+        margin: 0 calculateRem(6px);
+    }
+}

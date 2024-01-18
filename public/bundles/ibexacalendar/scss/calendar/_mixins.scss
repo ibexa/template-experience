@@ -1,0 +1,33 @@
+@mixin main-view {
+    padding: calculateRem(32px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-light;
+}
+
+@mixin past-tile {
+    color: $ibexa-color-dark-300;
+    background: $ibexa-color-light-200;
+}
+
+@mixin today-tile {
+    color: $ibexa-color-info;
+    border-color: rgba($ibexa-color-info, 0.4);
+    background: $ibexa-color-info-200;
+}
+
+@mixin selected-tile {
+    color: $ibexa-color-dark;
+    border-color: $ibexa-color-dark;
+}
+
+@mixin disabled-tile {
+    color: $ibexa-color-dark-300;
+    background-color: $ibexa-color-light-300;
+}
+
+@mixin calendar-header {
+    display: grid;
+    background: $ibexa-color-light-400;
+    border-radius: $ibexa-border-radius;
+    font-size: $ibexa-text-font-size-medium;
+}

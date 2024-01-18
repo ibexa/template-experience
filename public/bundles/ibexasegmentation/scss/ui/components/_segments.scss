@@ -1,0 +1,126 @@
+.c-segments {
+    &__wrapper {
+        padding: calculateRem(18px);
+    }
+
+    &__group {
+        display: block;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__group-name {
+        font-size: $ibexa-text-font-size-medium;
+        margin: 0;
+    }
+
+    &__group-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: $ibexa-text-font-size-medium;
+        outline: 0;
+        border: 0;
+        padding: calculateRem(12px) calculateRem(8px);
+
+        &:hover {
+            color: $ibexa-color-primary;
+
+            .c-segments__group-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &:focus-visible {
+            color: $ibexa-color-primary;
+            box-shadow: 0 0 0 calculateRem(2px) $ibexa-color-primary;
+            border-radius: $ibexa-border-radius;
+
+            .c-segments__group-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+    }
+
+    &__group-icon {
+        position: absolute;
+        right: calculateRem(8px);
+    }
+
+    &__list {
+        margin: 0 calculateRem(8px);
+        transition: none;
+        padding-left: 0;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__item {
+        list-style: none;
+        margin: calculateRem(5px) 0 calculateRem(15px);
+    }
+
+    &__item--hidden {
+        display: none;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: $ibexa-text-font-size-medium;
+        cursor: pointer;
+
+        &:hover {
+            color: $ibexa-color-primary;
+        }
+
+        .ibexa-input--radio {
+            margin-right: calculateRem(8px);
+            margin-bottom: 0;
+        }
+
+        &--no-filters {
+            margin: calculateRem(20px) calculateRem(8px);
+        }
+    }
+
+    &__more-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        margin-bottom: calculateRem(15px);
+        font-size: $ibexa-text-font-size-medium;
+        padding: 0;
+
+        &:hover {
+            color: $ibexa-color-primary;
+        }
+
+        &:focus-visible {
+            padding: calculateRem(2px);
+            box-shadow: 0 0 0 calculateRem(2px) $ibexa-color-primary;
+            border-radius: calculateRem(10px);
+            color: $ibexa-color-primary;
+        }
+    }
+
+    &__more-label {
+        text-decoration: underline;
+    }
+
+    &__more-icon {
+        font-size: $ibexa-text-font-size-large;
+        margin-right: calculateRem(6px);
+    }
+}

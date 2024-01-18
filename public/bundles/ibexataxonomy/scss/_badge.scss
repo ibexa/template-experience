@@ -1,0 +1,41 @@
+.c-tt-badge {
+    position: relative;
+
+    &:before {
+        content: '';
+        border-radius: 50%;
+        background: rgba($ibexa-color-info, 0.6);
+        display: inline-block;
+        width: calculateRem(36px);
+        height: calculateRem(36px);
+        left: calculateRem(-6px);
+        top: calculateRem(-6px);
+        z-index: 1;
+        position: absolute;
+    }
+
+    &:after {
+        content: '';
+        border-radius: 50%;
+        background: rgba($ibexa-color-info, 0.2);
+        display: inline-block;
+        width: calculateRem(48px);
+        height: calculateRem(48px);
+        left: calculateRem(-12px);
+        top: calculateRem(-12px);
+        z-index: 0;
+        position: absolute;
+    }
+
+    &__content {
+        border-radius: 50%;
+        background: $ibexa-color-info;
+        color: $ibexa-color-white;
+        display: inline-block;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        text-align: center;
+        z-index: 2;
+        position: relative;
+    }
+}

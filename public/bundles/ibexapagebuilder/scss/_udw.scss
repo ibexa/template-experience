@@ -1,0 +1,12 @@
+.m-ud {
+    --ibexa-primary-color: #{$ibexa-color-primary};
+    --ibexa-input-hover-border-color: var(--ibexa-primary-color);
+    --ibexa-input-focus-border-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-bg-color: var(--ibexa-primary-color);
+    --ibexa-input-checkbox-disabled-primary-color: #{$ibexa-color-primary-300};
+    --ibexa-input-checked-disabled-border-color: #{$ibexa-color-primary-300};
+    --ibexa-input-checked-disabled-bg-color: #{$ibexa-color-primary-300};
+    --ibexa-input-focus-shadow-color: #{rgba($ibexa-color-primary, 0.75)};
+    --ibexa-btn-shadow-box-primary-color: #{rgba($ibexa-color-primary, 0.5)};
+    --ibexa-dropdown-shadow-box-primary-color: #{rgba($ibexa-color-primary, 0.2)};
+}

@@ -1,0 +1,94 @@
+.ibexa-pc-attributes-sidebar {
+    @include sidebar-drag-items();
+
+    min-height: calculateRem(700px);
+    max-height: calc(100vh - #{calculateRem(200px)});
+    margin-left: calculateRem(32px);
+
+    &__list {
+        list-style: none;
+    }
+}
+
+.ibexa-available-attribute-item {
+    @include sidebar-drag-item;
+
+    &:last-of-type {
+        margin-bottom: calculateRem(8px);
+    }
+}
+
+.ibexa-available-attribute-item-group {
+    margin-bottom: calculateRem(12px);
+
+    &__header {
+        display: flex;
+        width: 100%;
+        padding: calculateRem(6px) 0;
+        margin-bottom: calculateRem(8px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(20px) calculateRem(-7px) rgba($ibexa-color-info, 0.05);
+        cursor: grab;
+    }
+
+    &__header-drag {
+        display: flex;
+        align-items: center;
+        padding: 0 calculateRem(8px) 0 calculateRem(16px);
+
+        .ibexa-icon {
+            fill: $ibexa-color-light;
+        }
+    }
+
+    &__header-label {
+        margin-top: calculateRem(5px);
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__header-toggler {
+        align-items: center;
+        margin: 0 calculateRem(5px) 0 auto;
+    }
+
+    &__attributes {
+        margin: 0 0 0 calculateRem(24px);
+        padding: 0;
+    }
+
+    &__attribute-wrapper {
+        list-style: none;
+        display: flex;
+
+        & > .ibexa-icon {
+            fill: $ibexa-color-light;
+            margin: calculateRem(12px) calculateRem(8px) 0 0;
+        }
+
+        &--hidden,
+        &--assigned {
+            display: none;
+        }
+    }
+
+    &--collapsed {
+        height: calculateRem(60px);
+        overflow: hidden;
+        margin-bottom: 0;
+
+        .ibexa-available-attribute-item-group {
+            &__header-toggler {
+                transform: rotate(180deg);
+            }
+
+            &__attribute-wrapper {
+                display: none;
+            }
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}

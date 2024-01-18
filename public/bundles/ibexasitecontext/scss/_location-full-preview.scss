@@ -1,0 +1,61 @@
+.ibexa-content-view--full-preview {
+    .ibexa-main-container__content-column {
+        overflow: hidden;
+    }
+
+    .ibexa-header-wrapper {
+        flex-basis: 50%;
+        max-width: 50%;
+        height: calculateRem(48px);
+        display: flex;
+        align-items: center;
+    }
+
+    .ibexa-page-title {
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__content {
+            font-size: $ibexa-text-font-size-large;
+        }
+
+        .ibexa-icon-tag {
+            font-family: $ibexa-font-family;
+            height: calculateRem(24px);
+            line-height: calculateRem(24px);
+            font-size: $ibexa-text-font-size-small;
+            font-weight: 400;
+            border: calculateRem(1px) solid $ibexa-color-dark-200;
+            border-radius: calculateRem(10px);
+            padding: 0 calculateRem(8px);
+            margin: 0 0 0 calculateRem(8px);
+        }
+    }
+
+    .ibexa-top-menu {
+        display: flex;
+        height: calculateRem(44px);
+    }
+
+    .ibexa-context-menu {
+        min-height: auto;
+        height: auto;
+        align-items: center;
+
+        &__item {
+            padding-left: 0;
+        }
+    }
+
+    .ibexa-sc-location-full-preview {
+        &__iframe-wrapper {
+            overflow: hidden;
+        }
+
+        &__iframe {
+            width: 100vw;
+            transform-origin: left top;
+        }
+    }
+}
