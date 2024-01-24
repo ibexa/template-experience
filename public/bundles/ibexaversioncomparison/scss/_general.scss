@@ -1,0 +1,24 @@
+.ibexa-version-compare-single-view,
+.ibexa-version-compare-side-by-side-view {
+    background-color: $ibexa-color-white;
+    overflow: auto;
+
+    .ibexa-main-container__content-column {
+        background-color: $ibexa-color-white;
+    }
+
+    .ibexa-edit-header {
+        box-shadow: none;
+    }
+
+    .ibexa-edit-content {
+        padding-top: 0;
+        overflow: initial;
+        min-height: auto;
+    }
+
+    .ibexa-content-field {
+        margin-bottom: 0;
+        padding: calculateRem(24px);
+    }
+}

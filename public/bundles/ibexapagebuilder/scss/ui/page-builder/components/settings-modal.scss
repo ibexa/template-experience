@@ -1,0 +1,9 @@
+.c-pb-settings-modal {
+    &__popup {
+        .c-popup {
+            &__dialog {
+                max-width: calculateRem(800px);
+            }
+        }
+    }
+}
