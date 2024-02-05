@@ -1,0 +1,21 @@
+.c-image-editor-flip {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .ibexa-btn {
+        &:first-child {
+            margin-right: calculateRem(8px);
+        }
+
+        &:hover {
+            color: $ibexa-color-info;
+            border-color: $ibexa-color-info;
+            box-shadow: none;
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+    }
+}

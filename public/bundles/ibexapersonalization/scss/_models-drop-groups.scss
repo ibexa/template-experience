@@ -1,0 +1,16 @@
+.ibexa-perso-models-drop-groups {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(32px);
+    background-color: $ibexa-color-light-300;
+
+    &__add-group-wrapper {
+        display: flex;
+        justify-content: center;
+        border: calculateRem(1px) dashed $ibexa-color-light-700;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(18px);
+    }
+}

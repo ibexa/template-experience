@@ -1,0 +1,8 @@
+.ibexa-pc-product-custom-price {
+    &__global-price-rule-cell {
+        &--unused {
+            color: $ibexa-color-danger;
+            text-decoration: line-through;
+        }
+    }
+}
