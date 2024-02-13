@@ -1,0 +1,10 @@
+.c-tb-action-list {
+    &__item {
+        cursor: pointer;
+
+        &--disabled {
+            color: var(--ibexa-tb-action-menu-item-disabled-color);
+            cursor: not-allowed;
+        }
+    }
+}

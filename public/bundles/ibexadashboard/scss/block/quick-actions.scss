@@ -1,0 +1,76 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+.ibexa-db-quick-actions {
+    .ibexa-card__body {
+        padding: 0;
+    }
+
+    &__tiles {
+        display: grid;
+        grid-template-columns: repeat(var(--columns, 6), 1fr);
+        gap: calculateRem(24px);
+    }
+
+    &__tile {
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.1);
+        background-color: $ibexa-color-white;
+        display: flex;
+        align-items: flex-start;
+        gap: calculateRem(16px);
+        padding: calculateRem(12px);
+        border-radius: calculateRem(12px);
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 calculateRem(22px) calculateRem(24px) 0 rgba($ibexa-color-info, 0.2);
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border: calculateRem(1px) solid $ibexa-color-primary;
+            box-shadow: 0 0 0 calculateRem(4px) rgba($ibexa-color-primary, 0.2);
+        }
+
+        &--anchor,
+        &--anchor:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__tile-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $ibexa-color-light-200;
+        padding: calculateRem(12px);
+        border-radius: calculateRem(12px);
+
+        .ibexa-icon {
+            fill: $ibexa-color-primary;
+        }
+    }
+
+    &__tile-content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        gap: calculateRem(4px);
+    }
+
+    &__tile-sublabel {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-400;
+    }
+
+    &__tile-label {
+        font-size: $ibexa-text-font-size-large;
+        color: $ibexa-color-dark;
+    }
+}

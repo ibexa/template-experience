@@ -1,0 +1,206 @@
+.ibexa-pc-added-attributes-group {
+    margin-bottom: calculateRem(8px);
+    border: calculateRem(1px) solid transparent;
+
+    &__drop-zone {
+        padding: calculateRem(1px);
+    }
+
+    &__list {
+        background-color: transparent;
+    }
+
+    &__list-head-cell {
+        &--icon {
+            width: 9%;
+        }
+
+        &--name {
+            width: 22%;
+        }
+
+        &--type {
+            width: 22%;
+        }
+
+        &--required-bool {
+            width: 16%;
+        }
+
+        &--discriminator {
+            width: 24%;
+        }
+
+        &--action {
+            width: 7%;
+        }
+    }
+
+    &__attribute-tab {
+        .ibexa-pc-search__form {
+            border-top-left-radius: 0;
+            margin: calculateRem(-11px) calculateRem(-25px) calculateRem(12px);
+        }
+    }
+
+    &--active {
+        border-color: $ibexa-color-info-300;
+    }
+
+    &--disabled {
+        border-color: $ibexa-color-dark-200;
+        background-color: $ibexa-color-light-300;
+
+        .ibexa-collapse {
+            &__header {
+                border-bottom-color: $ibexa-color-dark-200;
+                background-color: $ibexa-color-light-300;
+            }
+        }
+
+        * {
+            color: $ibexa-color-dark-300;
+        }
+
+        .ibexa-icon {
+            fill: $ibexa-color-dark-300;
+        }
+    }
+
+    &--highlight-drop {
+        border-color: $ibexa-color-info-300;
+        background: $ibexa-color-info-100;
+        animation: pc-attributes-item-highlight-pulse 1s 1;
+
+        .ibexa-icon {
+            fill: $ibexa-color-info;
+        }
+
+        .ibexa-table {
+            &__header-cell,
+            &__cell {
+                color: $ibexa-color-info;
+            }
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+
+        .ibexa-collapse {
+            &__header {
+                background: $ibexa-color-info-100;
+                border-bottom-color: $ibexa-color-info-300;
+            }
+
+            &__header-label {
+                color: $ibexa-color-info;
+            }
+        }
+    }
+
+    &--remove-animation {
+        background: $ibexa-color-light-300;
+        border-color: $ibexa-color-light-300;
+        transform-origin: center;
+        pointer-events: none;
+        animation: pc-attributes-remove-item 1.5s 1 forwards;
+
+        .ibexa-collapse {
+            &__header {
+                background: $ibexa-color-light-300;
+                border-bottom-color: $ibexa-color-light-300;
+            }
+        }
+    }
+
+    .ibexa-collapse {
+        &__header {
+            box-shadow: $ibexa-content-type-edit-field-shadow;
+        }
+
+        &__extra-action-button {
+            &--remove-attributes-group {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .ibexa-table {
+        table-layout: fixed;
+
+        &__header-cell {
+            padding: calculateRem(16px);
+            background-color: transparent;
+        }
+
+        &__row {
+            background-color: transparent;
+
+            &:nth-child(odd),
+            &:nth-child(even) {
+                .ibexa-table__cell.ibexa-pc-assigned-attribute__item {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &.ibexa-collapse--hidden {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes pc-attributes-remove-item {
+    0% {
+        border-color: $ibexa-color-light-300;
+        box-shadow: 0 0 0 0 $ibexa-color-light-300;
+    }
+    3% {
+        border-color: $ibexa-color-light-300;
+        box-shadow: 0 0 0 0 $ibexa-color-light-300;
+    }
+    6% {
+        border-color: $ibexa-color-light-300;
+        box-shadow: 0 0 0 calculateRem(10px) $ibexa-color-light-300;
+    }
+    20% {
+        border-color: $ibexa-color-light-300;
+        box-shadow: 0 0 0 0 $ibexa-color-light-300;
+    }
+    40% {
+        height: auto;
+        margin-bottom: calculateRem(16px);
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        height: 0;
+        margin-bottom: 0;
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes pc-attributes-item-highlight-pulse {
+    0% {
+        border-color: $ibexa-color-info-300;
+        background-color: $ibexa-color-info-100;
+        box-shadow: 0 0 0 0 $ibexa-color-info-100;
+    }
+    10% {
+        border-color: $ibexa-color-info-300;
+        background-color: $ibexa-color-info-100;
+        box-shadow: 0 0 0 0 $ibexa-color-info-100;
+    }
+    20% {
+        border-color: $ibexa-color-info-300;
+        background-color: $ibexa-color-info-100;
+        box-shadow: 0 0 0 calculateRem(10px) $ibexa-color-info-100;
+    }
+    100% {
+        border-color: $ibexa-color-info-300;
+        background-color: $ibexa-color-info-100;
+        box-shadow: calculateRem(4px) calculateRem(2px) calculateRem(17px) 0 rgba($ibexa-color-info, 0.05);
+    }
+}

@@ -1,0 +1,8 @@
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+
+.c-tb-list-placeholder-destination {
+    @include drag-item-placeholder(var(--ibexa-tb-list-item-dragged-placeholder-color));
+
+    min-height: 0;
+    margin: calculateRem(-1px) 0;
+}
