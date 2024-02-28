@@ -1,0 +1,138 @@
+.ibexa-pb-config-panel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calculateRem(133px);
+    z-index: 660;
+    height: calc(100vh - #{calculateRem(133px)});
+    min-width: calculateRem(500px);
+    background-color: $ibexa-color-white;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: $ibexa-edit-header-box-shadow;
+
+    &--closed {
+        display: none;
+    }
+
+    &--right {
+        right: 0;
+    }
+
+    &--fields {
+        .card {
+            background: none;
+        }
+    }
+
+    &__backdrop.ibexa-backdrop.ibexa-backdrop {
+        z-index: 655;
+    }
+
+    &__header {
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        padding: calculateRem(12px) calculateRem(16px);
+    }
+
+    &__title,
+    &__subtitle {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 0;
+        letter-spacing: 0.12px;
+    }
+
+    &__title {
+        line-height: calculateRem(33px);
+        min-height: calculateRem(33px);
+    }
+
+    &__subtitle {
+        line-height: calculateRem(24px);
+        font-weight: 400;
+        color: $ibexa-color-dark-400;
+        font-family: $ibexa-font-family;
+    }
+
+    &__body {
+        flex-grow: 1;
+        overflow: auto;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+        &--with-shadow {
+            box-shadow: inset calculateRem(4px) calculateRem(-47px) calculateRem(47px) calculateRem(-47px) rgba($ibexa-color-info, 0.15);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        height: calculateRem(120px);
+        z-index: 10;
+        margin: calculateRem(16px) 0;
+
+        .ibexa-btn {
+            margin-left: calculateRem(16px);
+        }
+    }
+
+    .ibexa-tabs.ibexa-tabs {
+        &--switcher {
+            .nav-link:hover {
+                color: $ibexa-color-info;
+            }
+        }
+    }
+
+    &__resizer {
+        position: absolute;
+        top: 0;
+        width: calculateRem(1px);
+        height: 100%;
+        background-color: transparent;
+
+        &:hover {
+            cursor: col-resize;
+            width: calculateRem(6px);
+            box-shadow: calculateRem(6px) 0 0 $ibexa-color-info inset;
+        }
+
+        &--left {
+            right: 0;
+        }
+
+        &--right {
+            left: 0;
+        }
+    }
+
+    &--resizing {
+        transition-property: transform;
+
+        .c-pb-config-panel__resizer {
+            transition: none;
+        }
+
+        .ibexa-pb-config-panel {
+            &__resizer {
+                &:hover {
+                    width: 100%;
+                    z-index: 1080;
+                }
+            }
+        }
+    }
+
+    &--distraction-free-mode-active {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        .ibexa-pb-config-panel {
+            &__header {
+                display: none;
+            }
+        }
+    }
+}

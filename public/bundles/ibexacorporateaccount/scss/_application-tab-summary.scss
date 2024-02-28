@@ -1,0 +1,13 @@
+.ibexa-ca-application-tab-summary {
+    display: flex;
+
+    &__basic-wrapper {
+        flex-grow: 1;
+        margin-right: calculateRem(48px);
+    }
+
+    &__assignments-wrapper {
+        flex-grow: 0;
+        padding-top: calculateRem(36px);
+    }
+}

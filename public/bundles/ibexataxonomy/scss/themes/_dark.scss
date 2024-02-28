@@ -1,0 +1,9 @@
+body.ibexa-theme.ibexa-theme--dark .c-tb-element.c-tb-element--use-theme {
+    $ibexa-color-dark-mode-50-white: #898d93;
+    $ibexa-color-dark-mode-75-white: #c4c6c9;
+    $ibexa-color-main-navigation-800: #18365f;
+
+    --ibexa-tt-sub-text-color: #{$ibexa-color-dark-mode-75-white};
+    --ibexa-tt-list-item-matched-bg-color: #{$ibexa-color-main-navigation-800};
+    --ibexa-input-placeholder-color: #{$ibexa-color-dark-mode-50-white};
+}

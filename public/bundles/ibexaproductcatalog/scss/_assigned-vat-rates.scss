@@ -1,0 +1,15 @@
+.ibexa-pc-assigned-vat-rates {
+    margin-top: calculateRem(24px);
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+
+    .ibexa-input-text-wrapper--search {
+        width: 50%;
+        margin-bottom: calculateRem(12px);
+    }
+
+    .ibexa-dropdown {
+        width: fit-content;
+    }
+}

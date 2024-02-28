@@ -1,0 +1,86 @@
+.ibexa-preview-popover {
+    $ibexa-color-dark-mode-5-white: #1f2731;
+    $ibexa-color-dark-mode-25-white: #4e555c;
+
+    max-width: initial;
+    width: calculateRem(420px);
+    box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.1);
+
+    .ibexa-preview-popover-content {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        max-height: calculateRem(570px);
+        background-color: $ibexa-color-white;
+
+        &__iframe-wrapper {
+            &--full-width {
+                min-width: 100%;
+
+                .ibexa-preview-popover-content__iframe {
+                    min-width: 100%;
+                }
+            }
+        }
+
+        &__iframe {
+            position: relative;
+            z-index: 1;
+            aspect-ratio: 16/9;
+
+            &--success {
+                width: 100vw;
+            }
+        }
+
+        &__loader-wrapper {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $ibexa-color-white;
+        }
+
+        &__loader {
+            @include spinner(calculateRem(80px), calculateRem(8px), $ibexa-color-primary);
+        }
+
+        .ibexa-theme--dark & {
+            &__loader-wrapper {
+                background-color: $ibexa-color-dark-mode-5-white;
+            }
+
+            &__loader {
+                background: $ibexa-color-info;
+            }
+        }
+    }
+
+    .popover-body {
+        max-width: initial;
+        width: 100%;
+        padding: calculateRem(8px);
+    }
+
+    &--hidden {
+        visibility: hidden;
+    }
+
+    .ibexa-theme--dark & {
+        background-color: $ibexa-color-dark-mode-5-white;
+        border-color: $ibexa-color-dark-mode-25-white;
+
+        .popover-arrow::before {
+            border-right-color: $ibexa-color-dark-mode-25-white;
+        }
+
+        .popover-arrow::after {
+            border-right-color: $ibexa-color-dark-mode-5-white;
+        }
+    }
+}
