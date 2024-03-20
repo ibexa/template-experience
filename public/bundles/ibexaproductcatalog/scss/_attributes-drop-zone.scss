@@ -1,0 +1,16 @@
+.ibexa-pc-attributes-drop-zone {
+    min-height: calculateRem(620px);
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid transparent;
+    border-radius: $ibexa-border-radius;
+    background-color: $ibexa-color-white;
+
+    &--active {
+        border-color: $ibexa-color-info-400;
+    }
+
+    &--highlighted {
+        background-color: $ibexa-color-info-100;
+        border-color: $ibexa-color-info-400;
+    }
+}

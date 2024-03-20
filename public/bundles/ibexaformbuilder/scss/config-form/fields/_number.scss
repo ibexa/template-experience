@@ -1,0 +1,15 @@
+.ibexa-fb-form-field-config-fieldset {
+    &__value-input {
+        .ibexa-input-text-wrapper--type-number {
+            width: calculateRem(84px);
+        }
+    }
+
+    &__validator-input {
+        &--number {
+            width: calculateRem(84px);
+            height: calculateRem(48px);
+            padding: calculateRem(6px) calculateRem(36px) calculateRem(6px) calculateRem(12px);
+        }
+    }
+}
