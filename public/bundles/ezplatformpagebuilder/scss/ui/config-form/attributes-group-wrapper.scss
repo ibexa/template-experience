@@ -1,0 +1,20 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-block-attributes-group-wrapper {
+    border: calculateRem(1px) solid $ibexa-color-base-dark;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(16px);
+
+    &--single {
+        border: none;
+        padding: 0;
+    }
+
+    &__header {
+        margin-bottom: calculateRem(16px);
+        display: flex;
+        justify-content: flex-end;
+    }
+}
