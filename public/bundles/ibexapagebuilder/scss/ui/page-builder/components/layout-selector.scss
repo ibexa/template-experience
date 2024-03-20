@@ -1,0 +1,121 @@
+.c-pb-layout-selector {
+    $self: &;
+
+    &__popup {
+        .c-popup {
+            &__dialog {
+                max-width: calculateRem(850px);
+            }
+
+            &__body {
+                overflow: auto;
+                padding: calculateRem(24px) calculateRem(8px) 0;
+                height: calc(100vh - #{calculateRem(252px)});
+            }
+
+            &__content {
+                padding: 0 calculateRem(24px);
+            }
+
+            &__header {
+                padding: calculateRem(24px) 0;
+            }
+
+            &__footer {
+                padding: calculateRem(24px) 0 calculateRem(32px);
+            }
+        }
+    }
+
+    &__content {
+        padding: calculateRem(12px);
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: calculateRem(16px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.05);
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 calculateRem(22px) calculateRem(24px) 0 rgba($ibexa-color-dark, 0.1);
+
+            #{$self}__radio {
+                display: block;
+                border-color: $ibexa-color-info;
+            }
+        }
+
+        &:active {
+            box-shadow: none;
+
+            #{$self}__radio {
+                display: block;
+                border-color: $ibexa-color-info;
+            }
+        }
+
+        &:focus-visible {
+            border-color: $ibexa-color-info;
+            box-shadow: 0 0 0 calculateRem(4px) rgba($ibexa-color-info, 0.2);
+
+            #{$self}__radio {
+                display: block;
+                border-color: $ibexa-color-info;
+                box-shadow: 0 0 0 calculateRem(4px) rgba($ibexa-color-info, 0.2);
+            }
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &--selected {
+            border-color: $ibexa-color-info;
+            background-color: $ibexa-color-light-300;
+
+            #{$self}__radio {
+                display: block;
+            }
+        }
+
+        &--unavailable {
+            opacity: 0.4;
+        }
+    }
+
+    &__item-desc {
+        max-width: 100%;
+        margin: calculateRem(16px) 0 0;
+        color: $ibexa-color-dark;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: $ibexa-text-font-size-medium;
+        font-weight: 600;
+        user-select: none;
+    }
+
+    &__layouts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calculateRem(220px), 1fr));
+        gap: calculateRem(16px);
+    }
+
+    &__radio {
+        display: none;
+        position: absolute;
+        left: calculateRem(8px);
+        top: calculateRem(9px);
+    }
+
+    &__subtitle {
+        font-size: $ibexa-text-font-size-medium;
+        margin-bottom: calculateRem(12px);
+    }
+}

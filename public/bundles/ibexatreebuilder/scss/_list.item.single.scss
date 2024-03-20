@@ -1,0 +1,307 @@
+.c-tb-list-item-single {
+    $self: &;
+
+    line-height: calculateRem(21px);
+    min-height: calculateRem(28px);
+    position: relative;
+
+    &__indentation {
+        background-color: grey;
+        width: calc(var(--indent, 0) * #{calculateRem(24px)});
+        position: relative;
+    }
+
+    &__indentation-line {
+        position: absolute;
+        z-index: 3;
+
+        &--vertical {
+            width: calculateRem(1px);
+            top: calculateRem(28px);
+            left: calc((var(--indent, 0) + 1) * #{calculateRem(24px)} + #{calculateRem(8px)});
+            background: var(--ibexa-tb-indent-line-color);
+        }
+    }
+
+    &__element {
+        display: flex;
+        align-items: center;
+        padding-right: calculateRem(4px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid transparent;
+        position: relative;
+        z-index: 2;
+
+        &--selected {
+            background-color: var(--ibexa-tb-list-item-selected-bg-color);
+            font-size: $ibexa-font-weight-bold;
+        }
+
+        .ibexa-input {
+            &--checkbox,
+            &--radio {
+                flex-shrink: 0;
+                margin-right: calculateRem(8px);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__drag-icon {
+        fill: var(--ibexa-tb-drag-icon-color);
+        margin: 0 calculateRem(4px);
+        opacity: 0;
+    }
+
+    &__hidden-icon {
+        margin-left: calculateRem(8px);
+        fill: var(--ibexa-tb-list-item-hidden-text-color);
+    }
+
+    &__link {
+        color: var(--ibexa-tb-text-color);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex: 1;
+        white-space: nowrap;
+        position: relative;
+        align-items: center;
+        font-size: $ibexa-text-font-size-medium;
+        line-height: calculateRem(21px);
+        min-height: calculateRem(21px);
+        padding: calculateRem(2px) calculateRem(14px) calculateRem(3px);
+        color: var(--ibexa-tb-text-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &__label-truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__load-more {
+        margin-left: calculateRem(48px);
+        padding: calculateRem(2px) 0 calculateRem(3px);
+        font-size: $ibexa-text-font-size-medium;
+        color: var(--ibexa-tb-text-color);
+        font-weight: normal;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--ibexa-tb-primary-color);
+        }
+    }
+
+    &__load-more-btn-spinner {
+        margin-right: calculateRem(4px);
+        fill: var(--ibexa-tb-text-color);
+    }
+
+    &__load-more-limit-info {
+        margin-left: calculateRem(48px);
+        padding: calculateRem(4px) 0;
+        color: var(--ibexa-tb-error-text-color);
+        font-size: $ibexa-text-font-size-medium;
+        font-style: italic;
+    }
+
+    .c-tb-list {
+        opacity: 0;
+        list-style: none;
+        max-width: 0;
+        overflow: hidden;
+    }
+
+    &--has-sub-items {
+        > .c-tb-list-item-single__element {
+            .c-tb-toggler {
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    &--expanded {
+        max-height: initial;
+
+        > .c-tb-list {
+            opacity: 1;
+            max-width: initial;
+            overflow: initial;
+        }
+
+        > .c-tb-list-item-single__element {
+            .c-tb-toggler {
+                &::before {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(90deg);
+                }
+            }
+        }
+    }
+
+    &--hidden {
+        > .c-tb-list-item-single__element {
+            --ibexa-tb-text-color: var(--ibexa-tb-list-item-hidden-text-color);
+
+            border-color: var(--ibexa-tb-list-item-hidden-border-color);
+            background: var(--ibexa-tb-list-item-hidden-bg-color);
+        }
+    }
+
+    &--active {
+        > .c-tb-list-item-single__element--main {
+            --ibexa-tb-text-color: var(--ibexa-tb-list-item-active-text-color);
+
+            border-color: var(--ibexa-tb-list-item-active-bg-color);
+            background-color: var(--ibexa-tb-list-item-active-bg-color);
+            font-weight: 600;
+        }
+
+        &.c-tb-list-item-single--hovered {
+            > #{$self}__element--main {
+                border-color: var(--ibexa-tb-list-item-active-hovered-border-color);
+            }
+        }
+    }
+
+    &--disabled {
+        > .c-tb-list-item-single {
+            &__element {
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &--destination {
+        background-color: var(--ibexa-tb-list-item-dropped-bg-color);
+        border: calculateRem(1px) solid var(--ibexa-tb-list-item-dropped-border-color);
+        border-radius: $ibexa-border-radius;
+        color: var(--ibexa-tb-list-item-dropped-text-color);
+        margin: calculateRem(-1px);
+
+        .ibexa-icon {
+            fill: var(--ibexa-tb-list-item-dropped-text-color);
+        }
+
+        .c-tb-toggler:before {
+            border-color: transparent transparent transparent var(--ibexa-tb-list-item-dropped-text-color);
+        }
+
+        &.c-tb-list-item-single {
+            &--expanded {
+                .c-tb-toggler:before {
+                    border-color: var(--ibexa-tb-list-item-dropped-text-color) transparent transparent transparent;
+                }
+            }
+        }
+
+        .c-tb-list-item-single {
+            &__label {
+                color: var(--ibexa-tb-list-item-dropped-text-color);
+            }
+        }
+    }
+
+    &--context-menu-opened {
+        > .c-tb-list-item-single__element {
+            border-color: var(--ibexa-tb-primary-color);
+        }
+    }
+
+    &--action-and-drag-disabled {
+        & > .c-tb-list-item-single__element {
+            & > .c-tb-list-item-single__label {
+                &,
+                .c-tb-list-item-single__link {
+                    cursor: default;
+
+                    &:hover {
+                        color: var(--ibexa-tb-list-item-drag-disabled-hover-text-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &--hovered {
+        > .c-tb-list-item-single__element--main {
+            border-color: var(--ibexa-tb-list-item-hover-border-color);
+            box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 var(--ibexa-tb-list-item-hover-shadow-color);
+
+            .c-tb-contextual-menu,
+            .c-tb-list-menu {
+                display: block;
+            }
+
+            .c-tb-list-item-single__drag-icon {
+                opacity: 1;
+
+                &--hidden {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &--highlighted {
+        > .c-tb-list-item-single__element {
+            border-color: var(--ibexa-tb-list-item-highlight-border-color);
+        }
+    }
+
+    &--draggable {
+        & > .c-tb-list-item-single__element {
+            cursor: grab;
+        }
+    }
+
+    &--draggable:not(.c-tb-list-item-single--clickable) {
+        & > .c-tb-list-item-single__element {
+            &:hover {
+                & > .c-tb-list-item-single__label {
+                    color: var(--ibexa-tb-primary-color);
+
+                    .ibexa-icon {
+                        fill: var(--ibexa-tb-primary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &--clickable {
+        & > .c-tb-list-item-single__element > .c-tb-list-item-single__label {
+            &,
+            .c-tb-list-item-single__link {
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                    color: var(--ibexa-tb-primary-color);
+
+                    .ibexa-icon {
+                        fill: var(--ibexa-tb-primary-color);
+                    }
+                }
+            }
+        }
+    }
+}

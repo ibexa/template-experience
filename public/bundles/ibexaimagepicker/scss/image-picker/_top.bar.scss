@@ -1,0 +1,32 @@
+.c-ip-top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: calculateRem(14px) calculateRem(24px);
+    align-items: center;
+
+    &__cancel-btn-wrapper {
+        justify-self: end;
+    }
+
+    &__cancel-btn {
+        border: none;
+    }
+
+    &__title-wrapper {
+        font-weight: $ibexa-font-weight-normal;
+        color: $ibexa-color-dark;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: calculateRem(28px);
+    }
+
+    &__actions-wrapper {
+        display: flex;
+    }
+
+    .ibexa-input-text-wrapper--search {
+        width: 100%;
+        margin-left: calculateRem(40px);
+    }
+}
