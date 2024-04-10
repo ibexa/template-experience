@@ -1,0 +1,21 @@
+.ibexa-ca-company-create-edit {
+    &__billing-address-header {
+        margin-top: calculateRem(48px);
+    }
+
+    .ibexa-field-edit--ibexa_address {
+        @include ibexa-address-edit-styles;
+    }
+
+    .ibexa-field-edit .ibexa-form-error {
+        min-height: 0;
+    }
+
+    .ibexa-anchor-navigation__section {
+        .ibexa-field-edit:first-child {
+            .ibexa-label {
+                margin-top: 0;
+            }
+        }
+    }
+}
