@@ -1,0 +1,143 @@
+.ibexa-al-data-grid {
+    $self: &;
+    padding: 0 calculateRem(24px) calculateRem(24px);
+
+    &--block {
+        padding: calculateRem(16px);
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.05);
+        background-color: $ibexa-color-white;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: calculateRem(12px);
+
+        #{$self}__data-row-header {
+            padding-top: 0;
+        }
+    }
+
+    &__search-bar {
+        padding: calculateRem(24px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        margin: calculateRem(-1px) calculateRem(-25px) 0 calculateRem(-25px);
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.05);
+
+        .ibexa-input-text-wrapper--search {
+            width: calculateRem(450px);
+        }
+    }
+
+    &__data-row-header {
+        padding: calculateRem(8px) 0 calculateRem(12px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        color: $ibexa-color-dark-400;
+        font-weight: 600;
+    }
+
+    &__data-row {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 12% auto 1fr auto;
+        grid-column-gap: calculateRem(4px);
+        justify-content: left;
+        grid-template-areas:
+            'group-date group-user group-description group-action'
+            '... grouped-logs grouped-logs grouped-logs';
+        margin: calculateRem(4px) 0;
+    }
+
+    &__data-column {
+        display: flex;
+        align-items: center;
+        gap: calculateRem(4px);
+        margin: 0;
+        padding: calculateRem(8px) 0;
+
+        &--date {
+            grid-area: group-date;
+            color: $ibexa-color-dark-400;
+            font-weight: 400;
+        }
+
+        &--user {
+            white-space: nowrap;
+            grid-area: group-user;
+
+            .ibexa-user-thumbnail {
+                margin-right: calculateRem(6px);
+            }
+        }
+
+        &--description {
+            white-space: nowrap;
+            overflow: hidden;
+            grid-area: group-description;
+
+            & > * {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &--actions {
+            grid-area: group-action;
+        }
+
+        &--grouped-logs {
+            display: block;
+            width: 100%;
+            grid-area: grouped-logs;
+            margin-top: calculateRem(4px);
+            padding: calculateRem(8px) 0;
+            background: $ibexa-color-light-200;
+            border-radius: calculateRem(8px);
+            max-height: calculateRem(364px);
+            overflow-y: hidden;
+        }
+
+        &--overflowed {
+            overflow-y: auto;
+        }
+    }
+
+    &__toggle-gouped-logs-btn {
+        .ibexa-icon {
+            margin: calculateRem(4px) 0 0 calculateRem(12px);
+            transform: rotate(180deg);
+            transition: transform 0.2s;
+        }
+
+        &.collapsed {
+            .ibexa-icon {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__gouped-logs-list {
+        margin: 0 0 0 calculateRem(48px);
+        padding: 0;
+    }
+
+    .ibexa-table-header {
+        border: none;
+    }
+
+    &__data-cell {
+        &--username {
+            font-weight: bold;
+        }
+    }
+
+    .ibexa-table-header {
+        margin: 0;
+        padding: calculateRem(24px) 0 calculateRem(16px);
+    }
+
+    &__empty-data-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calculateRem(480px);
+        color: $ibexa-color-dark-400;
+    }
+}

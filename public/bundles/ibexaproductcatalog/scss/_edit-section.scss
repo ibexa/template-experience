@@ -1,0 +1,20 @@
+.ibexa-pc-edit-section {
+    padding: calculateRem(32px) 0;
+    border-radius: $ibexa-border-radius;
+
+    &--filters {
+        max-width: calculateRem(1100px);
+        padding: calculateRem(25px);
+        background-color: $ibexa-color-light-300;
+    }
+
+    &--products {
+        max-width: calculateRem(1100px);
+    }
+
+    .form-group:first-child {
+        .ibexa-label {
+            margin-top: 0;
+        }
+    }
+}

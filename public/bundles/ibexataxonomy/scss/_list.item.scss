@@ -1,0 +1,32 @@
+.c-tt-list-item {
+    &__link {
+        width: 100%;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        background: none;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__icon-warning {
+        fill: $ibexa-color-warning;
+        margin-left: calculateRem(4px);
+    }
+
+    &__search-fragment {
+        white-space: pre;
+
+        &--matched {
+            border-radius: calculateRem(8px);
+            padding: 0 calculateRem(2px);
+            margin: 0 calculateRem(-2px);
+            background-color: var(--ibexa-tt-list-item-matched-bg-color, #{$ibexa-color-info-200});
+        }
+    }
+}

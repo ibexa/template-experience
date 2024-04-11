@@ -1,0 +1,96 @@
+.ibexa-workflow-apply-transition {
+    &__message-wrapper {
+        font-weight: bold;
+        margin-top: calculateRem(16px);
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: calculateRem(12px);
+    }
+
+    &__user-list-wrapper {
+        padding: 0;
+        position: fixed;
+        width: calculateRem(368px);
+        margin-bottom: 0;
+        background-color: $ibexa-color-white;
+        transform: scaleY(1);
+        transform-origin: top center;
+        transition: transform 0.2s $ibexa-admin-transition;
+        border: calculateRem(1px) solid $ibexa-color-dark;
+        border-bottom-left-radius: $ibexa-border-radius;
+        border-bottom-right-radius: $ibexa-border-radius;
+
+        &--hidden {
+            transform: scaleY(0);
+        }
+    }
+
+    &__user-list {
+        margin: 0;
+        list-style: none;
+        padding-left: 0;
+        display: block;
+        overflow: auto;
+        max-height: calculateRem(300px);
+    }
+
+    &__user-list-info {
+        padding: calculateRem(10px);
+        color: $ibexa-color-dark-300;
+        font-size: calculateRem(12px);
+        font-style: italic;
+        line-height: calculateRem(17px);
+    }
+
+    &__user-list-item {
+        padding: calculateRem(6px) calculateRem(16px);
+        cursor: pointer;
+        color: $ibexa-color-dark-300;
+
+        &--disabled {
+            cursor: not-allowed;
+            color: darken($ibexa-color-dark-300, 15%);
+            background-color: $ibexa-color-light-300;
+        }
+    }
+
+    &__user-name {
+        align-self: center;
+        padding-right: calculateRem(16px);
+        font-size: calculateRem(14px);
+    }
+
+    &__user {
+        display: flex;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: calculateRem(12px);
+    }
+
+    &__reviewer-title {
+        font-weight: bold;
+    }
+}
+
+.ibexa-dropdown .ibexa-workflow-apply-transition {
+    border-color: $ibexa-color-primary;
+    background-color: $ibexa-color-primary;
+
+    &::after {
+        background-color: $ibexa-color-primary;
+    }
+}
+
+.ibexa-dropdown {
+    .ibexa-workflow-apply-transition {
+        .ibexa-extra-actions__content {
+            padding: calculateRem(8px);
+        }
+    }
+}
