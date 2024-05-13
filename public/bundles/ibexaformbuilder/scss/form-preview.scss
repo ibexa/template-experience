@@ -1,0 +1,22 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+
+.ibexa-fb-preview-form {
+    height: 100%;
+    background-color: $ibexa-color-white;
+    overflow: auto;
+
+    .ibexa-main-container {
+        display: block;
+        height: auto;
+    }
+
+    .ibexa-label {
+        margin-top: calculateRem(24px);
+    }
+
+    .form-group:first-child {
+        .ibexa-label:first-child {
+            margin-top: 0;
+        }
+    }
+}

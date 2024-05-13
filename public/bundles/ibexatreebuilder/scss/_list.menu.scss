@@ -1,0 +1,24 @@
+.c-tb-list-menu {
+    position: relative;
+    display: none;
+
+    .c-tb-action-list {
+        display: flex;
+
+        &__list {
+            display: flex;
+            padding: 0;
+        }
+
+        &__item {
+            display: flex;
+            padding-left: calculateRem(4px);
+
+            &:hover {
+                .ibexa-icon {
+                    fill: var(--ibexa-tb-primary-color);
+                }
+            }
+        }
+    }
+}

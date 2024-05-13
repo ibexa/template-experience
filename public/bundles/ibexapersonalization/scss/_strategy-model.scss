@@ -1,0 +1,96 @@
+.ibexa-perso-strategy-model {
+    @include drag-item-placeholder-full;
+    @include drag-item;
+
+    height: calculateRem(86px);
+    padding: 0;
+
+    &--removed {
+        .ibexa-perso-strategy-model__content {
+            background: $ibexa-color-light-300;
+            border-color: $ibexa-color-light-300;
+            transform-origin: center;
+            pointer-events: none;
+
+            &:hover {
+                border-color: $ibexa-color-light-300;
+            }
+        }
+
+        animation: remove-perso-field 1s 1 forwards;
+    }
+
+    &__content {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: calculateRem(16px);
+        box-shadow: $ibexa-content-type-edit-field-shadow;
+
+        &--is-error {
+            border-color: $ibexa-color-danger;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        margin-right: calculateRem(12px);
+        fill: $ibexa-color-light;
+    }
+
+    &__name {
+        font-size: $ibexa-text-font-size;
+        font-weight: 600;
+        white-space: nowrap;
+        margin-right: calculateRem(10px);
+        width: calculateRem(200px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__settings {
+        flex: 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .ibexa-label {
+            margin: 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__select-context-container {
+        width: calculateRem(150px);
+    }
+
+    &__select-context {
+        max-width: calculateRem(200px);
+    }
+
+    .form-group {
+        width: calculateRem(150px);
+        margin-right: calculateRem(8px);
+    }
+
+    .ibexa-form-error {
+        position: absolute;
+        top: calculateRem(120px);
+    }
+
+    .ibexa-dropdown {
+        min-width: initial;
+    }
+}
+
+@keyframes remove-perso-field {
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

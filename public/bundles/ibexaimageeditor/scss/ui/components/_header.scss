@@ -1,0 +1,36 @@
+.c-image-editor-header {
+    display: grid;
+    grid-template-areas: 'title actions';
+    grid-template-columns: auto 1fr auto;
+    height: 100%;
+    background: $ibexa-color-dark;
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        grid-area: title;
+        color: $ibexa-color-white;
+    }
+
+    &__actions-wrapper {
+        grid-area: actions;
+        display: flex;
+        justify-content: end;
+        gap: calculateRem(16px);
+    }
+
+    &__title-wrapper,
+    &__actions-wrapper {
+        padding: calculateRem(12px) calculateRem(20px);
+    }
+
+    &__title {
+        font-size: calculateRem(28px);
+        margin-right: calculateRem(24px);
+        font-family: $headings-font-family;
+    }
+
+    &__save-menu-popup {
+        z-index: 100100;
+    }
+}
