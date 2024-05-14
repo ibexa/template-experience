@@ -1,0 +1,81 @@
+.ibexa-pb-menu-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $ibexa-color-dark;
+
+    &__page-builder {
+        display: flex;
+        align-items: center;
+    }
+
+    &__page-builder-name {
+        margin-left: calculateRem(16px);
+        color: $ibexa-color-white;
+        font-family: $headings-font-family;
+        font-size: calculateRem(28px);
+        font-weight: 600;
+        line-height: calculateRem(42px);
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    &__autosave-wrapper {
+        margin-left: calculateRem(48px);
+        padding-top: calculateRem(4px);
+    }
+
+    &__menu {
+        z-index: 650;
+        padding: calculateRem(12px) calculateRem(16px);
+        width: calc(100vw - #{calculateRem(450px)});
+    }
+
+    .ibexa-btn--secondary {
+        color: $ibexa-color-white;
+        fill: $ibexa-color-white;
+        background-color: transparent;
+        border-color: $ibexa-color-white;
+
+        &:focus {
+            color: $ibexa-color-white;
+            border-color: $ibexa-color-white;
+            box-shadow: 0 0 0 calculateRem(3px) rgba($ibexa-color-white, 0.2);
+
+            .ibexa-icon {
+                fill: $ibexa-color-white;
+            }
+        }
+
+        &:hover {
+            color: $ibexa-color-white;
+            fill: $ibexa-color-white;
+            background-color: transparent;
+            border-color: $ibexa-color-white;
+            box-shadow:
+                0 0 0 transparent,
+                0 calculateRem(22px) calculateRem(24px) 0 rgba($ibexa-color-white, 0.2);
+
+            .ibexa-icon {
+                fill: $ibexa-color-white;
+            }
+
+            &:focus {
+                color: $ibexa-color-white;
+                border-color: $ibexa-color-white;
+
+                .ibexa-icon {
+                    fill: $ibexa-color-white;
+                }
+            }
+        }
+
+        &.disabled,
+        &[disabled],
+        &:disabled {
+            color: $ibexa-color-dark-400;
+            fill: $ibexa-color-dark-400;
+            border-color: $ibexa-color-dark-400;
+            box-shadow: none;
+        }
+    }
+}

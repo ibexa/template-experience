@@ -1,0 +1,133 @@
+.ibexa-change-sa-context-dropdown {
+    margin: 0 calculateRem(16px);
+    min-width: auto;
+    max-width: calculateRem(225px);
+
+    .ibexa-dropdown {
+        &__selected-item-icon {
+            .ibexa-icon {
+                margin-right: calculateRem(4px);
+                fill: $ibexa-color-white;
+                transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+            }
+        }
+
+        &__selection-info {
+            color: $ibexa-color-white;
+            border-color: transparent;
+            padding-right: calculateRem(24px);
+
+            &::before,
+            &::after {
+                background-color: $ibexa-color-white;
+                width: calculateRem(7px);
+                margin-top: calculateRem(-1px);
+            }
+
+            &::before {
+                right: calculateRem(6px);
+            }
+
+            &::after {
+                right: calculateRem(11px);
+            }
+        }
+    }
+
+    &.ibexa-dropdown {
+        &:not(.ibexa-dropdown--disabled):not(.is-invalid) {
+            .ibexa-dropdown {
+                &__selection-info {
+                    .ibexa-dropdown__selected-item:not(.ibexa-dropdown__selected-placeholder) {
+                        color: $ibexa-color-white;
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        border-color: transparent;
+
+                        &::before,
+                        &::after {
+                            background-color: $ibexa-color-info;
+                        }
+
+                        .ibexa-dropdown__selected-item:not(.ibexa-dropdown__selected-placeholder) {
+                            color: $ibexa-color-info;
+                        }
+
+                        .ibexa-icon {
+                            fill: $ibexa-color-info;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--disabled {
+            .ibexa-dropdown {
+                &__selection-info {
+                    background: transparent;
+
+                    &::before,
+                    &::after {
+                        background-color: $ibexa-color-dark-400;
+                    }
+
+                    .ibexa-icon {
+                        fill: $ibexa-color-dark-400;
+                    }
+                }
+
+                &__selected-item {
+                    color: $ibexa-color-dark-400;
+                }
+            }
+        }
+    }
+
+    &__items {
+        max-width: calculateRem(430px);
+
+        .ibexa-dropdown {
+            &__items-list-header {
+                & + .ibexa-dropdown__items-list {
+                    padding-top: calculateRem(12px);
+                }
+            }
+
+            &__items-list {
+                padding: calculateRem(16px);
+            }
+
+            &__item {
+                margin: 0;
+
+                &[data-value=''] {
+                    margin-bottom: calculateRem(24px);
+
+                    &:after {
+                        bottom: calculateRem(-13px);
+                    }
+                }
+
+                & + .ibexa-dropdown__item {
+                    margin-top: calculateRem(12px);
+                }
+
+                &:hover {
+                    background-color: transparent;
+                }
+
+                &--selected {
+                    &:hover {
+                        background-color: $ibexa-color-light-300;
+                    }
+                }
+
+                &--hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}

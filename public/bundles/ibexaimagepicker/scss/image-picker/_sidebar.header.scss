@@ -1,0 +1,11 @@
+.c-ip-sidebar-header {
+    display: flex;
+    padding: calculateRem(16px);
+    height: calculateRem(64px);
+    align-items: center;
+    border-bottom: calculateRem(1px) solid $ibexa-color-light;
+
+    .ibexa-icon {
+        margin-right: calculateRem(8px);
+    }
+}

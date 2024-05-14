@@ -1,0 +1,37 @@
+.ibexa-location-preview {
+    padding-top: calculateRem(12px);
+    aspect-ratio: 16/9;
+    position: relative;
+
+    &__iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        transform-origin: left top;
+
+        &--full {
+            aspect-ratio: initial;
+            height: 100%;
+        }
+
+        &--success {
+            width: 100vw;
+        }
+    }
+
+    &__loader-wrapper {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $ibexa-color-white;
+    }
+
+    &__loader {
+        @include spinner(calculateRem(80px), calculateRem(8px), $ibexa-color-primary);
+    }
+}

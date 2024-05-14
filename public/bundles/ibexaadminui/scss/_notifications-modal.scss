@@ -1,0 +1,134 @@
+.ibexa-notifications-modal {
+    cursor: auto;
+
+    .modal-dialog {
+        max-width: 60vw;
+    }
+
+    .modal-header {
+        .modal-title {
+            &::after {
+                content: attr(data-notifications-total);
+            }
+        }
+    }
+
+    .table {
+        table-layout: fixed;
+        white-space: normal;
+        margin-bottom: 0;
+
+        th {
+            border: none;
+            color: $ibexa-color-dark-300;
+            border-top: calculateRem(1px) solid $ibexa-color-light;
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+
+        tr {
+            background-color: $ibexa-color-white;
+            cursor: pointer;
+
+            td {
+                vertical-align: top;
+            }
+        }
+    }
+
+    &__type {
+        .type__icon {
+            @include type-icon;
+        }
+
+        .type__text {
+            margin-left: 1rem;
+        }
+    }
+
+    &__type-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item--read {
+        color: $ibexa-color-dark-300;
+
+        .type__icon {
+            @include type-icon-read;
+        }
+    }
+
+    &__item--permanently-deleted {
+        .type__text,
+        .description__text {
+            font-style: italic;
+        }
+    }
+
+    &__description {
+        .description__title {
+            margin-bottom: 0;
+
+            &__item {
+                display: inline-block;
+                vertical-align: top;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+        }
+
+        .description__text {
+            width: 100%;
+            margin-bottom: 0;
+            max-width: 50ch;
+            float: left;
+
+            + .description__read-more {
+                display: none;
+
+                &::after {
+                    content: ' \00BB';
+                }
+            }
+
+            &--ellipsis {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                + .description__read-more {
+                    display: inline;
+                    color: $ibexa-color-primary;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &--loading {
+        .ibexa-notifications-modal__spinner {
+            display: block;
+        }
+
+        .ibexa-notifications-modal__results {
+            visibility: hidden;
+        }
+    }
+
+    &__spinner {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+
+        .ibexa-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

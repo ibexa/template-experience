@@ -1,0 +1,21 @@
+.ibexa-dropdown__items--qualifio {
+    .ibexa-dropdown__item-label-wrapper {
+        display: flex;
+        flex-direction: column;
+        line-height: calculateRem(21px);
+
+        .ibexa-dropdown__item-campaign-wrapper,
+        .ibexa-dropdown__item-date-wrapper {
+            display: flex;
+            align-items: center;
+
+            .ibexa-icon {
+                fill: $ibexa-color-dark-400;
+            }
+        }
+        .ibexa-dropdown__item-date,
+        .ibexa-dropdown__item-campaign {
+            color: $ibexa-color-dark-400;
+        }
+    }
+}
