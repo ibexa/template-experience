@@ -1,0 +1,42 @@
+.m-ibexa-fb-workspace {
+    display: block;
+    margin: 0 auto;
+    height: calc(100vh - #{calculateRem(162px)});
+    background-color: $ibexa-color-light-300;
+    border-radius: $ibexa-border-radius;
+    overflow: auto;
+    padding: calculateRem(48px) 15%;
+    border: calculateRem(1px) solid $ibexa-color-info;
+
+    &__empty-zone-placeholder {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__empty-zone-image {
+        margin-bottom: calculateRem(40px);
+    }
+
+    &__empty-zone-headline {
+        margin-bottom: calculateRem(8px);
+    }
+
+    &--active {
+        background-color: transparent;
+
+        .m-ibexa-fb-workspace__content {
+            min-height: calc(100% - 1rem);
+        }
+    }
+
+    &__content--empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .m-ibexa-fb-workspace__empty-zone-placeholder {
+            display: flex;
+        }
+    }
+}

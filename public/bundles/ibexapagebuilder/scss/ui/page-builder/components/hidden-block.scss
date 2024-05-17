@@ -1,0 +1,5 @@
+.c-pb-hidden-block {
+    @include toolbox-drag-item;
+
+    min-width: calculateRem(280px);
+}

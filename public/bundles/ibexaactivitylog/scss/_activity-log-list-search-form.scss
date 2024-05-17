@@ -1,0 +1,7 @@
+.ibexa-al-list-search-form {
+    @import './public/bundles/ibexaadminui/scss/mixins/search-form-no-results';
+
+    &__no-results {
+        padding: 0 0 calculateRem(100px);
+    }
+}

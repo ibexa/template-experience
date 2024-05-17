@@ -1,0 +1,53 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-pb-block-config--collection {
+    .ibexa-pb-block-config__field--other {
+        width: 100%;
+    }
+}
+
+.ibexa-pb-collection {
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(24px) calculateRem(16px);
+
+    &__items {
+        list-style: none;
+        padding: 0;
+        margin-top: calculateRem(16px);
+        min-height: calculateRem(36px);
+    }
+}
+
+.ibexa-pb-collection-item {
+    @include drag-item();
+
+    margin-bottom: calculateRem(8px);
+
+    &__label {
+        width: 100%;
+    }
+
+    &__label-name {
+        display: inline-block;
+        width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__label-type {
+        display: inline-block;
+        width: 35%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right;
+    }
+}
+
+.ibexa-pb-collection-placeholder {
+    @include drag-item-placeholder();
+}
