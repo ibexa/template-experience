@@ -1,0 +1,46 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-block-attributes-group-wrapper {
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(16px);
+
+    &__header {
+        margin-bottom: calculateRem(16px);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__group-name {
+        margin-right: auto;
+    }
+
+    .ibexa-collapse {
+        margin-bottom: calculateRem(8px);
+
+        &__body-content {
+            padding: calculateRem(16px);
+        }
+
+        &__header {
+            padding-left: calculateRem(16px);
+
+            .ibexa-input--checkbox {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--single {
+        border: none;
+        padding: 0;
+
+        .ibexa-collapse {
+            &__header {
+                padding-left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.c-tb-action-list {
+    &__item {
+        cursor: pointer;
+
+        &--disabled {
+            color: var(--ibexa-tb-action-menu-item-disabled-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &__item-loader {
+        display: inline-block;
+        margin-bottom: calculateRem(-1px);
+        padding-left: calculateRem(8px);
+
+        &--hidden {
+            visibility: hidden;
+        }
+    }
+
+    &__item-spinner {
+        @include spinner(calculateRem(12px), calculateRem(1px), $ibexa-color-primary);
+    }
+}
