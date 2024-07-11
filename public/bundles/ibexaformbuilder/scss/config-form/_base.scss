@@ -1,0 +1,136 @@
+.ibexa-fb-form-field-config {
+    .ibexa-main-container {
+        height: 100vh;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__link {
+        line-height: calculateRem(42px);
+        padding: 0 calculateRem(16px);
+        border: 0 none;
+    }
+
+    &__header {
+        padding: calculateRem(32px) calculateRem(32px) 0;
+        transition: padding 0.5s ease;
+
+        &--slim {
+            z-index: 1;
+            box-shadow: 0 0 calculateRem(16px) 0 rgba($ibexa-color-dark, 0.16);
+            padding: 0 calculateRem(32px) 0;
+
+            .ibexa-tabs.ibexa-tabs--switcher .ibexa-tabs__list {
+                border: none;
+                margin-bottom: 0;
+                background-color: transparent;
+            }
+        }
+    }
+
+    & &__content {
+        padding: calculateRem(32px);
+        height: 100%;
+        overflow: auto;
+
+        .ibexa-label {
+            display: block;
+        }
+
+        .form-group {
+            .ibexa-label {
+                margin-top: calculateRem(32px);
+            }
+        }
+
+        .ibexa-tab-content__pane {
+            padding: 0;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        padding: calculateRem(24px) calculateRem(32px);
+
+        &--slim {
+            z-index: 1;
+            box-shadow: 0 0 calculateRem(16px) 0 rgba($ibexa-color-dark, 0.16);
+        }
+
+        .ibexa-btn + .ibexa-btn {
+            margin-left: calculateRem(16px);
+        }
+    }
+
+    [data-open-udw] {
+        display: block;
+    }
+
+    &__error {
+        display: inline-block;
+        margin-left: calculateRem(8px);
+        color: $ibexa-color-danger;
+    }
+
+    &__btn {
+        &--open-udw {
+            display: flex;
+            align-items: center;
+
+            .ibexa-icon {
+                fill: $ibexa-color-white;
+                margin-right: calculateRem(8px);
+            }
+        }
+    }
+
+    &__config-label {
+        font-size: calculateRem(14px);
+
+        &--required {
+            &:after {
+                content: '*:';
+            }
+        }
+    }
+
+    .ibexa-fb-field-config__link {
+        &,
+        &:hover {
+            border: none;
+        }
+    }
+
+    .ibexa-tab-content {
+        margin-bottom: 0;
+        border-width: calculateRem(1px) 0 0 0;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    &--default {
+        background: $ibexa-color-white;
+
+        .ibexa-fb-field-config {
+            &__wrapper {
+                height: calc(100% - #{calculateRem(61px)});
+            }
+        }
+
+        .ibexa-main-container {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+[name='field_configuration'] {
+    height: 100%;
+    width: 100%;
+}

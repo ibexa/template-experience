@@ -1,0 +1,13 @@
+.ibexa-ca-applications-assignments-disc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calculateRem(60px);
+    width: calculateRem(60px);
+    border-radius: calculateRem(30px);
+    background-color: $ibexa-color-light;
+
+    .ibexa-icon {
+        fill: $ibexa-color-dark;
+    }
+}
