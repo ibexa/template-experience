@@ -1,0 +1,90 @@
+.c-ip-snackbar {
+    position: absolute;
+    z-index: 10;
+    color: $ibexa-color-white;
+    font-size: $ibexa-text-font-size-medium;
+    bottom: calculateRem(32px);
+    left: calc((100% - calculateRem(600px)) / 2);
+    width: calculateRem(600px);
+    padding: calculateRem(4px) calculateRem(8px);
+    border-radius: calculateRem(12px);
+    border: calculateRem(2px) solid $ibexa-color-info-200;
+    background: $ibexa-color-dark;
+    box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.15);
+
+    &__toggle-btn {
+        position: relative;
+        display: flex;
+        height: calculateRem(20px);
+        padding-right: calculateRem(16px);
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        color: $ibexa-color-white;
+        background: $ibexa-color-dark-500;
+        border-radius: calculateRem(4px);
+
+        &::after {
+            position: absolute;
+            top: calculateRem(9px);
+            right: calculateRem(4px);
+            content: '';
+            border-left: calculateRem(4px) solid transparent;
+            border-right: calculateRem(4px) solid transparent;
+            border-top: calculateRem(4px) solid $ibexa-color-white;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+    }
+
+    &__selection-info {
+        &--expanded {
+            .c-ip-snackbar {
+                &__toggle-btn::after {
+                    transform: rotate(180deg);
+                }
+
+                &__selection-info-row--multi-items {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__selection-info-multi-hint {
+        color: $ibexa-color-white-600;
+    }
+
+    &__selection-info-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: calculateRem(8px);
+
+        &--main {
+            height: calculateRem(36px);
+            margin: calculateRem(6px) 0 calculateRem(4px);
+            padding: 0 calculateRem(16px);
+        }
+
+        &--multi-items {
+            display: none;
+            flex-wrap: wrap;
+            gap: calculateRem(8px);
+            padding: 0 calculateRem(8px) calculateRem(12px) calculateRem(8px);
+        }
+    }
+
+    &__selection-info-label {
+        &::after {
+            content: ':';
+        }
+    }
+
+    &__selection-actions {
+        display: flex;
+        justify-content: space-between;
+        padding: calculateRem(6px) 0;
+        border-top: calculateRem(2px) solid $ibexa-color-dark-400;
+    }
+}

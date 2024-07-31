@@ -1,0 +1,11 @@
+.ibexa-pc-edit-section {
+    margin: 0 0 calculateRem(36px);
+
+    &--filters {
+        max-width: calculateRem(1100px);
+    }
+
+    &--products {
+        max-width: calculateRem(1100px);
+    }
+}
