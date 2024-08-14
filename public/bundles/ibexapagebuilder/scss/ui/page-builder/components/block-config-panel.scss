@@ -1,0 +1,30 @@
+.c-pb-block-config-panel {
+    &__body {
+        height: 100%;
+        padding: 0;
+
+        .c-pb-iframe:not(.c-pb-iframe--is-loading) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .c-pb-iframe.c-pb-iframe--is-loading {
+            .c-pb-iframe {
+                &__preview {
+                    display: none;
+                }
+            }
+        }
+
+        .c-pb-iframe {
+            height: 100%;
+
+            &__preview {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

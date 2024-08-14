@@ -1,0 +1,57 @@
+.c-pb-toolbox {
+    @include toolbar-drag-items;
+
+    & {
+        position: relative;
+        height: calc(100vh - #{calculateRem(139px)});
+    }
+
+    &__toggler {
+        display: flex;
+        cursor: pointer;
+        transform: rotate(180deg);
+    }
+
+    &__icon-wrapper {
+        display: flex;
+    }
+
+    &__resizer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calculateRem(1px);
+        height: 100%;
+        background-color: rgba($ibexa-color-white, 0.8);
+        transition: width 0.3s;
+
+        &:hover {
+            background-color: $ibexa-color-info;
+            cursor: col-resize;
+            width: calculateRem(6px);
+        }
+    }
+
+    &--resizing {
+        transition-property: opacity, transform;
+
+        .c-pb-toolbox__resizer {
+            transition: none;
+        }
+    }
+
+    &--collapsed {
+        min-width: 0;
+        width: 0;
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .m-page-builder__content--reversed &__action-bar {
+        flex-direction: row-reverse;
+
+        .c-pb-toolbox__toggler {
+            transform: none;
+        }
+    }
+}

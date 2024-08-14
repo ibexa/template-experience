@@ -1,0 +1,35 @@
+.ibexa-pc-edit-catalog-tags-popup-menu {
+    top: calculateRem(38px);
+    right: 0;
+    min-width: calculateRem(120px);
+
+    &__list {
+        display: inline-flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline-flex;
+        justify-content: space-between;
+        height: auto;
+        margin: calculateRem(3px) 0;
+        padding: calculateRem(4px) calculateRem(4px) calculateRem(4px) calculateRem(8px);
+        border-radius: calculateRem(18px);
+        background-color: $ibexa-color-light-400;
+        font-size: $ibexa-text-font-size-small;
+        min-width: calculateRem(40px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__item-remove-btn {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        height: calculateRem(16px);
+    }
+}

@@ -1,0 +1,105 @@
+.ibexa-al-block {
+    &__header {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__tiles {
+        display: flex;
+        flex-direction: column;
+        padding: calculateRem(16px) calculateRem(16px) calculateRem(8px);
+        background-color: $ibexa-color-white;
+        border-radius: calculateRem(12px);
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.05);
+
+        &--profile {
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+
+    &__date {
+        padding-bottom: calculateRem(12px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        color: $ibexa-color-dark-400;
+
+        &:not(:first-child) {
+            margin-top: calculateRem(12px);
+        }
+    }
+
+    &__tile {
+        padding: calculateRem(8px) calculateRem(12px);
+        background-color: $ibexa-color-light-100;
+        border-radius: calculateRem(12px);
+        margin-top: calculateRem(8px);
+    }
+
+    &__time {
+        margin-bottom: calculateRem(12px);
+        color: $ibexa-color-dark-400;
+    }
+
+    &__content {
+        display: inline;
+        flex-wrap: wrap;
+
+        & > * {
+            margin-right: calculateRem(3px);
+        }
+    }
+
+    &__content-name--overflowed {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__avatar {
+        display: inline;
+        align-items: center;
+    }
+
+    &__user-name {
+        margin-left: calculateRem(2px);
+        font-weight: 600;
+    }
+
+    &__thumbnail {
+        position: relative;
+        top: calculateRem(-2px);
+        height: calculateRem(20px);
+        width: calculateRem(20px);
+    }
+
+    &__show-more-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: calculateRem(8px) 0;
+
+        .ibexa-icon {
+            margin: 0 0 0 calculateRem(4px);
+            transform: rotate(180deg);
+            transition: transform 0.2s;
+        }
+
+        &.collapsed {
+            .ibexa-icon {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        margin-top: calculateRem(12px);
+    }
+
+    &__all-activity-btn {
+        margin: calculateRem(5px) 0 calculateRem(1px);
+    }
+}
