@@ -1,0 +1,34 @@
+.ibexa-sf-sections {
+    &__section {
+        margin-bottom: calculateRem(36px);
+    }
+
+    &__section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__section-header-title {
+        margin: 0;
+    }
+
+    &__section-body {
+        .ibexa-collapse {
+            &__header {
+                padding: 0 calculateRem(8px) 0 calculateRem(18px);
+            }
+
+            &__toggle-btn {
+                &--status {
+                    margin-left: auto;
+                }
+            }
+
+            &__body-content {
+                padding: calculateRem(12px) calculateRem(24px);
+            }
+        }
+    }
+}

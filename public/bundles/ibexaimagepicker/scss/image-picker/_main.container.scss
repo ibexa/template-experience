@@ -1,0 +1,84 @@
+.c-ip-main-container {
+    height: calc(100vh - #{calculateRem(32px)});
+    display: flex;
+    flex-direction: column;
+    border-radius: $ibexa-border-radius;
+    overflow: hidden;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &__top-bar {
+        background-color: $ibexa-color-white;
+        z-index: 2;
+    }
+
+    &__content {
+        display: flex;
+        min-height: 0;
+        flex-shrink: 1;
+        flex-grow: 1;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        box-shadow: calculateRem(4px) calculateRem(2px) calculateRem(17px) 0 rgba($ibexa-color-black, 0.05);
+    }
+
+    &__left-sidebar {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-color: $ibexa-color-white;
+        border-bottom: 0;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.05);
+    }
+
+    &__main {
+        flex: 4;
+        background-color: $ibexa-color-white;
+        overflow: hidden;
+    }
+
+    &__right-sidebar {
+        flex: 0.9;
+        min-width: calculateRem(270px);
+        max-width: calculateRem(300px);
+        background-color: $ibexa-color-white;
+        border-left: calculateRem(1px) solid $ibexa-color-light;
+        overflow-y: auto;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+        &:empty {
+            display: none;
+        }
+
+        &--collapsed {
+            min-width: calculateRem(64px);
+            max-width: calculateRem(64px);
+
+            .c-ip-filters {
+                &__header-content,
+                &__header-actions,
+                &__collapsible {
+                    display: none;
+                }
+
+                &__header {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__bottom-bar {
+        background-color: $ibexa-color-white;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-black, 0.05);
+        border-bottom-left-radius: $ibexa-border-radius;
+        border-bottom-right-radius: $ibexa-border-radius;
+    }
+
+    &__dropdown-portal {
+        .ibexa-dropdown__items {
+            position: fixed;
+            z-index: 250;
+        }
+    }
+}
