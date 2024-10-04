@@ -1,0 +1,11 @@
+.ibexa-pb-block-config--richtext {
+    #ibexa-tab-basic {
+        .ibexa-pb-block-config {
+            &__field {
+                &--other {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

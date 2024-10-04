@@ -1,0 +1,53 @@
+.ibexa-perso-segments-group-item {
+    position: relative;
+
+    &__content {
+        display: flex;
+        width: 100%;
+        height: calculateRem(50px);
+        align-items: center;
+        justify-content: center;
+        border: calculateRem(1px) solid $ibexa-color-light-400;
+        border-radius: $ibexa-border-radius;
+        padding: 0 0 0 calculateRem(20px);
+    }
+
+    &__icon {
+        display: flex;
+        margin-right: calculateRem(20px);
+        fill: $ibexa-color-light;
+    }
+
+    &__name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: calculateRem(10px);
+    }
+
+    &__status {
+        margin-left: auto;
+        padding: 0 calculateRem(8px);
+        border-radius: calculateRem(12px);
+
+        &--active {
+            color: $ibexa-color-success;
+            background-color: $ibexa-color-success-200;
+        }
+
+        &--inactive {
+            color: $ibexa-color-danger;
+            background-color: $ibexa-color-danger-200;
+        }
+    }
+
+    &:not(:first-child) {
+        .ibexa-perso-segments-group-item__content::before {
+            content: '';
+            position: absolute;
+            width: calculateRem(28px);
+            left: calculateRem(-27px);
+            border-top: calculateRem(3px) solid $ibexa-color-info;
+        }
+    }
+}

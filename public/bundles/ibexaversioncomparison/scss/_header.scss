@@ -1,0 +1,41 @@
+.ibexa-version-compare-header {
+    display: grid;
+    grid-template-areas:
+        'back title'
+        'menu menu';
+    grid-template-columns: auto 1fr;
+
+    &__back-wrapper {
+        grid-area: back;
+        padding: calculateRem(10px);
+        border-right: calculateRem(1px) solid $ibexa-color-light;
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) rgba(0, 63, 255, 0.07);
+    }
+
+    &__title-wrapper {
+        grid-area: title;
+        padding: calculateRem(18px) calculateRem(28px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) rgba(0, 63, 255, 0.07);
+        display: flex;
+        align-items: center;
+    }
+
+    &__tooltip {
+        margin-left: calculateRem(8px);
+    }
+
+    &__menu-wrapper {
+        grid-area: menu;
+    }
+
+    &__back-link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+}

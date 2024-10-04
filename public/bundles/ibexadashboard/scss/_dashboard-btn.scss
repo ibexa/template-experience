@@ -1,0 +1,50 @@
+// TODO: Remove this file after btns upgrade
+.ibexa-db-btn {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: calculateRem(14px) calculateRem(15px);
+    outline: none;
+    border: calculateRem(1px) solid transparent;
+    border-radius: $ibexa-border-radius;
+    text-decoration: none;
+    font-size: calculateRem(14px);
+    line-height: calculateRem(18px);
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &--tertiary {
+        color: $ibexa-color-primary;
+        fill: $ibexa-color-primary;
+        background-color: transparent;
+
+        &:hover {
+            box-shadow: 0 calculateRem(22px) calculateRem(24px) 0 rgba($ibexa-color-primary, 0.05);
+            background-color: $ibexa-color-primary-100;
+            color: $ibexa-color-primary;
+            opacity: 0.9;
+
+            .ibexa-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &:active,
+        &:focus-visible {
+            background-color: $ibexa-color-white;
+            box-shadow: 0 0 0 calculateRem(4px) rgba($ibexa-color-primary, 0.2);
+            color: $ibexa-color-primary-700;
+        }
+
+        &.disabled,
+        &[disabled],
+        &:disabled {
+            color: $ibexa-color-dark-300;
+            fill: $ibexa-color-dark-300;
+        }
+    }
+
+    & .ibexa-icon {
+        fill: $ibexa-color-primary;
+        margin-right: calculateRem(4px);
+    }
+}

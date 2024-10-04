@@ -1,0 +1,13 @@
+.ibexa-content-view {
+    .ibexa-header {
+        display: flex;
+    }
+
+    .ibexa-tabs {
+        flex-grow: 1;
+    }
+
+    .ibexa-additional-actions {
+        margin-bottom: calculateRem(1px);
+    }
+}
