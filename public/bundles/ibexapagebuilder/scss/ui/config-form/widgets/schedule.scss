@@ -1,0 +1,69 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-pb-schedule {
+    position: relative;
+
+    &__content-items-wrapper {
+        border: calculateRem(1px) solid $ibexa-color-dark-200;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(24px) calculateRem(16px);
+    }
+
+    &__content-items-label {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__btn-wrapper {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__active-items,
+    &__queue-items {
+        padding: 0;
+    }
+
+    &__loading {
+        display: none;
+    }
+
+    &__no-active-items-info,
+    &__no-queued-items-info {
+        min-height: calculateRem(36px);
+        padding: calculateRem(8px);
+        color: $ibexa-color-dark-300;
+        font-style: italic;
+        font-size: small;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &--is-loading {
+        .ibexa-pb-schedule {
+            &__items-wrapper {
+                display: none;
+            }
+
+            &__loading {
+                width: 100%;
+                height: calculateRem(320px);
+                background-color: $ibexa-color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .ibexa-input-text-wrapper--type-number {
+        width: calculateRem(84px);
+        height: calculateRem(48px);
+    }
+}
+
+.ibexa-pb-schedule-placeholder {
+    @include drag-item-placeholder();
+}

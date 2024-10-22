@@ -1,0 +1,95 @@
+body.ibexa-theme.ibexa-theme--dark .c-tb-element.c-tb-element--use-theme {
+    $ibexa-color-dark-mode-5-white: #1f2731;
+    $ibexa-color-dark-mode-10-white: #2b333c;
+    $ibexa-color-dark-mode-15-white: #363e47;
+    $ibexa-color-dark-mode-20-white: #424951;
+    $ibexa-color-dark-mode-25-white: #4e555c;
+    $ibexa-color-dark-mode-30-white: #5a6067;
+    $ibexa-color-dark-mode-35-white: #666b72;
+    $ibexa-color-dark-mode-50-white: #898d93;
+    $ibexa-color-dark-mode-70-white: #b8bbbe;
+    $ibexa-color-dark-mode-90-white: #e7e8e9;
+
+    --ibexa-primary-color: #{$ibexa-color-complementary-primary-500};
+    --ibexa-text-color: #{$ibexa-color-dark-mode-90-white};
+
+    --ibexa-tb-primary-color: var(--ibexa-primary-color);
+    // TODO: secondary buttons variables/colors should be configurable in main admin-ui file, but it's big change, probably for 5.0
+    --ibexa-tb-secondary-black-border-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-tb-secondary-black-text-color: #{$ibexa-color-dark-mode-90-white};
+
+    --ibexa-tb-bg-color: #{$ibexa-color-dark-mode-5-white};
+    --ibexa-tb-border-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-tb-error-text-color: #{$ibexa-color-accent-600};
+    --ibexa-tb-text-color: #{$ibexa-color-dark-mode-90-white};
+
+    --ibexa-tb-drag-icon-color: #{$ibexa-color-dark-400};
+    --ibexa-tb-header-line-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-tb-indent-line-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-tb-scrollbar-thumb-color: #{$ibexa-color-dark-mode-20-white};
+    --ibexa-tb-scrollbar-track-color: #{$ibexa-color-dark-mode-10-white};
+
+    --ibexa-tb-action-menu-bg-color: #{$ibexa-color-dark-mode-5-white};
+    --ibexa-tb-action-menu-border-color: #{$ibexa-color-dark-mode-25-white};
+    --ibexa-tb-action-menu-item-disabled-color: #{$ibexa-color-dark-mode-35-white};
+    --ibexa-tb-action-menu-item-hover-text-color: var(--ibexa-tb-primary-color);
+    --ibexa-tb-action-menu-item-hover-bg-color: transparent;
+    --ibexa-tb-action-menu-separator-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-tb-action-menu-shadow-color: #{rgba($ibexa-color-info-600, 0.1)};
+
+    --ibexa-tb-list-item-active-bg-color: #{$ibexa-color-complementary-primary-700};
+    --ibexa-tb-list-item-active-border-color: #{$ibexa-color-complementary-primary-700};
+    --ibexa-tb-list-item-active-text-color: #{$ibexa-color-complementary-primary-200};
+    --ibexa-tb-list-item-active-hovered-border-color: #{$ibexa-color-complementary-primary-500};
+    --ibexa-tb-list-item-drag-disabled-hover-text-color: #{$ibexa-color-dark-mode-90-white};
+    --ibexa-tb-list-item-dragged-bg-color: #{$ibexa-color-dark-mode-5-white};
+    --ibexa-tb-list-item-dragged-border-color: #{$ibexa-color-dark-mode-25-white};
+    --ibexa-tb-list-item-dragged-placeholder-color: #{$ibexa-color-info};
+    --ibexa-tb-list-item-dropped-bg-color: #{$ibexa-color-complementary-primary-900};
+    --ibexa-tb-list-item-dropped-border-color: #{$ibexa-color-complementary-primary-900};
+    --ibexa-tb-list-item-dropped-text-color: var(--ibexa-tb-text-color);
+    --ibexa-tb-list-item-hidden-border-color: #{$ibexa-color-dark-mode-15-white};
+    --ibexa-tb-list-item-hidden-bg-color: #{$ibexa-color-dark-mode-10-white};
+    --ibexa-tb-list-item-hidden-text-color: #{$ibexa-color-dark-mode-50-white};
+    --ibexa-tb-list-item-highlight-border-color: #{$ibexa-color-complementary-primary-500};
+    --ibexa-tb-list-item-hover-border-color: #{$ibexa-color-dark-mode-25-white};
+    --ibexa-tb-list-item-hover-shadow-color: #{rgba($ibexa-color-info, 0.05)};
+    --ibexa-tb-list-item-selected-bg-color: #{$ibexa-color-dark-mode-10-white};
+    --ibexa-tb-list-item-source-bg-color: #{$ibexa-color-dark-mode-10-white};
+    --ibexa-tb-list-item-source-border-color: #{$ibexa-color-dark-mode-30-white};
+
+    --ibexa-input-bg-color: #{$ibexa-color-dark-mode-10-white};
+    --ibexa-input-border-color: #{$ibexa-color-dark-mode-30-white};
+    --ibexa-input-text-color: #{$ibexa-color-dark-mode-90-white};
+    --ibexa-input-focus-border-color: #{$ibexa-color-white};
+    --ibexa-input-focus-shadow-color: #{rgba($ibexa-color-white, 0.2)};
+    --ibexa-input-hover-border-color: #{$ibexa-color-complementary-primary-600};
+    --ibexa-input-checked-bg-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-disabled-bg-color: #{$ibexa-color-complementary-primary-800};
+    --ibexa-input-checked-disabled-text-color: #{$ibexa-color-complementary-primary-700};
+    --ibexa-input-disabled-bg-color: #{$ibexa-color-dark-mode-10-white};
+    --ibexa-input-disabled-border-color: #{$ibexa-color-dark-mode-15-white};
+    --ibexa-btn-icon-fill-color: #{$ibexa-color-dark-mode-70-white};
+
+    --ibexa-dropdown-items-bg-color: #{$ibexa-color-dark-mode-5-white};
+    --ibexa-dropdown-items-border-color: #{$ibexa-color-dark-mode-25-white};
+    --ibexa-dropdown-items-item-hover-text-color: var(--ibexa-tb-primary-color);
+    --ibexa-dropdown-items-item-hover-bg-color: transparent;
+    --ibexa-dropdown-items-separator-color: #{$ibexa-color-dark-mode-30-white};
+
+    .c-tb-tree__scrollable-wrapper {
+        scrollbar-color: var(--ibexa-tb-scrollbar-thumb-color) var(--ibexa-tb-scrollbar-track-color);
+
+        &::-webkit-scrollbar {
+            width: calculateRem(8px);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--ibexa-tb-scrollbar-thumb-color);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--ibexa-tb-scrollbar-track-color);
+        }
+    }
+}

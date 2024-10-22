@@ -1,0 +1,42 @@
+.c-ip-list-view {
+    height: 100%;
+    overflow: auto;
+
+    &__table-cell-name {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ibexa-table {
+        table-layout: fixed;
+        min-width: calculateRem(1000px);
+
+        &__header-cell {
+            &--select-toggler {
+                width: calculateRem(50px);
+            }
+
+            &--thumbnail {
+                width: calculateRem(120px);
+            }
+
+            &--format {
+                width: calculateRem(75px);
+            }
+
+            &--size {
+                width: calculateRem(105px);
+            }
+
+            &--dimensions {
+                width: calculateRem(130px);
+            }
+
+            &--published-date,
+            &--modifitaction-date {
+                width: calculateRem(170px);
+            }
+        }
+    }
+}
