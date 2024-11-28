@@ -1,0 +1,10 @@
+.ibexa-ca-user-status-change-confirmation-modal {
+    &__question {
+        font-weight: bold;
+    }
+
+    &__note {
+        display: block;
+        margin-bottom: calculateRem(24px);
+    }
+}

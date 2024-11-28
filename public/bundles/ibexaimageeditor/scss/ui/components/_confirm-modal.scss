@@ -1,0 +1,18 @@
+.ibexa-image-editor-confirm-modal {
+    display: block;
+
+    .modal-footer {
+        justify-content: space-between;
+    }
+
+    &__confirm-wrapper {
+        margin: 0;
+
+        .ibexa-btn {
+            &.ibexa-btn--secondary,
+            &.ibexa-btn--primary {
+                margin-right: calculateRem(16px);
+            }
+        }
+    }
+}

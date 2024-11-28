@@ -1,0 +1,20 @@
+.ibexa-pc-product-price-edit-form {
+    &__group {
+        &--price {
+            padding-bottom: calculateRem(70px);
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+
+        &--customer-group-price {
+            margin-top: calculateRem(32px);
+        }
+    }
+
+    &__group-title {
+        margin-bottom: calculateRem(48px);
+    }
+}
+
+.ibexa-pc-product-price {
+    margin-bottom: calculateRem(24px);
+}

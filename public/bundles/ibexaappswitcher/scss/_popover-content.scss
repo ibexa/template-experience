@@ -1,0 +1,13 @@
+.PopoverContent {
+    box-sizing: initial;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: calculateRem(4px) calculateRem(32px) calculateRem(47px) 0 rgba($ibexa-color-info-600, 0.15);
+    padding: calculateRem(32px) calculateRem(24px) calculateRem(16px) calculateRem(24px);
+    font-family: $ibexa-font-family;
+    gap: calculateRem(16px);
+
+    & > hr {
+        border-color: $ibexa-color-light;
+        margin-top: calculateRem(16px);
+    }
+}
