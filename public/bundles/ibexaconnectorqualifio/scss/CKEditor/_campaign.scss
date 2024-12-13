@@ -1,0 +1,68 @@
+.ibexa-ckeditor-campaign {
+    .ck {
+        &.ck-labeled-field-view {
+            .ck-list__group {
+                .ck {
+                    &.ck-label {
+                        position: relative;
+                    }
+                }
+            }
+
+            .ck {
+                &.ck-labeled-field-view__input-wrapper {
+                    .ck {
+                        &.ck-dropdown {
+                            width: 100%;
+
+                            .ck-button {
+                                &.ck-dropdown__button {
+                                    .ck-button__label {
+                                        width: calculateRem(206px);
+                                    }
+
+                                    &.ck-button_with-text {
+                                        .ck-button__label {
+                                            width: calculateRem(208px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .ck-list__item {
+                                .ck-button {
+                                    .ck-button__label {
+                                        display: flex;
+                                        flex-direction: column;
+                                        line-height: calculateRem(21px);
+
+                                        .ibexa-ckeditor-campaign__item-date-wrapper {
+                                            display: flex;
+                                            align-items: center;
+
+                                            .ck-icon {
+                                                fill: $ibexa-color-dark-400;
+                                                width: calculateRem(12px);
+                                                height: calculateRem(12px);
+                                            }
+                                        }
+
+                                        .ibexa-ckeditor-campaign__item-date-icon {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+
+                                        .ibexa-ckeditor-campaign__item-date {
+                                            color: $ibexa-color-dark-400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

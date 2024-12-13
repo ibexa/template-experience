@@ -1,0 +1,18 @@
+.ibexa-pc-anchor-section {
+    margin-bottom: calculateRem(32px);
+    padding-bottom: calculateRem(32px);
+
+    &__header {
+        margin: calculateRem(16px) 0;
+    }
+
+    .ibexa-input-text-wrapper {
+        width: 80%;
+    }
+
+    .ibexa-form-field {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.footer__link {
+    font-size: $ibexa-text-font-size-medium;
+    color: $ibexa-color-dark-400;
+    fill: $ibexa-color-dark-400;
+
+    &:hover {
+        color: $ibexa-color-primary;
+        fill: $ibexa-color-primary;
+        text-decoration: none;
+    }
+}

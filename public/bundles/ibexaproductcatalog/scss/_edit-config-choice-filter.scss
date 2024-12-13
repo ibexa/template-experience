@@ -1,0 +1,41 @@
+.ibexa-pc-edit-config-choice-filter {
+    &__list {
+        max-height: calc(100vh - #{calculateRem(274px)});
+        margin: 0;
+        padding: 0 calculateRem(6px);
+        list-style: none;
+        font-size: $ibexa-text-font-size-medium;
+        overflow: auto;
+
+        .ibexa-input--checkbox {
+            margin-right: calculateRem(4px);
+        }
+    }
+
+    &__list-item {
+        margin: calculateRem(8px) 0;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__search-wrapper {
+        .ibexa-input-text-wrapper {
+            width: 100%;
+        }
+    }
+
+    &__search-input {
+        width: 100%;
+        margin-bottom: calculateRem(16px);
+        border-radius: $ibexa-border-radius;
+    }
+
+    .ibexa-pc-config-panel {
+        &__body {
+            height: calc(100vh - #{calculateRem(130px)});
+            padding: calculateRem(16px) 0 calculateRem(16px) calculateRem(32px);
+        }
+    }
+}

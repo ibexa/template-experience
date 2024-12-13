@@ -1,0 +1,127 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+
+.ibexa-segmentation {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: calculateRem(10px);
+    padding: calculateRem(16px);
+
+    .ibexa-link--change {
+        display: block;
+        margin-top: calculateRem(2px);
+        margin-left: calculateRem(2px);
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__labels {
+        margin-bottom: calculateRem(-20px);
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__label {
+        &--segment {
+            width: calc(50% - #{calculateRem(24px)});
+            margin-left: calculateRem(45px);
+        }
+    }
+
+    &__items {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: flex;
+        border-radius: $ibexa-border-radius;
+        background-color: $ibexa-color-white;
+        padding: calculateRem(16px);
+        align-items: center;
+        margin-bottom: calculateRem(8px);
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+
+        &--placeholder {
+            display: block;
+            height: calculateRem(40px);
+            background-color: $ibexa-color-light-300;
+            pointer-events: none;
+        }
+
+        &--no-configuration {
+            cursor: default;
+            color: $ibexa-color-dark-400;
+            font-style: italic;
+        }
+
+        &:nth-child(2n) {
+            background-color: $ibexa-color-light-300;
+        }
+    }
+
+    &__item-drag {
+        display: flex;
+
+        .ibexa-icon {
+            fill: $ibexa-color-dark-200;
+        }
+    }
+
+    &__select-wrapper {
+        display: flex;
+        width: 50%;
+        margin-left: calculateRem(16px);
+    }
+
+    &__item-actions {
+        margin-left: auto;
+    }
+
+    &__content-info {
+        width: calculateRem(150px);
+
+        &--hidden {
+            display: none;
+        }
+
+        .ibexa-label {
+            margin-top: 0;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__info-left {
+        max-width: 100%;
+    }
+
+    &__info-right {
+        margin-left: calculateRem(4px);
+    }
+
+    &__remove-content-btn {
+        display: flex;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        padding: calculateRem(8px);
+    }
+
+    &__content-title,
+    &__content-breadcrumbs {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__content-title {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__content-breadcrumbs {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-300;
+    }
+}

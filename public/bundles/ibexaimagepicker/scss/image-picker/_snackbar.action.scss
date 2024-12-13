@@ -1,0 +1,10 @@
+.c-ip-snackbar-action {
+    &__btn.ibexa-btn--dark:disabled {
+        border-color: transparent;
+        background: transparent;
+    }
+
+    &--select-all {
+        margin-left: auto;
+    }
+}
