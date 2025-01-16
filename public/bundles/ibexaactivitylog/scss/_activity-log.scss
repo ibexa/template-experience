@@ -1,0 +1,11 @@
+.ibexa-al {
+    &__content-column {
+        &--full-width {
+            padding: 0 calculateRem(12px);
+
+            .ibexa-back-to-top-anchor {
+                max-width: 100%;
+            }
+        }
+    }
+}

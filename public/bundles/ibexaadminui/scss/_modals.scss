@@ -1,0 +1,95 @@
+.ibexa-modal {
+    .modal-dialog {
+        @include modal-main();
+    }
+
+    .modal-content {
+        @include modal-content();
+    }
+
+    .modal-header {
+        @include modal-header();
+
+        .modal-title {
+            @include modal-title();
+        }
+
+        .close {
+            @include close-button();
+        }
+    }
+
+    .modal-body {
+        @include modal-body();
+
+        .ibexa-modal__trash-option {
+            .ibexa-modal__option-label {
+                margin-bottom: 0;
+                margin-top: calculateRem(18px);
+            }
+
+            .ibexa-label {
+                font-size: calculateRem(16px);
+            }
+
+            .ibexa-modal__option-description {
+                font-size: calculateRem(14px);
+            }
+        }
+    }
+
+    .modal-footer {
+        @include modal-footer();
+    }
+
+    &--no-header {
+        .close {
+            @include close-button();
+
+            & {
+                top: calculateRem(22px);
+                right: calculateRem(18px);
+            }
+        }
+
+        .modal-body {
+            padding-bottom: 0;
+            margin-right: calculateRem(36px);
+        }
+    }
+
+    &--has-subtitle {
+        .modal-header {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .ibexa-modal__subheader {
+            border-bottom: calculateRem(1px) solid $ibexa-color-light-500;
+            padding-bottom: calculateRem(16px);
+            color: $ibexa-color-dark-400;
+        }
+    }
+
+    &--no-header-border {
+        &:not(.ibexa-modal--has-subtitle) {
+            .modal-header {
+                border-width: 0;
+            }
+
+            .modal-body {
+                padding-top: 0;
+            }
+        }
+
+        &.ibexa-modal--has-subtitle {
+            .ibexa-modal__subheader {
+                border-width: 0;
+            }
+
+            .modal-body {
+                padding-top: 0;
+            }
+        }
+    }
+}

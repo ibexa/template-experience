@@ -1,0 +1,43 @@
+.ibexa-pc-edit-config-price-filter {
+    &__widget {
+        display: flex;
+        width: 80%;
+    }
+
+    &__field {
+        flex: 1;
+        margin-top: calculateRem(32px);
+
+        .ibexa-label {
+            margin-top: 0;
+        }
+
+        .ibexa-pc-edit__form-field {
+            margin-bottom: 0;
+        }
+
+        .ibexa-input-text-wrapper {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__separator {
+        width: calculateRem(32px);
+    }
+
+    &__separator-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: calculateRem(61px);
+        height: calculateRem(48px);
+        width: calculateRem(32px);
+    }
+
+    .ibexa-pc-config-filter {
+        &__content {
+            padding-left: calculateRem(5px);
+        }
+    }
+}
