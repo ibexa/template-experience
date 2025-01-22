@@ -6,7 +6,7 @@ Visit our official documentation to learn more about the supported way of starti
 
 ## COPYRIGHT
 
-Copyright (C) 1999-2024 Ibexa AS (formerly eZ Systems AS). All rights reserved.
+Copyright (C) 1999-2025 Ibexa AS (formerly eZ Systems AS). All rights reserved.
 
 ## LICENSE
 
