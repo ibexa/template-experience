@@ -1,0 +1,7 @@
+.PopoverTrigger {
+    transition: all 0.3s $ibexa-admin-transition;
+
+    &:hover {
+        color: $ibexa-color-info;
+    }
+}

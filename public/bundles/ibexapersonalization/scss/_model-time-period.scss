@@ -1,0 +1,42 @@
+.ibexa-perso-model-time-period {
+    max-width: calculateRem(820px);
+    padding: calculateRem(32px);
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    box-shadow: $ibexa-content-type-edit-field-shadow;
+    margin-bottom: calculateRem(32px);
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &__title {
+        margin-bottom: calculateRem(20px);
+    }
+
+    &__fields-wrapper {
+        display: flex;
+        align-items: flex-end;
+        margin-top: calculateRem(-12px);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        margin-right: calculateRem(16px);
+
+        .ibexa-dropdown {
+            width: calculateRem(180px);
+        }
+
+        .ibexa-input-text-wrapper {
+            width: calculateRem(90px);
+        }
+    }
+}
+
+.ibexa-edit-header--slim {
+    .ibexa-perso-model-time-period {
+        padding: 0;
+        border-color: transparent;
+        box-shadow: none;
+        margin-bottom: calculateRem(12px);
+    }
+}

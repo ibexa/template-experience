@@ -1,0 +1,10 @@
+.ibexa-fa-dropdown-loader {
+    display: inline-block;
+    height: calculateRem(16px);
+    width: calculateRem(16px);
+    padding-top: calculateRem(3px);
+
+    &__spinner {
+        @include spinner(calculateRem(16px), calculateRem(2px), $ibexa-color-primary);
+    }
+}

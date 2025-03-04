@@ -1,0 +1,55 @@
+.ibexa-db-banner {
+    display: flex;
+    margin-bottom: calculateRem(30px);
+    position: relative;
+    overflow: hidden;
+
+    &--hidden {
+        display: none;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-radius: $ibexa-border-radius;
+        background-image: url('/bundles/ibexadashboard/img/banner-dashboard-background.svg');
+        background-size: cover;
+    }
+
+    &__content {
+        padding: calculateRem(40px) calculateRem(36px);
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        justify-content: center;
+    }
+
+    &__desc {
+        font-size: $ibexa-text-font-size;
+    }
+
+    &__customize-dashboard {
+        margin-top: calculateRem(32px);
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: calculateRem(16px);
+        right: calculateRem(16px);
+    }
+
+    &__graph-img {
+        margin: 0 calculateRem(50px) 0 0;
+    }
+}
+
+@media only screen and (max-width: 1650px) {
+    .ibexa-db-banner {
+        &__desc {
+            font-size: $ibexa-text-font-size-medium;
+        }
+    }
+}

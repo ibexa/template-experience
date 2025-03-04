@@ -1,0 +1,30 @@
+.ibexa-sf-list-actions {
+    display: flex;
+
+    &__view-action {
+        display: flex;
+        align-items: center;
+        margin-left: calculateRem(8px);
+        border-left: calculateRem(2px) solid $ibexa-color-light;
+
+        .ibexa-view-switcher {
+            min-width: calculateRem(120px);
+
+            .ibexa-dropdown__selection-info:hover {
+                .ibexa-dropdown__selected-item {
+                    color: $ibexa-color-primary;
+                }
+
+                .ibexa-icon {
+                    fill: $ibexa-color-primary;
+                }
+            }
+        }
+    }
+
+    &__label {
+        margin-right: calculateRem(7px);
+        padding-top: calculateRem(2px);
+        font-size: $ibexa-text-font-size-small;
+    }
+}
