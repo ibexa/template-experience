@@ -1,0 +1,24 @@
+.ibexa-sf-public-access {
+    min-height: calculateRem(600px);
+    padding: calculateRem(16px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+
+    &__list-actions {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 calculateRem(32px);
+    }
+
+    &__list-actions-title {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__list-item {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &.is-invalid {
+        background-color: $ibexa-color-danger-100;
+    }
+}

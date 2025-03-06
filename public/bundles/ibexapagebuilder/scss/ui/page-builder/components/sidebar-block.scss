@@ -1,0 +1,9 @@
+.c-pb-sidebar-block {
+    @include sidebar-drag-item;
+
+    &__label {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

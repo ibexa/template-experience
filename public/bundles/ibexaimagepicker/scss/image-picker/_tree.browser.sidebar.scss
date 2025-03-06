@@ -1,0 +1,43 @@
+.c-ip-tree-browser-sidebar {
+    padding-top: calculateRem(8px);
+    min-height: calculateRem(320px);
+
+    &__header-content {
+        display: flex;
+        flex: 1;
+        gap: calculateRem(8px);
+        height: calculateRem(32px);
+        align-items: center;
+    }
+
+    .c-tb-header {
+        justify-content: flex-start;
+        gap: calculateRem(8px);
+        margin: 0;
+        padding: 0 calculateRem(16px) calculateRem(16px);
+
+        .ibexa-btn {
+            display: flex;
+            width: calculateRem(32px);
+            height: calculateRem(32px);
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .c-tb-width-container {
+        max-width: 50vw;
+        background-color: $ibexa-color-white;
+
+        &--collapsed {
+            .c-tb-header {
+                border-color: transparent;
+                justify-content: center;
+            }
+        }
+    }
+
+    .c-tb-list-item-single__element {
+        cursor: pointer;
+    }
+}

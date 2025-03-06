@@ -1,0 +1,40 @@
+.ck-reset.ck .ibexa-ckeditor-campaign-filter-input {
+    padding: calculateRem(8px);
+    position: relative;
+
+    .ck {
+        &.ck-input {
+            width: 100%;
+
+            &:placeholder-shown {
+                & + .ibexa-ckeditor-campaign-filter-input__clear-btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__icon-wrapper {
+        .ck.ck-icon {
+            position: absolute;
+            right: calculateRem(16px);
+            top: calculateRem(14px);
+            width: calculateRem(16px);
+            height: calculateRem(16px);
+            fill: $ibexa-color-dark-400;
+        }
+    }
+
+    &__clear-btn {
+        position: absolute;
+        right: calculateRem(40px);
+        top: calculateRem(10px);
+        cursor: pointer;
+
+        .ck.ck-icon {
+            width: calculateRem(10px);
+            height: calculateRem(10px);
+            fill: $ibexa-color-dark-400;
+        }
+    }
+}

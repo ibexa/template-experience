@@ -1,0 +1,62 @@
+.ibexa-pc-assigned-attribute {
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &__item {
+        &--icon {
+            text-align: right;
+
+            .ibexa-icon {
+                fill: $ibexa-color-light;
+                margin-top: calculateRem(-8px);
+            }
+        }
+
+        &--name {
+            .ibexa-pc-assigned-attribute {
+                &__item-label {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                    }
+                }
+
+                &__item-identifier {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    font-size: $ibexa-text-font-size-small;
+                    color: $ibexa-color-dark-400;
+                    line-height: 1.5;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &--type {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &--action {
+            text-align: center;
+        }
+    }
+
+    &--in-removing {
+        opacity: 0;
+    }
+
+    .ibexa-table__cell {
+        height: calculateRem(48px);
+        padding: calculateRem(2px) calculateRem(12px);
+    }
+}

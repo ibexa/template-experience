@@ -1,0 +1,27 @@
+.c-products-tab-layout {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+
+    &__table-wrapper {
+        flex-grow: 1;
+        padding: calculateRem(18px) calculateRem(32px);
+        height: 100%;
+        overflow: auto;
+    }
+
+    &__filters-wrapper {
+        width: calculateRem(300px);
+        min-width: calculateRem(300px);
+        border-left: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__spinner-wrapper {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}

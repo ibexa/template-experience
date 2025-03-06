@@ -1,0 +1,14 @@
+.c-product-table {
+    &__table-header {
+        border-bottom: 0;
+    }
+
+    &__init-locations-alert {
+        margin-top: 0;
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__table {
+        border-top: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+}
