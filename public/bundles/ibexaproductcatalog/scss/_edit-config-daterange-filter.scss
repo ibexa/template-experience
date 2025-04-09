@@ -1,0 +1,10 @@
+.ibexa-pc-edit-config-daterange-filter {
+    .ibexa-pc-config-filter__content {
+        display: flex;
+        gap: calculateRem(16px);
+
+        .ibexa-input-text-wrapper {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.ibexa-connect-action-edit-handler-actions {
+    font-size: $ibexa-text-font-size-medium;
+    line-height: calculateRem(18px);
+    margin: calculateRem(32px) 0;
+
+    &__action {
+        &--go-to-connect {
+            .ibexa-icon {
+                margin-left: calculateRem(8px);
+            }
+        }
+    }
+}

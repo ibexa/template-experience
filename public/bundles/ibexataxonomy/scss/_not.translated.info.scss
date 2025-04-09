@@ -1,0 +1,16 @@
+.c-tt-not-translated-info {
+    display: flex;
+    align-items: center;
+    color: $ibexa-color-dark-400;
+    font-size: $ibexa-text-font-size-small;
+    background-color: $ibexa-color-light-400;
+    padding: calculateRem(7px) calculateRem(12px);
+    position: absolute;
+    right: calculateRem(8px);
+    top: calculateRem(64px);
+
+    &__icon-warning {
+        fill: $ibexa-color-warning;
+        margin-right: calculateRem(12px);
+    }
+}

@@ -1,0 +1,19 @@
+.ibexa-sf-edit-widget {
+    margin-bottom: calculateRem(24px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.is-invalid {
+        .ibexa-tag-view-select,
+        .ibexa-sf-form-languages {
+            border: calculateRem(1px) solid $ibexa-color-danger;
+            background-color: $ibexa-color-danger-100;
+
+            &__info {
+                color: $ibexa-color-danger;
+            }
+        }
+    }
+}

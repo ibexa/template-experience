@@ -1,0 +1,35 @@
+body {
+    &.ibexa-airtime-popup-visible {
+        .m-page-builder__modal-container {
+            .c-pb-config-popup {
+                height: 0;
+            }
+        }
+    }
+}
+
+.c-pb-config-popup {
+    &__body {
+        .c-pb-iframe,
+        .c-pb-iframe__preview {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &--airtime {
+        .ibexa-input-text-wrapper__action-btn--clear {
+            display: none;
+        }
+
+        .c-pb-config-popup {
+            &__body {
+                .c-pb-date-picker {
+                    .flatpickr-input {
+                        background-color: $ibexa-color-white;
+                    }
+                }
+            }
+        }
+    }
+}

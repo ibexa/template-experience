@@ -1,0 +1,9 @@
+.c-pb-toolbox-block {
+    @include toolbox-drag-item;
+
+    &__label {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
