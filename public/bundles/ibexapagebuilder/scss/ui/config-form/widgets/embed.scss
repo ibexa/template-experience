@@ -1,0 +1,44 @@
+@import './public/bundles/ibexaadminui/scss/_custom.scss';
+@import './public/bundles/ibexaadminui/scss/_mixins.scss';
+
+.ibexa-pb-embed-meta {
+    display: flex;
+    align-items: center;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(16px);
+
+    &__preview,
+    &__preview-icon {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        justify-self: center;
+    }
+
+    &__info {
+        margin-left: calculateRem(16px);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: flex-end;
+        margin-left: auto;
+
+        .ibexa-btn + .ibexa-btn {
+            margin-left: calculateRem(8px);
+        }
+    }
+
+    &__title {
+        font-size: $ibexa-text-font-size-medium;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calculateRem(390px);
+    }
+
+    &__content-type {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-300;
+    }
+}

@@ -1,0 +1,14 @@
+.ibexa-extra-actions {
+    &--attributes-definition,
+    &--product {
+        .ibexa-extra-actions {
+            &__pre-form {
+                margin-bottom: calculateRem(16px) calculateRem(8px);
+            }
+
+            &__pre-form-btns {
+                padding-bottom: calculateRem(48px);
+            }
+        }
+    }
+}

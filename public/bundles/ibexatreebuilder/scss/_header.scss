@@ -1,0 +1,81 @@
+.c-tb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 calculateRem(8px);
+    padding-bottom: calculateRem(8px);
+    border-bottom: calculateRem(1px) solid var(--ibexa-tb-header-line-color);
+
+    .ibexa-icon {
+        fill: var(--ibexa-btn-icon-fill-color, #{$ibexa-color-dark});
+    }
+
+    &__toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: calculateRem(48px);
+        min-width: calculateRem(48px);
+        height: calculateRem(48px);
+
+        // TODO: this should be done in main admin-ui button file, but it's probably a thing for 5.0
+        &.ibexa-btn {
+            color: var(--ibexa-tb-secondary-black-text-color);
+            fill: var(--ibexa-tb-secondary-black-text-color);
+            border-color: var(--ibexa-tb-secondary-black-border-color);
+
+            &:hover {
+                border-color: var(--ibexa-tb-secondary-black-text-color);
+
+                .ibexa-icon {
+                    fill: var(--ibexa-tb-secondary-black-text-color);
+                }
+            }
+
+            &:focus {
+                border-color: var(--ibexa-tb-secondary-black-border-color);
+            }
+        }
+
+        .ibexa-icon:nth-child(2) {
+            margin-left: calculateRem(4px);
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: calculateRem(16px);
+        font-weight: bold;
+        line-height: calculateRem(33px);
+        padding-left: calculateRem(16px);
+        width: 100%;
+        overflow: hidden;
+
+        .ibexa-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+
+    &__name-content {
+        width: calc(100% - #{calculateRem(24px)});
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: flex-end;
+        width: calculateRem(80px);
+    }
+
+    .c-tb-contextual-menu--burger {
+        display: block;
+
+        .ibexa-icon {
+            fill: var(--ibexa-btn-icon-fill-color, #{$ibexa-color-dark});
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.c-ibexa-fb-config-panel {
+    top: calculateRem(72px);
+    height: calc(100% - #{calculateRem(72px)});
+
+    &__body {
+        height: 100%;
+        overflow: hidden;
+
+        .c-pb-iframe,
+        .c-pb-iframe__preview {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

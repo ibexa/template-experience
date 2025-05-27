@@ -1,0 +1,21 @@
+.ibexa-pc-view {
+    &__header-progress-wrapper {
+        max-width: calculateRem(270px);
+    }
+
+    .ibexa-table {
+        margin-top: calculateRem(24px);
+
+        &--users-in-group {
+            margin-bottom: 0;
+        }
+    }
+
+    .ibexa-pc-wrapper {
+        margin-bottom: 0;
+
+        &--users-in-group {
+            margin-bottom: calculateRem(72px);
+        }
+    }
+}

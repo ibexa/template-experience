@@ -1,0 +1,20 @@
+.c-pb-back-to-current-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calculateRem(22px);
+    font-size: $ibexa-text-font-size-small;
+    background: $ibexa-color-info;
+    color: $ibexa-color-white;
+
+    &__btn {
+        font-size: inherit;
+        color: inherit;
+        padding: 0;
+        margin-left: calculateRem(8px);
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}

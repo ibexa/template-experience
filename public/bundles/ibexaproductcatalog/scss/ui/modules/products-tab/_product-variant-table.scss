@@ -1,0 +1,9 @@
+.c-product-variant-table {
+    &__header {
+        justify-content: flex-start;
+    }
+
+    &__back-btn {
+        margin-right: calculateRem(12px);
+    }
+}
