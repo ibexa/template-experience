@@ -1,0 +1,26 @@
+.c-event-badge {
+    &__title {
+        word-break: break-word;
+    }
+
+    &__subtitle {
+        margin-top: calculateRem(-4px);
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-300;
+    }
+
+    &__properties {
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-400;
+        margin-top: calculateRem(5px);
+    }
+
+    &__property-label,
+    &__property-value {
+        vertical-align: top;
+    }
+
+    &__property-label {
+        padding-right: calculateRem(8px);
+    }
+}

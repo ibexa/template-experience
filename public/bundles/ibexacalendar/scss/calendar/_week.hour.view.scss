@@ -1,0 +1,50 @@
+.c-week-hour-view {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: calculateRem(13px);
+    min-height: calculateRem(45px);
+    border-top: calculateRem(1px) solid $ibexa-color-light;
+
+    &--past {
+        @include past-tile();
+    }
+
+    &--today {
+        @include today-tile();
+    }
+
+    &--selected {
+        border-style: solid;
+        border-color: $ibexa-color-dark;
+        border-width: 0 calculateRem(1px);
+    }
+
+    &--first-pm {
+        border-color: $ibexa-color-dark;
+
+        &:last-child {
+            position: relative;
+
+            &:after {
+                content: attr(data-time-pm-symbol);
+                position: absolute;
+                right: 0;
+                top: calculateRem(-10px);
+                display: block;
+                width: calculateRem(32px);
+                height: calculateRem(20px);
+                padding-left: calculateRem(10px);
+                background-color: $ibexa-color-white;
+                font-size: $ibexa-text-font-size-medium;
+            }
+        }
+    }
+
+    &--first-pm.c-week-hour-view--today {
+        &:after {
+            background: $ibexa-color-info-200;
+        }
+    }
+}

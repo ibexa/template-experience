@@ -1,0 +1,38 @@
+.c-ip-snackbar-selection-info-item {
+    display: flex;
+    line-height: calculateRem(20px);
+    padding: 0 calculateRem(4px) 0 calculateRem(8px);
+    width: min-content;
+    max-width: calculateRem(460px);
+    height: calculateRem(20px);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: calculateRem(4px);
+    background: $ibexa-color-dark-500;
+
+    &__content {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__unselect-btn.ibexa-btn--secondary-light {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: calculateRem(2px);
+        padding: 0;
+        width: calculateRem(20px);
+        height: calculateRem(20px);
+        border-color: transparent;
+
+        &:hover {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+        }
+    }
+}

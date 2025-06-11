@@ -1,0 +1,60 @@
+.c-pb-event-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calculateRem(16px);
+    cursor: pointer;
+    background: $ibexa-color-info;
+    border-radius: calculateRem(8px);
+    z-index: 1;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-left: calculateRem(-1px);
+        margin-right: calculateRem(-1px);
+        border: none;
+        font-size: calculateRem(10px);
+        line-height: calculateRem(16px);
+        color: $ibexa-color-white;
+    }
+
+    &--in-calendar {
+        position: absolute;
+        left: calculateRem(6px);
+        bottom: calculateRem(6px);
+    }
+
+    &--in-timeline {
+        position: absolute;
+        top: calculateRem(12px);
+        transform: translateX(-50%);
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $ibexa-color-info;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:before {
+            width: calculateRem(2px);
+            height: calculateRem(10px);
+            bottom: calculateRem(-10px);
+        }
+
+        &:after {
+            bottom: calculateRem(-12px);
+            height: calculateRem(5px);
+            width: calculateRem(5px);
+            border-radius: 50%;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
