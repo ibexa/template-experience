@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-notifications-container {
+    position: fixed;
+    bottom: 0;
+    right: calculateRem(32px);
+    width: calculateRem(400px);
+    z-index: 50000;
+}

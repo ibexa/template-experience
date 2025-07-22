@@ -1,0 +1,58 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-shr-share-widget {
+    .ibexa-edit-header__title & {
+        display: flex;
+        margin: 0 0 0 calculateRem(12px);
+        font-family: $ibexa-font-family;
+    }
+
+    &__modal {
+        font-weight: normal;
+        font-size: $ibexa-text-font-size;
+
+        .modal-dialog {
+            min-width: calculateRem(800px);
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            border-top: calculateRem(1px) solid $ibexa-color-light;
+            padding: calculateRem(16px) 0 calculateRem(16px);
+
+            .ibexa-btn {
+                margin: 0;
+
+                &:disabled {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__modal-link-settings-msg {
+        margin-bottom: calculateRem(8px);
+        font-size: $ibexa-text-font-size-small;
+        color: $ibexa-color-dark-400;
+    }
+
+    &__copy-link-button {
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
+
+    &__link-settings-button {
+        &.ibexa-btn {
+            color: $ibexa-color-dark-400;
+        }
+
+        .ibexa-icon {
+            fill: $ibexa-color-dark-400;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-products-purchased {
+    margin: calculateRem(12px) 0;
+}

@@ -1,0 +1,25 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+@mixin ibexa-address-edit-styles {
+    .ibexa-field-edit {
+        &__label-wrapper {
+            display: none;
+        }
+    }
+
+    .ibexa-field-edit {
+        &__data {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    .ibexa-input--small,
+    .ibexa-dropdown--small .ibexa-dropdown__selection-info {
+        height: calculateRem(48px);
+        padding-top: calculateRem(6px);
+        padding-bottom: calculateRem(6px);
+        border-radius: $ibexa-border-radius;
+    }
+}

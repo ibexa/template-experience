@@ -1,0 +1,25 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.m-calendar {
+    display: grid;
+    grid-gap: calculateRem(32px);
+    grid-template-columns: calculateRem(288px) 1fr;
+    grid-template-areas:
+        'header header'
+        'sidebar view';
+
+    &__header {
+        grid-area: header;
+        padding-bottom: calculateRem(8px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__sidebar {
+        grid-area: sidebar;
+    }
+
+    &__view {
+        grid-area: view;
+    }
+}

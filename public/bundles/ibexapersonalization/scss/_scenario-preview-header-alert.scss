@@ -1,0 +1,5 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-perso-scenario-preview-header-alert {
+    margin-bottom: calculateRem(6px);
+}

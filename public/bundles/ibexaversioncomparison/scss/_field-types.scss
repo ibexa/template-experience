@@ -1,0 +1,117 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.ibexa-version-compare {
+    .ibexa_image-comparison {
+        display: flex;
+
+        &__version-wrapper {
+            flex: 1;
+        }
+
+        .ibexa-field-preview {
+            &--ibexa_image {
+                display: block;
+            }
+
+            &__image {
+                display: inline-block;
+                margin-bottom: calculateRem(10px);
+
+                &.ibexa-compared-part {
+                    &--added {
+                        border: calculateRem(8px) solid $ibexa-color-version-compare-added;
+                    }
+
+                    &--removed {
+                        @include image-removed();
+
+                        & {
+                            border: calculateRem(8px) solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ibexa_media-comparison {
+        display: flex;
+
+        &__version-wrapper {
+            flex: 1;
+        }
+
+        .ibexa-field-preview {
+            &__media-meta {
+                overflow: initial;
+            }
+
+            &--ibexa_media {
+                display: block;
+            }
+
+            &__media {
+                display: inline-block;
+                margin-bottom: calculateRem(10px);
+
+                &.ibexa-compared-part {
+                    &--added {
+                        border: calculateRem(8px) solid $ibexa-color-version-compare-added;
+                    }
+
+                    &--removed {
+                        @include image-removed();
+
+                        & {
+                            border: calculateRem(8px) solid transparent;
+                        }
+
+                        video {
+                            filter: opacity(0.3);
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    del:not(.ibexa_image-field),
+    del:not(.embed-container) {
+        color: $ibexa-color-version-compare-removed;
+        text-decoration: line-through;
+    }
+
+    ins:not(.ibexa_image-field),
+    ins:not(.embed-container) {
+        background-color: $ibexa-color-version-compare-added;
+        text-decoration: none;
+    }
+
+    .ibexa_image-field,
+    .embed-container {
+        del,
+        ins {
+            display: inline-block;
+        }
+
+        del + ins {
+            margin-left: calculateRem(20px);
+        }
+
+        del {
+            @include image-removed();
+
+            & {
+                border: calculateRem(8px) solid transparent;
+            }
+        }
+
+        ins {
+            border: calculateRem(8px) solid $ibexa-color-version-compare-added;
+        }
+    }
+}
