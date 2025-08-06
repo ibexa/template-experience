@@ -1,0 +1,11 @@
+.c-popup-ai-actions-list {
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        font-size: $ibexa-text-font-size-medium;
+        margin: 0 calculateRem(17px);
+        padding: calculateRem(8px) 0;
+    }
+}

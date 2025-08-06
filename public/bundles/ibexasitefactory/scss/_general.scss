@@ -1,0 +1,44 @@
+.ibexa-sf-status {
+    border-radius: 50%;
+    width: calculateRem(8px);
+    height: calculateRem(8px);
+    margin-top: calculateRem(8px);
+
+    &--offline {
+        background-color: $ibexa-color-dark-300;
+    }
+
+    &--online {
+        background-color: $ibexa-color-success;
+    }
+
+    &--build {
+        background-color: $ibexa-color-warning;
+    }
+
+    &--one-line {
+        float: left;
+        margin-right: calculateRem(12px);
+    }
+}
+
+.ibexa-sf-list {
+    &__site-search {
+        margin-bottom: calculateRem(42px);
+    }
+
+    &__alert-wrapper {
+        margin-bottom: calculateRem(32px);
+    }
+}
+
+.ibexa-sf-view {
+    .ibexa-table {
+        margin-bottom: calculateRem(72px);
+    }
+
+    &__site-thumbnail {
+        max-width: calculateRem(240px);
+        max-height: calculateRem(240px);
+    }
+}

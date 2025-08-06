@@ -1,0 +1,43 @@
+.ibexa-ckeditor-measurement {
+    &__inputs {
+        display: flex;
+    }
+
+    .ck {
+        &.ck-labeled-field-view {
+            height: calculateRem(32px);
+
+            &:first-child {
+                margin-right: calculateRem(8px);
+            }
+
+            &__input-wrapper {
+                height: calculateRem(32px);
+
+                .ck-input {
+                    min-width: calculateRem(160px);
+                }
+
+                .ck {
+                    &.ck-dropdown {
+                        .ck-button {
+                            &.ck-dropdown__button {
+                                .ck {
+                                    &.ck-button__label {
+                                        width: calculateRem(40px);
+                                    }
+                                }
+                            }
+                        }
+
+                        .ck-list {
+                            &__item {
+                                min-width: calculateRem(72px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

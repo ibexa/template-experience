@@ -1,0 +1,40 @@
+.ibexa-datetime-attribute {
+    display: flex;
+    width: 50%;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(16px);
+
+    &__datepicker {
+        .ibexa-date-time-picker {
+            width: 50%;
+        }
+    }
+
+    & > :first-child {
+        flex: 1 1 80%;
+        margin-right: calculateRem(16px);
+        margin-bottom: 0;
+    }
+
+    & > :last-child {
+        flex: 0 0 calculateRem(113px);
+        margin-bottom: 0;
+    }
+
+    &__filter-fields {
+        display: flex;
+        gap: calculateRem(16px);
+    }
+
+    &__grouped-filter {
+        width: 90%;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(16px);
+    }
+
+    &__filter-wrapper {
+        margin-top: calculateRem(16px);
+    }
+}

@@ -1,0 +1,110 @@
+.ibexa-perso-summary {
+    padding: 0;
+    margin-bottom: calculateRem(40px);
+
+    &__item {
+        height: 100%;
+        padding: calculateRem(16px) calculateRem(28px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        box-shadow: $ibexa-edit-header-box-shadow;
+        position: relative;
+    }
+
+    &__item-name {
+        line-height: calculateRem(33px);
+        height: calculateRem(66px);
+        margin-right: calculateRem(58px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__item-value {
+        font-weight: bold;
+        font-size: calculateRem(40px);
+        line-height: calculateRem(42px);
+        padding: calculateRem(4px) 0;
+    }
+
+    &__item-period {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+        line-height: calculateRem(18px);
+    }
+
+    &__reco-delta-value {
+        color: $ibexa-color-dark-300;
+        font-size: $ibexa-text-font-size;
+        line-height: calculateRem(24px);
+
+        .ibexa-icon {
+            display: none;
+            width: calculateRem(14px);
+            height: calculateRem(14px);
+        }
+
+        &--up {
+            color: $ibexa-color-success;
+
+            .ibexa-icon {
+                display: inline;
+                fill: $ibexa-color-success;
+                transform: rotate(90deg);
+            }
+        }
+
+        &--down {
+            color: $ibexa-color-danger;
+
+            .ibexa-icon {
+                display: inline;
+                fill: $ibexa-color-danger;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &__icon-circle {
+        width: calculateRem(68px);
+        height: calculateRem(68px);
+        border-radius: 50%;
+        position: absolute;
+        top: calculateRem(14px);
+        right: calculateRem(17px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--recommendation-calls {
+            background-color: $ibexa-color-primary-100;
+
+            .ibexa-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &--clicked-recommendations {
+            background-color: $ibexa-color-accent-100;
+
+            .ibexa-icon {
+                fill: $ibexa-color-accent;
+            }
+        }
+
+        &--imported-items {
+            background-color: $ibexa-color-light-300;
+
+            .ibexa-icon {
+                fill: $ibexa-color-light-700;
+            }
+        }
+
+        &--events-collected {
+            background-color: $ibexa-color-success-100;
+
+            .ibexa-icon {
+                fill: $ibexa-color-success;
+            }
+        }
+    }
+}

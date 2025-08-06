@@ -1,0 +1,61 @@
+.c-calendar-filters {
+    $self: &;
+
+    margin-top: calculateRem(32px);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calculateRem(16px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__title {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__body {
+        display: block;
+
+        #{$self}--collapsed & {
+            display: none;
+        }
+    }
+
+    &__filter {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__types-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__toggler {
+        height: auto;
+
+        #{$self}--collapsed & {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__type {
+        padding: calculateRem(10px) 0;
+        font-size: $ibexa-text-font-size-medium;
+        display: flex;
+        align-items: center;
+
+        .ibexa-input--checkbox {
+            margin-right: calculateRem(8px);
+            margin-bottom: 0;
+        }
+    }
+
+    &__language-list {
+        .ibexa-dropdown__items {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}

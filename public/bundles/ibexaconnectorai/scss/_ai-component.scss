@@ -1,0 +1,59 @@
+.ibexa-ai-component {
+    $self: &;
+
+    &.ibexa-btn:not(.ibexa-ai-component--custom-btn) {
+        --ibexa-btn-primary-color: #{$ibexa-color-info};
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        background-color: $ibexa-color-info-100;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    &__options-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        font-size: $ibexa-text-font-size-medium;
+        margin: 0 calculateRem(17px);
+        padding: calculateRem(8px) 0;
+    }
+
+    &__btn-icon-wrapper {
+        margin-right: calculateRem(12px);
+        line-height: 1;
+    }
+
+    &__btn-icon.ibexa-icon {
+        margin-right: 0;
+    }
+
+    &__btn-spinner {
+        @include spinner(calculateRem(16px), calculateRem(2px), $ibexa-color-primary);
+
+        display: none;
+    }
+
+    &__cancel-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        padding: 0;
+    }
+
+    &--disabled {
+        #{$self}__btn-icon {
+            display: none;
+        }
+
+        #{$self}__btn-spinner {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.ck.ck-reset_all .ibexa-ckeditor-ai-component-preview {
+    box-shadow: 0 0 calculateRem(16px) 0 rgba($ibexa-color-dark, 0.15);
+
+    .ibexa-ckeditor-balloon-form {
+        &__header {
+            position: relative;
+            padding: calculateRem(20px) 0 calculateRem(12px) 0;
+            margin: 0 calculateRem(16px) calculateRem(16px);
+            border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        }
+
+        &__actions {
+            padding-bottom: calculateRem(32px);
+
+            .ck.ck-button {
+                margin-right: calculateRem(16px);
+            }
+        }
+
+        &__close-btn.ck-button {
+            position: absolute;
+            min-height: auto;
+            min-width: auto;
+            top: calculateRem(26px);
+            padding: 0;
+            margin-right: 0;
+            right: 0;
+
+            .ck-icon {
+                fill: $ibexa-color-dark;
+                width: calculateRem(12px);
+                height: calculateRem(12px);
+            }
+        }
+    }
+
+    .ck-button {
+        color: $ibexa-color-dark;
+        font-size: $ibexa-text-font-size-medium;
+
+        &:hover {
+            color: $ibexa-color-primary;
+            background-color: transparent;
+
+            .ck-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &:focus {
+            color: $ibexa-color-primary;
+            border-color: $ibexa-color-primary;
+            box-shadow: 0 0 0 calculateRem(3px) rgba($ibexa-color-primary, 0.5);
+
+            .ibexa-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &.disabled,
+        &[disabled],
+        &:disabled {
+            color: $ibexa-color-dark-300;
+            fill: $ibexa-color-dark-300;
+            cursor: default;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+        margin-bottom: calculateRem(-8px);
+    }
+
+    &__input {
+        width: calculateRem(620px);
+        font-size: calculateRem(14px);
+
+        &--generating {
+            padding-left: calculateRem(28px);
+        }
+    }
+
+    &__spinner-wrapper {
+        display: none;
+        position: absolute;
+        left: calculateRem(8px);
+        top: calculateRem(6px);
+
+        &--visible {
+            display: block;
+        }
+    }
+
+    &__spinner {
+        @include spinner(calculateRem(16px), calculateRem(2px), $ibexa-color-primary);
+    }
+}
