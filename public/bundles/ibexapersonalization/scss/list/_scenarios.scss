@@ -1,0 +1,47 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-perso-scenarios-list {
+    &__name-link {
+        display: inline-block;
+    }
+
+    &__period-form {
+        .ibexa-dropdown {
+            display: inline-block;
+
+            &__selection-info {
+                padding: 0 calculateRem(26px) 0 0;
+            }
+        }
+    }
+
+    .ibexa-table &__actions-table-header-cell {
+        padding: 0;
+
+        .ibexa-table {
+            &__header-cell-content {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .ibexa-table {
+        &__cell {
+            &--scenario-name {
+                max-width: calculateRem(300px);
+
+                .ibexa-icon {
+                    &:hover {
+                        fill: $ibexa-color-primary;
+                    }
+                }
+            }
+
+            .list-unstyled {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

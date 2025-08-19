@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-collaboration-onboarding-modal {
+    &__content-row {
+        font-size: $ibexa-text-font-size-medium;
+
+        &:first-of-type {
+            margin-bottom: calculateRem(24px);
+        }
+    }
+}
