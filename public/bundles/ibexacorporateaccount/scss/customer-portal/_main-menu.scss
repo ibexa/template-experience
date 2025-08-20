@@ -1,0 +1,71 @@
+.ibexa-ca-main-menu {
+    width: calculateRem(264px);
+    height: 100%;
+    overflow: auto;
+    background: $ibexa-color-dark;
+
+    &__items,
+    &__subgroup-items {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__items {
+        padding: calculateRem(8px) calculateRem(6px);
+    }
+
+    &__subgroup-items {
+        padding: 0;
+    }
+
+    &__item {
+        margin: calculateRem(2px) 0;
+    }
+
+    &__subgroup {
+        margin-top: calculateRem(12px);
+        border-top: calculateRem(1px) solid $ibexa-color-info-800;
+    }
+
+    &__subgroup-title,
+    &__item-link {
+        padding: calculateRem(10px) calculateRem(10px) calculateRem(10px) calculateRem(4px);
+    }
+
+    &__subgroup-title {
+        color: $ibexa-color-light-700;
+        font-size: $ibexa-text-font-size-small;
+        margin: 0 calculateRem(6px);
+    }
+
+    &__item-link {
+        color: $ibexa-color-white;
+        display: flex;
+        align-items: center;
+        margin: 0 calculateRem(6px);
+        font-size: $ibexa-text-font-size-medium;
+        text-decoration: none;
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(2px) solid transparent;
+        height: calculateRem(48px);
+        overflow: hidden;
+
+        &:focus {
+            color: $ibexa-color-white;
+            border-color: $ibexa-color-info-800;
+        }
+
+        &:hover {
+            color: $ibexa-color-info;
+            border-color: transparent;
+            text-decoration: none;
+        }
+
+        &.active {
+            color: $ibexa-color-info;
+            background-color: $ibexa-color-info-800;
+        }
+    }
+}

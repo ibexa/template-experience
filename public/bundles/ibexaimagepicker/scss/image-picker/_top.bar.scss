@@ -1,0 +1,37 @@
+.c-ip-top-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: calculateRem(14px) calculateRem(24px);
+    align-items: center;
+
+    &__col {
+        display: flex;
+    }
+
+    &__title {
+        font-weight: $ibexa-font-weight-normal;
+        color: $ibexa-color-dark;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: calculateRem(28px);
+        margin-right: calculateRem(8px);
+        max-width: calculateRem(700px);
+    }
+
+    .ibexa-input-text-wrapper--search {
+        width: 100%;
+        margin-left: calculateRem(40px);
+    }
+
+    &__cancel-btn {
+        border: none;
+        margin: 0 0 0 auto;
+    }
+
+    .m-mfu {
+        display: flex;
+        align-items: center;
+        margin-left: calculateRem(12px);
+    }
+}

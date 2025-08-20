@@ -1,0 +1,26 @@
+.ibexa-al-list {
+    display: flex;
+    align-items: start;
+    gap: calculateRem(16px);
+    margin-bottom: calculateRem(48px);
+
+    &__data-grid-wrapper {
+        width: calc(100% - #{calculateRem(269px)});
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__filters-wrapper {
+        width: calculateRem(275px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &--simple {
+        .ibexa-al-list {
+            &__data-grid-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}

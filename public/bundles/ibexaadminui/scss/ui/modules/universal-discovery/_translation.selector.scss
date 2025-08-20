@@ -1,0 +1,10 @@
+.c-translation-selector {
+    .ibexa-instant-filter {
+        &__item {
+            @include edit-language-item;
+
+            width: 100%;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.c-pc-product-variants-filters {
+    &__spinner-wrapper {
+        height: calculateRem(200px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

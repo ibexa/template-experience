@@ -1,0 +1,30 @@
+.c-month-view {
+    $cols: 7;
+    $rows: 6;
+
+    position: relative;
+
+    &__week-days {
+        @include calendar-header();
+
+        grid-template-columns: repeat($cols, 1fr);
+        grid-column-gap: calculateRem(2px);
+        height: calculateRem(48px);
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__day-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat($cols, 1fr);
+        grid-template-rows: repeat($rows, calculateRem(78px));
+        grid-column-gap: calculateRem(4px);
+        grid-row-gap: calculateRem(4px);
+    }
+}
