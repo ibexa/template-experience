@@ -1,0 +1,68 @@
+.ibexa-perso-scenario-edit {
+    &__separator {
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        margin: calculateRem(32px) 0;
+    }
+
+    &__checkbox {
+        display: flex;
+        flex-direction: column;
+
+        &--user-attribute {
+            margin-left: calculateRem(20px);
+        }
+
+        .ibexa-input-text-wrapper {
+            max-width: calculateRem(200px);
+        }
+    }
+
+    &__checkbox-subfield {
+        margin-left: calculateRem(20px);
+        margin-top: calculateRem(-8px);
+        margin-bottom: calculateRem(8px);
+
+        .ibexa-label {
+            margin-top: calculateRem(-8px);
+        }
+    }
+
+    &__multiline-label-wrapper {
+        display: flex;
+    }
+
+    &__boost-position-move-up {
+        display: flex;
+        align-items: baseline;
+        font-size: $ibexa-text-font-size-medium;
+
+        .ibexa-input-text-wrapper {
+            margin-right: calculateRem(8px);
+        }
+    }
+
+    &__category-path-select {
+        width: calculateRem(470px);
+    }
+
+    .ibexa-input-text-wrapper {
+        width: initial;
+
+        .ibexa-input--text {
+            max-width: initial;
+        }
+    }
+
+    .ibexa-input--textarea {
+        width: 100%;
+    }
+
+    .ibexa-input-text-wrapper--type-number {
+        max-width: calculateRem(96px);
+    }
+}
+
+.ibexa-perso-scenario-strategy-edit {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}

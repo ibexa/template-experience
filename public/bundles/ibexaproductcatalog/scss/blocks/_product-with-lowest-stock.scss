@@ -1,0 +1,10 @@
+.ibexa-pc-product-lowest-stock {
+    &__table {
+        padding: calculateRem(16px);
+        margin: 0;
+    }
+
+    &__header {
+        margin-bottom: calculateRem(16px);
+    }
+}
