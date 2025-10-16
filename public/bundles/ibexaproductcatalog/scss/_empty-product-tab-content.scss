@@ -1,0 +1,26 @@
+.ibexa-pc-empty-product-tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__info {
+        max-width: calculateRem(440px);
+        margin-left: calculateRem(56px);
+    }
+
+    &__header {
+        margin-bottom: calculateRem(16px);
+        color: $ibexa-color-dark-400;
+    }
+
+    &__description {
+        margin-bottom: calculateRem(16px);
+        color: $ibexa-color-dark-400;
+    }
+
+    &__action {
+        .ibexa-icon {
+            transform: rotate(180deg);
+        }
+    }
+}

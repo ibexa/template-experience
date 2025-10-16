@@ -1,0 +1,6 @@
+.c-ip-tab-selector {
+    @include tab-selector();
+
+    border-right: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.05);
+}

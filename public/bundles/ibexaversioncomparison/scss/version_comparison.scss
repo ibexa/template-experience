@@ -1,0 +1,15 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem';
+
+$ibexa-color-version-compare-added: #cceeb1;
+$ibexa-color-version-compare-removed: $ibexa-color-dark-300;
+
+@import 'mixins';
+@import 'general';
+@import 'compared-part';
+@import 'version-compare';
+@import 'version-comparison-menu';
+@import 'field-types';
+@import 'header';
+@import 'header-tooltip';

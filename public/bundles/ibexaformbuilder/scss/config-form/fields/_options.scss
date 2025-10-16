@@ -1,0 +1,18 @@
+.ibexa-fb-form-field-config-options {
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    clear: left;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calculateRem(8px);
+        padding-bottom: calculateRem(16px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+
+    &__headline {
+        font-size: $ibexa-text-font-size-medium;
+    }
+}
