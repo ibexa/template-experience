@@ -1,0 +1,10 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.ibexa-pc-attributes-drop-zone-item-placeholder {
+    @include drag-item-placeholder;
+
+    & {
+        margin: 0 calculateRem(12px) calculateRem(12px);
+    }
+}

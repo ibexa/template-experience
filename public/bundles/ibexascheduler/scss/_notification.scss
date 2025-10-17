@@ -1,0 +1,16 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.dbp-notification {
+    .ibexa-notifications-modal__type {
+        .type__icon {
+            background: $ibexa-color-danger;
+            fill: $ibexa-color-light-200;
+        }
+    }
+
+    &.ibexa-notifications-modal__item--read {
+        .type__icon {
+            background-color: $ibexa-color-dark-300;
+        }
+    }
+}

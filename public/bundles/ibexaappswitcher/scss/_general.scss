@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+#qntm-app-switcher {
+    color: $ibexa-color-white;
+    margin-left: calculateRem(16px);
+    display: flex;
+    width: calculateRem(16px);
+}

@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-popup--workflow {
+    .modal-dialog {
+        min-width: calculateRem(860px);
+        width: 60vh;
+    }
+
+    .modal-body {
+        padding-top: 0;
+    }
+}

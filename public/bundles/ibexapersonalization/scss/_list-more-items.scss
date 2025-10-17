@@ -1,0 +1,13 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-perso-list-more-items {
+    font-size: $ibexa-text-font-size-medium;
+    user-select: none;
+    text-decoration: underline;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &:hover {
+        color: $ibexa-color-primary;
+        border-color: $ibexa-color-primary;
+    }
+}

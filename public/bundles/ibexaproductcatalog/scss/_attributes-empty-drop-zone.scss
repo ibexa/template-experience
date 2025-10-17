@@ -1,0 +1,5 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.ibexa-pc-attributes-empty-drop-zone {
+    @include empty-drop-zone;
+}

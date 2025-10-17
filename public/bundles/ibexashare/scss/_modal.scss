@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-shr-modal {
+    &__content-row {
+        font-size: $ibexa-text-font-size-medium;
+
+        &:first-of-type {
+            margin-bottom: calculateRem(24px);
+        }
+    }
+}

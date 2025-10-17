@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.ibexa-perso-models-drop-empty-group {
+    @include empty-drop-zone;
+}
+
+.ibexa-perso-segments-drop-empty-group {
+    @include empty-drop-zone;
+}

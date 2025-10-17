@@ -1,0 +1,22 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-ai-input-wrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+
+    .ibexa-ai-component-output {
+        flex-grow: 1;
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__btn {
+        height: calculateRem(48px);
+        margin-left: calculateRem(16px);
+        margin-bottom: calculateRem(24px);
+    }
+
+    .ibexa-data-form-field {
+        margin-bottom: 0;
+    }
+}
