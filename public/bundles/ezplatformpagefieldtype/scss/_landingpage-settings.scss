@@ -1,0 +1,16 @@
+.ez-landingpage-settings {
+    margin-top: calculateRem(30px);
+
+    &__editor_mode {
+        display: flex;
+    }
+
+    &__editor_mode_label {
+        display: flex;
+        align-items: center;
+
+        .ez-icon {
+            margin: 0 calculateRem(10px);
+        }
+    }
+}
