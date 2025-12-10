@@ -1,0 +1,35 @@
+.ibexa-perso-search-input {
+    display: flex;
+
+    .ibexa-input-text-wrapper {
+        width: 100%;
+        margin-right: calculateRem(16px);
+    }
+
+    &__popup {
+        width: 100%;
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        background-color: $ibexa-color-white;
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(67px) 0 rgba($ibexa-color-info, 0.1);
+        padding: calculateRem(8px);
+        z-index: 10;
+        display: none;
+
+        &[data-show] {
+            display: block;
+        }
+    }
+
+    &__popup-item {
+        display: flex;
+        align-items: center;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(8px);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $ibexa-color-light-300;
+        }
+    }
+}

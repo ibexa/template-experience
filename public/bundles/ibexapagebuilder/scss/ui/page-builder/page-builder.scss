@@ -1,0 +1,45 @@
+.m-page-builder {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+
+    &__content {
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+        justify-content: flex-end;
+
+        &--reversed {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__preview-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__preview {
+        display: block;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__active-layout-error {
+        padding: calculateRem(18px) 0;
+        color: $ibexa-color-danger;
+        background: rgba($ibexa-color-danger, 0.2);
+
+        .ibexa-icon {
+            margin: calculateRem(8px) calculateRem(12px);
+            fill: $ibexa-color-danger;
+        }
+    }
+
+    &__active-layout-error-content {
+        display: flex;
+        justify-content: space-between;
+    }
+}

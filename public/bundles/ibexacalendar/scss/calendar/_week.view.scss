@@ -1,0 +1,86 @@
+.c-week-view {
+    position: relative;
+    width: 100%;
+
+    &__days-names {
+        @include calendar-header();
+
+        grid-template-columns: calculateRem(72px) repeat(7, 1fr);
+        height: calculateRem(48px);
+    }
+
+    &__days-dates {
+        display: grid;
+        grid-template-columns: calculateRem(72px) repeat(7, 1fr);
+    }
+
+    &__days {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__day-time {
+        width: calculateRem(72px);
+        padding: calculateRem(12px) 0 0 calculateRem(4px);
+        font-size: $ibexa-text-font-size-medium;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+
+        &--no-border {
+            border-width: 0;
+        }
+
+        &--first-pm {
+            border-color: $ibexa-color-dark;
+        }
+    }
+
+    &__day-name,
+    &__day-date-wrapper {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        flex-basis: 0;
+        height: 100%;
+        padding-left: calculateRem(12px);
+    }
+
+    &__day-date-wrapper {
+        padding: calculateRem(14px) 0 calculateRem(14px) calculateRem(12px);
+
+        &--past {
+            @include past-tile();
+        }
+
+        &--today {
+            @include today-tile();
+        }
+
+        &--selected {
+            border-right: calculateRem(1px) solid $ibexa-color-dark;
+            border-left: calculateRem(1px) solid $ibexa-color-dark;
+        }
+    }
+
+    &__day-name {
+        &--today {
+            color: $ibexa-color-info;
+            background: $ibexa-color-info-200;
+            border-top-left-radius: $ibexa-border-radius-small;
+            border-top-right-radius: $ibexa-border-radius-small;
+        }
+
+        &--selected {
+            border-color: $ibexa-color-dark;
+            border-style: solid;
+            border-width: calculateRem(1px) calculateRem(1px) 0 calculateRem(1px);
+            border-top-left-radius: $ibexa-border-radius-small;
+            border-top-right-radius: $ibexa-border-radius-small;
+        }
+    }
+
+    &__hour-row {
+        display: grid;
+        grid-template-columns: calculateRem(72px) repeat(7, minmax(0, 1fr));
+        height: calculateRem(75px);
+    }
+}

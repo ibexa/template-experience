@@ -1,0 +1,12 @@
+.ibexa-pc-variants-viewer {
+    &__show-variants-btn {
+        margin-left: calculateRem(-15px);
+        text-decoration: underline;
+    }
+
+    &__show-variants-btn-icon.ibexa-icon {
+        align-self: center;
+        margin-right: 0;
+        margin-left: calculateRem(4px);
+    }
+}

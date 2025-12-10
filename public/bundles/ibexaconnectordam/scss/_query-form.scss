@@ -1,0 +1,10 @@
+.ibexa-dam-query-form {
+    margin: 0 calculateRem(15px) calculateRem(32px);
+    display: flex;
+
+    &__input {
+        width: calculateRem(460px);
+        margin-right: calculateRem(16px);
+        padding-left: calculateRem(16px);
+    }
+}

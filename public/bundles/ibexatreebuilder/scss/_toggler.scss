@@ -1,0 +1,36 @@
+.c-tb-toggler {
+    height: calculateRem(16px);
+    width: calculateRem(16px);
+    margin: 0 calculateRem(4px);
+    position: relative;
+
+    &::before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: calculateRem(4px) 0 calculateRem(4px) calculateRem(4px);
+        border-color: transparent transparent transparent var(--ibexa-tb-text-color);
+        display: inline-block;
+        position: absolute;
+        top: calc(50% + #{calculateRem(1px)});
+        left: calculateRem(6px);
+        transform-origin: center center;
+        transform: translateY(-50%) rotate(0);
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &:hover {
+        &::before {
+            border-color: transparent transparent transparent var(--ibexa-tb-primary-color);
+        }
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    & + .c-tb-list-item-single__label {
+        padding-left: calculateRem(4px);
+    }
+}
