@@ -1,0 +1,6 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-dam-search-form {
+    padding-bottom: calculateRem(16px);
+    width: 60%;
+}

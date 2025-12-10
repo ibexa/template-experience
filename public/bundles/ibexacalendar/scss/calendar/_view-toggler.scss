@@ -1,0 +1,16 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-view-toggler {
+    margin-left: calculateRem(8px);
+    padding-left: calculateRem(8px);
+    border-left: calculateRem(1px) solid $ibexa-color-light;
+
+    &__dropdown {
+        .c-simple-dropdown {
+            &__items {
+                width: calculateRem(200px);
+            }
+        }
+    }
+}

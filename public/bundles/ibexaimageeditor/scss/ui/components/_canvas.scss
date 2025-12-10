@@ -1,0 +1,13 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-image-editor-canvas {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calculateRem(30px);
+
+    &__technical {
+        position: absolute;
+    }
+}

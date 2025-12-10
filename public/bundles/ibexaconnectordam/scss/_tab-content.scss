@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-dam-tab-content {
+    border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    padding: calculateRem(16px) 0;
+    display: flex;
+    justify-content: space-between;
+}

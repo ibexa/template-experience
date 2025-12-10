@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-pb-block-checkbox-field {
+    .form-check {
+        display: flex;
+        height: 100%;
+    }
+
+    .ibexa-input {
+        margin-right: calculateRem(4px);
+    }
+}

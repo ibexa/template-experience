@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-pc-category-select-popup {
+    &__language-icon {
+        margin-right: calculateRem(4px);
+    }
+
+    .c-tb-width-container {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,12 @@
+@use '@ibexa-page-builder/src/bundle/Resources/public/scss/config-panel';
+@use '@ibexa-page-builder/src/bundle/Resources/public/scss/ui/page-builder/components/iframe';
+
+@use 'components/sidebar';
+@use 'components/sidebar-field';
+@use 'components/sidebar-fields-group';
+@use 'components/field-config-panel';
+@use 'field-type';
+@use 'form-builder';
+@use 'form-builder-modal';
+@use 'form-builder-workspace';
+@use 'form-builder-form-field';

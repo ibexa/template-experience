@@ -1,0 +1,16 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-extra-actions {
+    &--attributes-definition,
+    &--product {
+        .ibexa-extra-actions {
+            &__pre-form {
+                margin-bottom: calculateRem(16px) calculateRem(8px);
+            }
+
+            &__pre-form-btns {
+                padding-bottom: calculateRem(48px);
+            }
+        }
+    }
+}

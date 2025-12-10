@@ -1,0 +1,16 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ca-applications-assignments-disc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calculateRem(60px);
+    width: calculateRem(60px);
+    border-radius: calculateRem(30px);
+    background-color: $ibexa-color-light;
+
+    .ibexa-icon {
+        fill: $ibexa-color-dark;
+    }
+}

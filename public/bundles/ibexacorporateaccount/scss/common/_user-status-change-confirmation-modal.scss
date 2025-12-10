@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ca-user-status-change-confirmation-modal {
+    &__question {
+        font-weight: bold;
+    }
+
+    &__note {
+        display: block;
+        margin-bottom: calculateRem(24px);
+    }
+}
