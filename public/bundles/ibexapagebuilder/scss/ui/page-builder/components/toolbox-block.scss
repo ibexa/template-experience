@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.c-pb-toolbox-block {
+    @include toolbox-drag-item;
+
+    &__label {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

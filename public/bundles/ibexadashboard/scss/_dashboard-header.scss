@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-db-header {
+    &__date {
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size;
+    }
+
+    &__actions {
+        justify-self: flex-end;
+    }
+}

@@ -1,0 +1,13 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ca-application-workflow-extra-actions {
+    &__btns {
+        margin-top: calculateRem(24px);
+        margin-bottom: calculateRem(48px);
+        display: flex;
+    }
+
+    &__btn {
+        margin-right: calculateRem(16px);
+    }
+}

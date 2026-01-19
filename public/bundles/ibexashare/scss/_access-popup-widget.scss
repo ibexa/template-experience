@@ -1,0 +1,95 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-shr-access-popup {
+    position: relative;
+
+    &__btn {
+        &--menu-opened {
+            .ibexa-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .ibexa-btn {
+        align-items: center;
+
+        .ibexa-icon {
+            margin: 0 0 0 calculateRem(12px);
+            fill: $ibexa-color-dark-400;
+            transition: transform 0.2s;
+
+            &--enabled {
+                display: block;
+            }
+
+            &--disabled {
+                display: none;
+                fill: $ibexa-color-dark-300;
+                pointer-events: auto;
+            }
+        }
+
+        &:focus {
+            border-color: transparent;
+        }
+
+        &:disabled {
+            color: $ibexa-color-dark;
+
+            .ibexa-icon {
+                fill: $ibexa-color-dark;
+
+                &--enabled {
+                    display: none;
+                }
+
+                &--disabled {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__item {
+        &--remove {
+            &::before {
+                content: '';
+                height: calculateRem(1px);
+                width: 100%;
+                background-color: $ibexa-color-light;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__popup-menu {
+        z-index: $ibexa-modal-zindex;
+    }
+
+    &--new-participant {
+        .ibexa-shr-access-popup {
+            &__button {
+                color: $ibexa-color-dark;
+
+                .ibexa-icon {
+                    fill: $ibexa-color-dark;
+                }
+
+                &:disabled {
+                    .ibexa-icon {
+                        fill: $ibexa-color-dark-300;
+                    }
+                }
+            }
+
+            &__popup-menu {
+                top: calculateRem(46px);
+                right: 0;
+            }
+        }
+    }
+}
