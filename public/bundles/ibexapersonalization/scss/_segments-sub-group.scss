@@ -1,0 +1,53 @@
+.ibexa-perso-segments-sub-group {
+    margin: calculateRem(8px) 0;
+    padding-left: calculateRem(40px);
+    display: flex;
+    overflow: hidden;
+
+    &__relationship {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        width: calculateRem(40px);
+
+        &--hidden {
+            display: none;
+        }
+
+        .ibexa-dropdown {
+            position: absolute;
+            z-index: 2;
+            left: calculateRem(-22px);
+            background-color: $ibexa-color-white;
+            min-width: calculateRem(70px);
+            margin-bottom: calculateRem(8px);
+
+            & .ibexa-dropdown__selection-info {
+                border-radius: $ibexa-border-radius;
+            }
+        }
+    }
+
+    &__connector {
+        margin: calculateRem(23px) calculateRem(5px) calculateRem(23px);
+        width: calculateRem(20px);
+        height: 100%;
+        border: calculateRem(2px) solid $ibexa-color-accent-300;
+        border-top-left-radius: calculateRem(5px);
+        border-bottom-left-radius: calculateRem(5px);
+        border-right: none;
+    }
+
+    &__items {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-left: calculateRem(35px);
+        background-color: $ibexa-color-light-300;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(11px) calculateRem(8px);
+    }
+}

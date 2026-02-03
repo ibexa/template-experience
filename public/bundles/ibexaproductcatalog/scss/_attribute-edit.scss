@@ -1,0 +1,33 @@
+.ibexa-attribute-edit {
+    &--integer {
+        .ibexa-input-text-wrapper--type-number .ibexa-input--text {
+            max-width: calculateRem(113px);
+        }
+        .ibexa-input-text-wrapper__actions {
+            right: calculateRem(64px);
+        }
+    }
+
+    &--choice {
+        max-width: 50%;
+    }
+
+    &--color {
+        .ibexa-attribute-edit {
+            &__input-wrapper {
+                display: flex;
+            }
+
+            &__hex-value {
+                display: flex;
+                align-items: center;
+                height: calculateRem(42px);
+                margin-left: calculateRem(8px);
+            }
+        }
+
+        .ibexa-input {
+            min-width: calculateRem(90px);
+        }
+    }
+}

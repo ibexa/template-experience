@@ -1,0 +1,28 @@
+{
+  "entrypoints": {
+    "welcome-page-css": {
+      "js": [
+        "/build/runtime.js",
+        "/build/welcome-page-css.js"
+      ],
+      "css": [
+        "/build/welcome-page-css.css"
+      ]
+    },
+    "welcome-page-js": {
+      "js": [
+        "/build/runtime.js",
+        "/build/welcome-page-js.js"
+      ]
+    },
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/app.css"
+      ]
+    }
+  }
+}

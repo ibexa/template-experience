@@ -1,0 +1,67 @@
+.ibexa-perso-segments-group {
+    display: flex;
+    flex-direction: column;
+    border-radius: $ibexa-border-radius-small;
+    background-color: $ibexa-color-white;
+    padding: calculateRem(8px) calculateRem(32px) calculateRem(32px);
+    margin: calculateRem(24px) 0;
+
+    &--active {
+        border: calculateRem(1px) solid $ibexa-color-info;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__items-container {
+        display: flex;
+        margin-top: calculateRem(8px);
+    }
+
+    &__relationship {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        width: calculateRem(50px);
+
+        &--hidden {
+            display: none;
+        }
+
+        .ibexa-dropdown {
+            position: absolute;
+            z-index: 2;
+            border-radius: $ibexa-border-radius;
+            left: calculateRem(-15px);
+            top: calculateRem(68px);
+            background-color: $ibexa-color-white;
+            min-width: calculateRem(70px);
+
+            & .ibexa-dropdown__selection-info {
+                border-radius: $ibexa-border-radius;
+            }
+        }
+    }
+
+    &__connector {
+        margin: calculateRem(23px) calculateRem(-10px) calculateRem(23px) 0;
+        width: calculateRem(40px);
+        height: 100%;
+        border: calculateRem(3px) solid $ibexa-color-info;
+        border-radius: calculateRem(7px);
+    }
+
+    &__items {
+        width: 90%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        background-color: $ibexa-color-white;
+    }
+}

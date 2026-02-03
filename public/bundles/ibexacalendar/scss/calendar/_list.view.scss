@@ -1,0 +1,56 @@
+.c-list-view {
+    @include main-view();
+
+    &__day-separator {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__event {
+        display: flex;
+        padding: calculateRem(25px) 0;
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__event-actions-col {
+        display: flex;
+        justify-content: center;
+        width: calculateRem(48px);
+        padding-top: calculateRem(4px);
+        margin-right: calculateRem(8px);
+    }
+
+    &__event-data-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__event-name {
+        font-weight: bold;
+    }
+
+    &__event-type,
+    &__event-details {
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__event-date {
+        margin-top: calculateRem(32px);
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__list {
+        position: relative;
+        margin-top: calculateRem(32px);
+
+        &--loading {
+            height: calculateRem(400px);
+        }
+    }
+
+    &__load-more-wrapper {
+        padding: calculateRem(16px);
+        display: flex;
+        justify-content: center;
+        background: $ibexa-color-white;
+    }
+}
