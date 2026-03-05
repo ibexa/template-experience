@@ -1,0 +1,15 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-json {
+    &__key {
+        color: $ibexa-color-dark;
+    }
+
+    &__value {
+        color: $ibexa-color-primary;
+    }
+
+    &__string {
+        color: $ibexa-color-success;
+    }
+}

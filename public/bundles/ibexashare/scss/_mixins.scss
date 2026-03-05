@@ -1,0 +1,20 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+@mixin modal-session-link() {
+    flex-basis: 100%;
+    width: 100%;
+    height: auto;
+    max-height: calculateRem(100px);
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    color: $ibexa-color-dark-400;
+    opacity: 1;
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &--hidden {
+        max-height: 0;
+        opacity: 0;
+    }
+}

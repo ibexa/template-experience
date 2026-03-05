@@ -1,0 +1,36 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use 'mixins' as *;
+
+.c-month-day-view {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: $ibexa-border-radius-small;
+    border: calculateRem(1px) solid $ibexa-color-white;
+    min-width: calc(100% / 7);
+
+    &--past {
+        @include past-tile();
+    }
+
+    &--today {
+        @include today-tile();
+    }
+
+    &--disabled {
+        @include disabled-tile();
+    }
+
+    &--selected {
+        @include selected-tile();
+    }
+
+    &__day {
+        margin-left: calculateRem(4px);
+        flex-basis: calculateRem(32px);
+    }
+
+    .c-events {
+        max-width: 100%;
+    }
+}

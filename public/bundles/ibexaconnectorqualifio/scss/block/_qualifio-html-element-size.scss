@@ -1,0 +1,34 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-qualifio-html-element-size {
+    display: flex;
+    clear: both;
+
+    .form-group {
+        &:first-child {
+            margin-right: calculateRem(16px);
+        }
+    }
+
+    .ibexa-input-text-wrapper {
+        &--type-text {
+            width: calculateRem(140px);
+        }
+    }
+
+    .ibexa-dropdown {
+        &__wrapper {
+            width: calculateRem(92px);
+        }
+    }
+
+    .ibexa-form-error {
+        &__row {
+            width: calculateRem(150px);
+        }
+
+        &__icon {
+            flex-shrink: 0;
+        }
+    }
+}

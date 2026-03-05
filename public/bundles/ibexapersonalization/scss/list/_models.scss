@@ -1,0 +1,38 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-perso-models-list {
+    &__name-link {
+        display: inline-block;
+    }
+
+    &__td-list {
+        white-space: nowrap;
+    }
+
+    .ibexa-table {
+        &__cell {
+            &--model-name {
+                max-width: calculateRem(300px);
+                white-space: nowrap;
+
+                .ibexa-icon {
+                    &:hover {
+                        fill: $ibexa-color-primary;
+                    }
+                }
+            }
+
+            &--model-scenario {
+                word-break: break-all;
+                white-space: nowrap;
+                max-width: calculateRem(300px);
+                min-width: calculateRem(150px);
+            }
+
+            .list-unstyled {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

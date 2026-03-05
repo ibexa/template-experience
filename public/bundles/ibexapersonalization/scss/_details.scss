@@ -1,0 +1,7 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-perso-details {
+    &__subtitle {
+        color: $ibexa-color-dark-400;
+    }
+}

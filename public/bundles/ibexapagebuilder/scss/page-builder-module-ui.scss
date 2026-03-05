@@ -1,0 +1,35 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+@use 'ui/page-builder/components/block-preview';
+@use 'ui/page-builder/components/toolbox-blocks-group';
+@use 'ui/page-builder/components/toolbox-block';
+@use 'ui/page-builder/components/toolbox-structure';
+@use 'ui/page-builder/components/config-popup';
+@use 'ui/page-builder/components/block-config-panel';
+@use 'ui/page-builder/components/toolbox';
+@use 'ui/page-builder/components/notification';
+@use 'ui/page-builder/components/layout-selector';
+@use 'ui/page-builder/components/settings-modal';
+@use 'ui/page-builder/components/iframe';
+@use 'ui/page-builder/components/date-picker';
+@use 'ui/page-builder/components/hidden-blocks';
+@use 'ui/page-builder/components/hidden-block';
+@use 'ui/page-builder/components/structure-block.scss';
+@use 'ui/page-builder/page-builder';
+
+body {
+    .c-tb-element {
+        --ibexa-primary-color: #{$ibexa-color-info};
+    }
+
+    .c-pb-toolbox {
+        --ibexa-hover-color: #{$ibexa-color-info};
+        --ibexa-border-color: #{$ibexa-color-info};
+    }
+
+    .c-udw-tab__popup {
+        --ibexa-input-checked-bg-color: #{$ibexa-color-primary};
+        --ibexa-input-hover-border-color: #{$ibexa-color-primary};
+        --ibexa-input-focus-border-color: #{$ibexa-color-primary};
+    }
+}

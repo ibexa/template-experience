@@ -1,0 +1,26 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-time-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+        &--right {
+            align-items: end;
+        }
+    }
+
+    &__custom-range-container {
+        min-width: calculateRem(225px);
+        margin-top: calculateRem(16px);
+    }
+
+    .ibexa-dropdown,
+    .ibexa-field-edit--ibexa_date {
+        width: calculateRem(250px);
+    }
+}

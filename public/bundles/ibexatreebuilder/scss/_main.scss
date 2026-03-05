@@ -1,0 +1,19 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-tb-tree {
+    height: 100%;
+    padding-top: calculateRem(8px);
+
+    &__scrollable-wrapper {
+        padding: calculateRem(8px);
+        overflow: auto;
+
+        &--disabled {
+            pointer-events: none;
+        }
+    }
+
+    &--no-header {
+        padding-top: 0;
+    }
+}

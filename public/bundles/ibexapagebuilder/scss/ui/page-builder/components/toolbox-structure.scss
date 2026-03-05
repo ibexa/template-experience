@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.c-pb-toolbox-structure {
+    &__name {
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    .c-tb-width-container {
+        background-color: $ibexa-color-white;
+    }
+}
