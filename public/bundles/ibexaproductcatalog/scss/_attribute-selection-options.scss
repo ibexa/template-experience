@@ -1,0 +1,66 @@
+.ibexa-pc-attribute-selection-options {
+    padding: calculateRem(24px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+
+    &__toolbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calculateRem(12px);
+        padding-bottom: calculateRem(18px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-dark-200;
+    }
+
+    &__toolbar-title {
+        display: flex;
+        align-items: center;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__list-labels {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: calculateRem(8px);
+        padding: 0 calculateRem(48px);
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__list-label {
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__option {
+        display: grid;
+        grid-template-columns: calculateRem(40px) repeat(2, 1fr) calculateRem(40px);
+        column-gap: calculateRem(8px);
+        margin-bottom: calculateRem(4px);
+        padding: calculateRem(8px) 0;
+        border-radius: $ibexa-border-radius-small;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+        &--added {
+            background: $ibexa-color-info-100;
+
+            .ibexa-input {
+                border-color: $ibexa-color-info;
+            }
+
+            .ibexa-icon {
+                fill: $ibexa-color-info;
+            }
+        }
+    }
+
+    &__option-checkbox-container {
+        display: flex;
+        justify-content: center;
+        padding-top: calculateRem(8px);
+    }
+
+    &__option-label-input-container,
+    &__option-value-input-container {
+        .ibexa-pc-edit__form-field {
+            margin-bottom: 0;
+        }
+    }
+}

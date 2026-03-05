@@ -1,0 +1,29 @@
+.ibexa-perso-strategy-sidebar {
+    @include sidebar-drag-items;
+
+    & {
+        position: sticky;
+        top: calculateRem(-40px);
+        max-height: calc(100vh - #{calculateRem(140px)});
+        margin-left: calculateRem(32px);
+    }
+}
+
+.ibexa-perso-strategy-sidebar-item {
+    @include sidebar-drag-item;
+
+    & {
+        align-items: baseline;
+    }
+
+    &__label {
+        font-size: $ibexa-text-font-size;
+    }
+
+    &__description {
+        padding-top: calculateRem(6px);
+        padding-right: calculateRem(6px);
+        line-height: calculateRem(24px);
+        color: $ibexa-color-dark-400;
+    }
+}

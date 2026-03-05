@@ -1,0 +1,23 @@
+.ibexa-perso-models-drop-group-item {
+    @include drag-item;
+
+    &__content {
+        align-items: center;
+        justify-content: center;
+        box-shadow: $ibexa-content-type-edit-field-shadow;
+        padding: 0 0 0 calculateRem(20px);
+    }
+
+    &__icon {
+        display: flex;
+        margin-right: calculateRem(10px);
+
+        .ibexa-icon {
+            fill: $ibexa-color-dark-200;
+        }
+    }
+
+    &__remove-btn {
+        margin-left: auto;
+    }
+}

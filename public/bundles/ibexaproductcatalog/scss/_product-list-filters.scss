@@ -1,0 +1,10 @@
+.ibexa-pc-product-list-filters {
+    &__created-at-date-time-range {
+        margin-left: calculateRem(12px);
+        width: calculateRem(320px);
+
+        .ibexa-date-time-range-single__date-time-picker-input {
+            width: calculateRem(320px);
+        }
+    }
+}

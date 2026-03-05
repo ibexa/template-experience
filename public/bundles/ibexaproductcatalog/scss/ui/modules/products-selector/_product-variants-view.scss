@@ -1,0 +1,15 @@
+.c-pc-selector-product-variants-view {
+    height: 100%;
+    width: 100%;
+    min-height: calculateRem(200px);
+    display: flex;
+    flex-direction: column;
+
+    &__spinner-wrapper {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+.ibexa-ca-registration-banner {
+    display: flex;
+    align-items: center;
+    max-width: calculateRem(1200px);
+    padding: 0 calculateRem(64px);
+    margin: 0 auto;
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__steps {
+        margin-left: calculateRem(50px);
+        width: calculateRem(364px);
+    }
+
+    &__step-content {
+        font-weight: 600;
+    }
+
+    &__step:not(:first-child) {
+        margin-top: calculateRem(32px);
+    }
+}

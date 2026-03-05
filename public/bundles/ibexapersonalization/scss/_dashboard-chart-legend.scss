@@ -1,0 +1,21 @@
+.ibexa-perso-dashboard-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calculateRem(16px);
+
+    &__item-wrapper {
+        list-style-type: none;
+    }
+
+    &__item {
+        display: flex;
+        color: $ibexa-color-dark-500;
+        margin-right: calculateRem(16px);
+        font-size: $ibexa-text-font-size-small;
+        cursor: pointer;
+    }
+
+    &__label {
+        margin: 0 calculateRem(6px);
+    }
+}
