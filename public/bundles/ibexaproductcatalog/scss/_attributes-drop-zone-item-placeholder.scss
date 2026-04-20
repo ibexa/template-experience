@@ -1,0 +1,7 @@
+.ibexa-pc-attributes-drop-zone-item-placeholder {
+    @include drag-item-placeholder;
+
+    & {
+        margin: 0 calculateRem(12px) calculateRem(12px);
+    }
+}

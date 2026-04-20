@@ -1,0 +1,29 @@
+.ibexa-fb-form-field-config-option {
+    @include drag-item;
+
+    & {
+        background: $ibexa-color-white;
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__input {
+        height: calculateRem(32px);
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__input-wrapper {
+        width: 100%;
+    }
+
+    &__drag-handler {
+        cursor: grab;
+    }
+
+    &__right-col {
+        cursor: grab;
+    }
+}
+
+.ibexa-fb-form-field-config-option-placeholder {
+    @include drag-item-placeholder;
+}

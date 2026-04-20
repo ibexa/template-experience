@@ -1,0 +1,10 @@
+.ibexa-perso-mandator-selector {
+    display: flex;
+    justify-content: flex-end;
+    min-width: calculateRem(290px);
+    margin-top: calculateRem(-20px);
+
+    .ibexa-label {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,25 @@
+.c-pb-thumb {
+    width: calculateRem(12px);
+    height: calculateRem(58px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: $ibexa-color-info;
+    border: calculateRem(5px) solid transparent;
+    background-clip: padding-box;
+    cursor: pointer;
+
+    &__bottom-arrow {
+        position: absolute;
+        display: block;
+        bottom: calculateRem(-13px);
+        left: calculateRem(-8px);
+        width: calculateRem(18px);
+        height: calculateRem(17px);
+        border: calculateRem(2px) solid transparent;
+        background-clip: content-box;
+        user-select: none;
+        max-width: none;
+    }
+}

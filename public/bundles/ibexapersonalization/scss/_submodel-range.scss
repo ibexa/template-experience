@@ -1,0 +1,9 @@
+.ibexa-perso-submodel-range {
+    display: flex;
+    align-items: flex-end;
+
+    .ibexa-input-text-wrapper {
+        max-width: calculateRem(96px);
+        margin-right: calculateRem(16px);
+    }
+}

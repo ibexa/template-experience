@@ -1,0 +1,27 @@
+.ibexa-ca-registration-confirmation {
+    &__wrapper {
+        max-width: 70vw;
+        margin: calculateRem(60px) auto calculateRem(100px) auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__fancy-image {
+        height: fit-content;
+    }
+
+    &__info {
+        margin-left: calculateRem(48px);
+    }
+
+    &__info-title {
+        margin-top: calculateRem(40px);
+    }
+
+    &__info-title,
+    &__approval-info,
+    &__link-info,
+    &__after-info {
+        margin-bottom: calculateRem(24px);
+    }
+}

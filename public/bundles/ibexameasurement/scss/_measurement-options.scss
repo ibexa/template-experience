@@ -1,0 +1,22 @@
+.ibexa-measurement-options {
+    display: flex;
+
+    &__icon-wrapper {
+        position: absolute;
+        padding-top: calculateRem(12px);
+        min-width: calculateRem(24px);
+    }
+
+    &__content {
+        flex-grow: 1;
+        margin-left: calculateRem(32px);
+    }
+
+    &__min-max {
+        display: flex;
+    }
+
+    &__min {
+        margin-right: calculateRem(8px);
+    }
+}

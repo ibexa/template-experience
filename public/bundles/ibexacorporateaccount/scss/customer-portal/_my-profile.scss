@@ -1,0 +1,30 @@
+.ibexa-ca-my-profile {
+    &__about {
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        padding-bottom: calculateRem(48px);
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__about,
+    &__sign-in {
+        display: flex;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        width: calculateRem(400px);
+    }
+
+    &__edit-label {
+        margin: 0;
+    }
+
+    &__edit-btn-wrapper {
+        margin-left: calculateRem(-14px);
+    }
+
+    &__details {
+        flex-grow: 2;
+    }
+}
