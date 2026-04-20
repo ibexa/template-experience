@@ -1,0 +1,1 @@
+module.exports = [".\/vendor\/ibexa\/fieldtype-richtext\/src\/bundle\/Resources\/encore\/ibexa.webpack.richtext.config.js"];

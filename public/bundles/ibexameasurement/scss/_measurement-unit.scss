@@ -1,0 +1,26 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-measurement-unit {
+    margin-top: calculateRem(12px);
+
+    &__original-dropdown {
+        display: none;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__icon-wrapper {
+        margin-right: calculateRem(8px);
+        padding-top: calculateRem(4px);
+    }
+
+    &__dropdown-wrapper {
+        flex-grow: 1;
+
+        .ibexa-label {
+            margin-top: calculateRem(12px);
+        }
+    }
+}

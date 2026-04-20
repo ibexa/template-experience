@@ -1,0 +1,24 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.m-ibexa-fb {
+    display: grid;
+    grid-template-columns: auto calculateRem(354px);
+    height: calc(100vh - #{calculateRem(16px)});
+
+    &__workspace-wrapper {
+        padding: calculateRem(40px);
+    }
+}
+
+.droppable-placeholder {
+    @include drag-item-placeholder;
+
+    & {
+        margin-top: calculateRem(2px);
+    }
+
+    & + .c-ibexa-fb-form-field {
+        margin-top: calculateRem(2px);
+    }
+}

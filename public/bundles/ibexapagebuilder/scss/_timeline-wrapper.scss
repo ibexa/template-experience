@@ -1,0 +1,20 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-pb-timeline-wrapper {
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    position: absolute;
+    top: calculateRem(162px);
+    left: calculateRem(16px);
+    right: calculateRem(16px);
+    z-index: 125;
+    transform-origin: top;
+    transform: scaleY(0);
+    will-change: transform;
+    opacity: 0;
+
+    .ibexa-pb-timeline-visible & {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

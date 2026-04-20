@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.partner__link {
+    color: $ibexa-color-dark;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

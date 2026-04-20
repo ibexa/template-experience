@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.ibexa-sf-form-languages-item {
+    @include drag-item;
+}
+
+.ibexa-sf-form-languages-item-placeholder {
+    @include drag-item-placeholder;
+}

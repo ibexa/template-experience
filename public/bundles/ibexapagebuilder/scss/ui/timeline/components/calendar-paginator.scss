@@ -1,0 +1,17 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-pb-calendar-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calculateRem(8px);
+    margin-bottom: calculateRem(10px);
+    font-size: $ibexa-text-font-size-medium;
+
+    &__caret {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
