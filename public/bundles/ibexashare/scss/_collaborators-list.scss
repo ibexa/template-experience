@@ -1,0 +1,35 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-shr-collapsible-list {
+    &__items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__toggle-btn {
+        padding: calculateRem(10px) calculateRem(12px) calculateRem(6px) 0;
+        gap: calculateRem(4px);
+        font-size: $ibexa-text-font-size-medium;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        border: none;
+        background: none;
+    }
+
+    &__toggle-icon {
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        &--opened {
+            transform: rotate(-180deg);
+        }
+    }
+}

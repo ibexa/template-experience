@@ -1,0 +1,122 @@
+import { View, ButtonView, LabeledFieldView, createLabeledInputText } from 'ckeditor5';
+
+const { Translator } = window;
+
+class IbexaLinkFormView extends View {
+    constructor(props) {
+        super(props);
+
+        this.locale = props.locale;
+
+        this.anchorInputView = this.createTextInput(Translator.trans(/*@Desc("Name")*/ 'anchor_btn.input.name', {}, 'ck_editor'));
+        this.saveButtonView = this.createButton(
+            Translator.trans(/*@Desc("Save")*/ 'anchor_btn.save.label', {}, 'ck_editor'),
+            null,
+            'ck-button-save',
+            'save-anchor',
+        );
+        this.cancelButtonView = this.createButton(
+            Translator.trans(/*@Desc("Remove")*/ 'anchor_btn.remove.label', {}, 'ck_editor'),
+            null,
+            'ck-button-cancel',
+            'remove-anchor',
+        );
+
+        this.children = this.createFormChildren();
+
+        this.setTemplate({
+            tag: 'div',
+            attributes: {
+                class: 'ibexa-ckeditor-balloon-form',
+            },
+            children: [
+                {
+                    tag: 'div',
+                    attributes: {
+                        class: 'ibexa-ckeditor-balloon-form__header',
+                    },
+                    children: ['Anchor'],
+                },
+                {
+                    tag: 'form',
+                    attributes: {
+                        tabindex: '-1',
+                    },
+                    children: [
+                        {
+                            tag: 'div',
+                            attributes: {
+                                class: 'ibexa-ckeditor-balloon-form__fields',
+                            },
+                            children: this.children,
+                        },
+                        {
+                            tag: 'div',
+                            attributes: {
+                                class: 'ibexa-ckeditor-balloon-form__actions',
+                            },
+                            children: [this.saveButtonView, this.cancelButtonView],
+                        },
+                    ],
+                },
+            ],
+        });
+    }
+
+    setValues({ anchor }) {
+        this.anchorInputView.fieldView.element.value = anchor;
+        this.anchorInputView.fieldView.set('value', anchor);
+        this.anchorInputView.fieldView.set('isEmpty', !anchor);
+    }
+
+    getValues() {
+        return {
+            anchor: this.anchorInputView.fieldView.element.value,
+        };
+    }
+
+    createFormChildren() {
+        const children = this.createCollection();
+
+        children.add(this.anchorInputView);
+
+        return children;
+    }
+
+    createTextInput(label) {
+        const labeledInput = new LabeledFieldView(this.locale, createLabeledInputText);
+
+        labeledInput.label = label;
+
+        return labeledInput;
+    }
+
+    setError(message) {
+        this.anchorInputView.errorText = message;
+    }
+
+    createButton(label, icon, className, eventName) {
+        const button = new ButtonView(this.locale);
+
+        button.set({
+            label,
+            icon,
+            tooltip: true,
+            withText: true,
+        });
+
+        button.extendTemplate({
+            attributes: {
+                class: className,
+            },
+        });
+
+        if (eventName) {
+            button.delegate('execute').to(this, eventName);
+        }
+
+        return button;
+    }
+}
+
+export default IbexaLinkFormView;

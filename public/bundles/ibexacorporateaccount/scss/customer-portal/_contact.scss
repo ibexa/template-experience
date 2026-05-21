@@ -1,0 +1,18 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ca-contact {
+    display: flex;
+
+    &__billing-address-wrapper {
+        flex-grow: 1;
+        border-radius: $ibexa-border-radius;
+        padding: 0 calculateRem(24px) calculateRem(24px) calculateRem(24px);
+        margin-right: calculateRem(24px);
+        background: $ibexa-color-light-200;
+
+        .ibexa-table-header {
+            margin-top: calculateRem(30px);
+        }
+    }
+}

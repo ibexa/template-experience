@@ -1,0 +1,113 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-selected-items-product-item-variants {
+    background-color: $ibexa-color-light-200;
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: calculateRem(8px);
+        padding: calculateRem(4px) calculateRem(8px);
+        user-select: none;
+        font-size: $ibexa-text-font-size-small;
+
+        &--has-variants {
+            cursor: pointer;
+        }
+
+        &--disable-product-variants-selection {
+            cursor: default;
+        }
+    }
+
+    &__info-arrow {
+        height: 0;
+        width: 0;
+        border: calculateRem(5px) solid transparent;
+        border-left-color: $ibexa-color-black;
+        transform-origin: 0 50%;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+        &--open {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__list-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        padding: 0 calculateRem(8px);
+        flex-grow: 1;
+    }
+
+    &__list-spinner-wrapper {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $ibexa-color-light-200;
+    }
+
+    &__list-item {
+        display: flex;
+        gap: calculateRem(8px);
+        padding: calculateRem(8px) calculateRem(16px);
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+        font-size: $ibexa-text-font-size-medium;
+    }
+
+    &__list-item-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: calculateRem(4px);
+        overflow: hidden;
+    }
+
+    &__list-item-remove {
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+    }
+
+    &__pagination {
+        margin: 0 calculateRem(8px);
+        padding: calculateRem(8px);
+        border-top: calculateRem(1px) solid $ibexa-color-light;
+
+        .c-pagination {
+            --bs-pagination-bg: $ibexa-color-light-200;
+        }
+
+        .page-item {
+            .page-link {
+                width: calculateRem(24px);
+                height: calculateRem(24px);
+                border-radius: calculateRem(6px);
+            }
+
+            &.prev {
+                .page-link {
+                    &::before {
+                        width: calculateRem(10px);
+                        height: calculateRem(10px);
+                    }
+                }
+            }
+
+            &.next {
+                .page-link {
+                    &::after {
+                        width: calculateRem(10px);
+                        height: calculateRem(10px);
+                    }
+                }
+            }
+        }
+    }
+}

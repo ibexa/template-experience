@@ -1,0 +1,21 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use 'common/mixins/edit' as *;
+
+.ibexa-ca-application-create-edit {
+    .ibexa-anchor-navigation__section:not(:first-child) {
+        margin-top: calculateRem(48px);
+    }
+
+    .ibexa-field-edit--ibexa_address {
+        @include ibexa-address-edit-styles;
+    }
+
+    .ibexa-field-edit .ibexa-form-error {
+        min-height: 0;
+    }
+
+    .ibexa-label.ibexa-field-edit__label,
+    .ibexa-label.ibexa-data-source__label {
+        margin-top: 0;
+    }
+}

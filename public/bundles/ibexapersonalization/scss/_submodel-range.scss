@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-perso-submodel-range {
+    display: flex;
+    align-items: flex-end;
+
+    .ibexa-input-text-wrapper {
+        max-width: calculateRem(96px);
+        margin-right: calculateRem(16px);
+    }
+}

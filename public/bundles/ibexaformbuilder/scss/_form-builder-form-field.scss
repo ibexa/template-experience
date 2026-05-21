@@ -1,0 +1,5 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/drag-and-drop' as *;
+
+.c-ibexa-fb-form-field {
+    @include drag-item;
+}

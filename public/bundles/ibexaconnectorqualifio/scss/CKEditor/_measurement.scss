@@ -1,0 +1,64 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ckeditor-measurement {
+    &__inputs {
+        display: flex;
+    }
+
+    .ck {
+        &.ck-labeled-field-view {
+            height: calculateRem(32px);
+            min-width: calculateRem(70px);
+
+            &:first-child {
+                margin-right: calculateRem(8px);
+            }
+
+            &__input-wrapper {
+                height: calculateRem(32px);
+
+                .ck-input {
+                    min-width: calculateRem(120px);
+                }
+
+                .ck {
+                    &.ck-dropdown {
+                        .ck-button {
+                            height: calculateRem(32px);
+
+                            &.ck-dropdown__button {
+                                .ck {
+                                    &.ck-button__label {
+                                        width: calculateRem(40px);
+                                    }
+                                }
+                            }
+                        }
+
+                        .ck-dropdown__panel {
+                            &.ck-dropdown__panel-visible {
+                                background: $ibexa-color-white;
+                                border: calculateRem(1px) solid $ibexa-color-light;
+                                border-radius: $ibexa-border-radius;
+                                max-height: fit-content;
+                            }
+                        }
+
+                        .ck-list {
+                            border: calculateRem(1px) solid $ibexa-color-complementary-300;
+                            position: relative;
+                            z-index: inherit;
+
+                            &__item {
+                                min-width: calculateRem(72px);
+                                padding: calculateRem(4px);
+                                background-color: $ibexa-color-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

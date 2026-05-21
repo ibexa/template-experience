@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-tb-list-placeholder-source {
+    background-color: var(--ibexa-tb-list-item-source-bg-color);
+    border: calculateRem(1px) dashed var(--ibexa-tb-list-item-source-border-color);
+    border-radius: $ibexa-border-radius;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+}
