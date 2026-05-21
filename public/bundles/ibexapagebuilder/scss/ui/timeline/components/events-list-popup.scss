@@ -1,0 +1,22 @@
+.c-pb-events-list-popup {
+    &__toggler {
+        display: flex;
+        align-items: center;
+
+        .ibexa-icon {
+            width: calculateRem(12px);
+            height: calculateRem(12px);
+            margin-left: calculateRem(32px);
+            margin-right: 0;
+        }
+    }
+
+    .c-pb-events-list {
+        &__list {
+            max-width: calculateRem(500px);
+            min-width: calculateRem(400px);
+            max-height: calculateRem(500px);
+            overflow: auto;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.ibexa-ca-company-tab-address-book {
+    .ibexa-ca-billing-address-table {
+        margin-bottom: calculateRem(48px);
+    }
+
+    &__cell-wrapper {
+        max-width: calculateRem(400px);
+    }
+
+    &__address-details {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,17 @@
+.c-pc-selector-selector-view {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(20px);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: calculateRem(24px);
+        margin-bottom: calculateRem(12px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__info {
+        font-size: $ibexa-text-font-size-medium;
+    }
+}

@@ -1,0 +1,53 @@
+.ibexa-ca-dashboard {
+    margin: 0 calculateRem(48px) calculateRem(48px);
+
+    &__title {
+        margin-bottom: calculateRem(48px);
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__data {
+        flex-grow: 1;
+        padding: calculateRem(18px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        margin-left: calculateRem(18px);
+    }
+
+    &__tiles {
+        display: flex;
+        margin-bottom: calculateRem(32px);
+    }
+
+    &__tile {
+        position: relative;
+        height: calculateRem(160px);
+        width: calculateRem(300px);
+        padding: calculateRem(24px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        margin-right: calculateRem(32px);
+        box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(19px) calculateRem(-10px) rgba($ibexa-color-info, 0.05);
+    }
+
+    &__tile-data {
+        font-size: calculateRem(40px);
+        font-weight: bold;
+    }
+
+    &__tile-title {
+        position: absolute;
+        bottom: calculateRem(24px);
+        font-size: calculateRem(18px);
+        font-weight: bold;
+    }
+
+    &__table-wrapper {
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        padding: calculateRem(24px);
+    }
+}
