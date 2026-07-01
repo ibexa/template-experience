@@ -1,0 +1,31 @@
+.ibexa-pc-product-assets-source {
+    display: flex;
+    flex-direction: column;
+    width: calculateRem(366px);
+
+    &__message {
+        margin: calculateRem(2px);
+        color: $ibexa-color-dark-400;
+        text-align: center;
+        font-size: $ibexa-text-font-size-large;
+
+        &--separator {
+            font-size: $ibexa-text-font-size;
+        }
+
+        &--filesize {
+            margin-top: calculateRem(8px);
+            font-size: $ibexa-text-font-size-small;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn-add {
+        border: none;
+        text-decoration: underline;
+    }
+}

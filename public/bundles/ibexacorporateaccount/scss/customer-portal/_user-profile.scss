@@ -1,0 +1,68 @@
+.ibexa-ca-user-profile {
+    border: calculateRem(1px) solid $ibexa-color-light;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(24px) calculateRem(58px) calculateRem(24px) calculateRem(56px);
+
+    &__thumbnail-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: calculateRem(24px);
+    }
+
+    &__thumbnail {
+        height: calculateRem(169px);
+        width: calculateRem(169px);
+
+        &--img {
+            border: calculateRem(1px) solid $ibexa-color-light;
+            border-radius: 50%;
+        }
+    }
+
+    &__info {
+        width: calculateRem(200px);
+    }
+
+    &__name {
+        font-size: calculateRem(18px);
+        font-weight: bold;
+    }
+
+    &__phone-group,
+    &__email-group {
+        margin-top: calculateRem(24px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__phone-label,
+    &__email-label,
+    &__email-info-label {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        .ibexa-icon {
+            margin-right: calculateRem(4px);
+            fill: $ibexa-color-dark-400;
+        }
+    }
+
+    &__email {
+        word-break: break-all;
+    }
+
+    &--vertical {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: calculateRem(24px);
+
+        .ibexa-ca-user-profile {
+            &__name-group {
+                margin-top: calculateRem(16px);
+                margin-bottom: calculateRem(80px);
+            }
+        }
+    }
+}

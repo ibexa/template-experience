@@ -1,0 +1,27 @@
+.ibexa-perso-dashboard-chart-summary {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: calculateRem(8px);
+    border-top: calculateRem(1px) solid $ibexa-color-light;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: calculateRem(16px);
+        }
+    }
+
+    &__value {
+        color: $ibexa-color-dark;
+        font-weight: bold;
+        font-size: calculateRem(22px);
+        line-height: calculateRem(36px);
+    }
+
+    &__label {
+        margin-right: calculateRem(6px);
+        line-height: calculateRem(18px);
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+}
