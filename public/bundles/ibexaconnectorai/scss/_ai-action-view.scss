@@ -1,0 +1,12 @@
+.ibexa-ai-action-view {
+    &__settings {
+        .ibexa-details {
+            margin-top: 0;
+        }
+    }
+
+    &__name {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+}

@@ -1,0 +1,9 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-pb-reveal-hide-date-time {
+    margin-top: calculateRem(4px);
+
+    .ibexa-picker {
+        width: calculateRem(288px);
+    }
+}

@@ -1,0 +1,7 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-perso-model-details {
+    .ibexa-dropdown {
+        max-width: calculateRem(320px);
+    }
+}

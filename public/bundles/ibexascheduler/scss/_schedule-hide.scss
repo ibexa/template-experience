@@ -1,0 +1,7 @@
+.ibexa-pb-schedule-hide {
+    &--hidden-calendar {
+        .flatpickr-calendar {
+            display: none;
+        }
+    }
+}

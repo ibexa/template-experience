@@ -1,0 +1,29 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-events-view-event {
+    position: relative;
+    margin-bottom: calculateRem(2px);
+    color: $ibexa-color-dark;
+
+    &:hover {
+        cursor: pointer;
+
+        .c-event-tooltip {
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    &__label {
+        padding: 0 calculateRem(6px);
+        border-radius: $ibexa-border-radius-small;
+    }
+
+    &__name {
+        font-size: $ibexa-text-font-size-small;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

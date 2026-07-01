@@ -1,0 +1,17 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-connect-action-edit-handler-options {
+    &__row {
+        display: flex;
+        margin-bottom: calculateRem(8px);
+
+        .ibexa-dropdown {
+            width: calculateRem(368px);
+        }
+    }
+
+    &__row-group--selector {
+        flex-shrink: 0;
+        margin-right: calculateRem(8px);
+    }
+}

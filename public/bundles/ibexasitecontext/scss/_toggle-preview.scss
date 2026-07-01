@@ -1,0 +1,12 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-toggle-preview {
+    .ibexa-toggle__label--edit,
+    .ibexa-toggle__label--preview {
+        color: $ibexa-color-light;
+        font-size: 0.9em;
+        display: inline-block;
+        padding: calculateRem(3px) calculateRem(10px);
+    }
+}

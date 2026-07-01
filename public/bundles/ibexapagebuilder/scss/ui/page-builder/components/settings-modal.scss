@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-pb-settings-modal {
+    &__popup {
+        .c-popup {
+            &__dialog {
+                max-width: calculateRem(800px);
+            }
+        }
+    }
+}

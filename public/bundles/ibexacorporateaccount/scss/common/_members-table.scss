@@ -1,0 +1,8 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ca-members-table {
+    &__thumbnail {
+        vertical-align: bottom;
+        margin-right: calculateRem(8px);
+    }
+}

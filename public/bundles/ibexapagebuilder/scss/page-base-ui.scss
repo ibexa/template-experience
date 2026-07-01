@@ -1,0 +1,29 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+@use 'action-bar';
+@use 'menu-bar';
+@use 'config-panel';
+@use 'page-info-bar';
+@use 'back-to-current-time-wrapper';
+@use 'events-tooltip-container';
+@use 'fields-config-panel';
+@use 'page-builder';
+@use 'iframe-backdrop';
+@use 'modals';
+@use 'content-action-info';
+@use 'preview-error-screen';
+@use 'timeline-wrapper';
+@use 'event-item';
+@use 'udw';
+
+:root {
+    --ibexa-primary-color: #{$ibexa-color-info};
+    --ibexa-input-hover-border-color: var(--ibexa-primary-color);
+    --ibexa-input-focus-border-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-bg-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-disabled-border-color: #{$ibexa-color-info-300};
+    --ibexa-input-checked-disabled-bg-color: #{$ibexa-color-info-300};
+    --ibexa-input-focus-shadow-color: #{rgba($ibexa-color-info, 0.2)};
+    --ibexa-btn-shadow-box-primary-color: #{rgba($ibexa-color-info, 0.5)};
+    --ibexa-dropdown-shadow-box-primary-color: #{rgba($ibexa-color-info, 0.2)};
+}

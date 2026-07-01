@@ -1,0 +1,40 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/spinner' as *;
+
+.ibexa-cai-multistep-selector {
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+    padding: calculateRem(24px) calculateRem(23px) calculateRem(26px);
+
+    .ibexa-alert {
+        margin: calculateRem(24px) 0;
+    }
+
+    .ibexa-dropdown {
+        &__loader-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &__loader {
+            @include spinner(calculateRem(24px), calculateRem(3px), $ibexa-color-primary);
+        }
+    }
+
+    &__steps,
+    &__step--fields {
+        display: flex;
+        flex-direction: column;
+        gap: calculateRem(16px);
+    }
+
+    &__step {
+        flex-grow: 1;
+    }
+
+    .ibexa-cai-multistep-selector__step--ct-group {
+        width: calculateRem(180px);
+    }
+}

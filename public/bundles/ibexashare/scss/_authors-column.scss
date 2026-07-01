@@ -1,0 +1,15 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-shr-authors-column {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(8px);
+
+    &__info {
+        display: flex;
+    }
+
+    &__popover {
+        display: none;
+    }
+}

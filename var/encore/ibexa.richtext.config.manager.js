@@ -1,0 +1,1 @@
+module.exports = [".\/vendor\/ibexa\/product-catalog\/src\/bundle\/Resources\/encore\/ibexa.richtext.config.manager.js",".\/vendor\/ibexa\/connector-qualifio\/src\/bundle\/Resources\/encore\/ibexa.richtext.config.manager.js",".\/vendor\/ibexa\/connector-ai\/src\/bundle\/Resources\/encore\/ibexa.richtext.config.manager.js"];

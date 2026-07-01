@@ -1,0 +1,82 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-ckeditor-campaign {
+    .ck {
+        &.ck-labeled-field-view {
+            .ck-dropdown__panel-visible {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .ck-list__group {
+                .ck {
+                    &.ck-label {
+                        position: relative;
+                    }
+                }
+            }
+
+            .ck {
+                &.ck-labeled-field-view__input-wrapper {
+                    .ck {
+                        &.ck-dropdown {
+                            width: 100%;
+
+                            .ck-button {
+                                &.ck-dropdown__button {
+                                    .ck-button__label {
+                                        width: calculateRem(206px);
+                                    }
+
+                                    &.ck-button_with-text {
+                                        .ck-button__label {
+                                            width: calculateRem(278px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .ck-list__item {
+                                .ck-button {
+                                    .ck-button__label {
+                                        display: flex;
+                                        flex-direction: column;
+                                        line-height: calculateRem(21px);
+
+                                        .ibexa-ckeditor-campaign__item-date-wrapper {
+                                            display: flex;
+                                            align-items: center;
+                                            margin-left: calculateRem(4px);
+
+                                            .ck-icon {
+                                                fill: $ibexa-color-dark-400;
+                                                width: calculateRem(12px);
+                                                height: calculateRem(12px);
+                                            }
+                                        }
+
+                                        .ibexa-ckeditor-campaign__item-date-icon {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+
+                                        .ibexa-ckeditor-campaign__item-date {
+                                            color: $ibexa-color-dark-400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ibexa-custom-panel .ibexa-ckeditor-campaign .ibexa-ckeditor-campaign__label-text {
+    white-space: normal;
+    word-break: break-word;
+}

@@ -1,0 +1,13 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-pc-availability-dot {
+    width: calculateRem(16px);
+    height: calculateRem(16px);
+    border-radius: 50%;
+    background-color: $ibexa-color-success;
+
+    &--not-available {
+        background-color: $ibexa-color-light-600;
+    }
+}
