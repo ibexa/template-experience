@@ -1,0 +1,177 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use '@ids-assets/scss/variables/colors' as *;
+@use '@ids-assets/scss/variables/typography' as *;
+
+.ibexa-pb-config-panel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calculateRem(138px);
+    z-index: 660;
+    height: calc(100vh - #{calculateRem(138px)});
+    min-width: calculateRem(500px);
+    background-color: $ibexa-color-white;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: $ibexa-edit-header-box-shadow;
+
+    &--closed {
+        display: none;
+    }
+
+    &--right {
+        right: 0;
+    }
+
+    &--fields {
+        .card {
+            background: none;
+        }
+    }
+
+    &__backdrop.ibexa-backdrop.ibexa-backdrop {
+        z-index: 655;
+    }
+
+    &__header {
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+        padding: calculateRem(12px) calculateRem(16px);
+        display: flex;
+    }
+
+    &__header-left-col {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &__header-right-col {
+        flex: 0 0 auto;
+    }
+
+    &__header-tooltip {
+        margin: calculateRem(2px) calculateRem(8px) 0 calculateRem(16px);
+        font-size: $text-font-size-s;
+
+        &--has-name {
+            border: calculateRem(1px) solid $color-neutral-70;
+            border-radius: calculateRem(15px);
+            margin-right: 0;
+            padding: calculateRem(2px) calculateRem(6px);
+
+            .ibexa-icon {
+                margin-right: calculateRem(4px);
+            }
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 0;
+        letter-spacing: 0.12px;
+    }
+
+    &__title {
+        line-height: calculateRem(33px);
+        min-height: calculateRem(33px);
+    }
+
+    &__subtitle {
+        line-height: calculateRem(24px);
+        font-weight: 400;
+        color: $ibexa-color-dark-400;
+        font-family: $ibexa-font-family;
+    }
+
+    &__body {
+        overflow: auto;
+        transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        padding: calculateRem(24px) calculateRem(32px);
+        z-index: 10;
+
+        &--slim {
+            z-index: 1;
+            box-shadow: 0 0 calculateRem(16px) 0 rgba($ibexa-color-dark, 0.16);
+        }
+
+        .ibexa-btn {
+            margin-right: calculateRem(16px);
+        }
+    }
+
+    .ibexa-tabs.ibexa-tabs {
+        &--switcher {
+            .ibexa-tabs__tab {
+                .ibexa-tabs__link {
+                    &:hover {
+                        border: calculateRem(1px) solid $ibexa-color-info;
+                    }
+
+                    &:focus-visible {
+                        border: calculateRem(1px) solid $ibexa-color-info;
+                        box-shadow: 0 0 0 calculateRem(4px) rgba($ibexa-color-info, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &__resizer {
+        position: absolute;
+        top: 0;
+        width: calculateRem(1px);
+        height: 100%;
+        background-color: transparent;
+
+        &:hover {
+            cursor: col-resize;
+            width: calculateRem(6px);
+            box-shadow: calculateRem(6px) 0 0 $ibexa-color-info inset;
+        }
+
+        &--left {
+            right: 0;
+        }
+
+        &--right {
+            left: 0;
+        }
+    }
+
+    &--resizing {
+        transition-property: transform;
+
+        .c-pb-config-panel__resizer {
+            transition: none;
+        }
+
+        .ibexa-pb-config-panel {
+            &__resizer {
+                &:hover {
+                    width: 100%;
+                    z-index: 1080;
+                }
+            }
+        }
+    }
+
+    &--distraction-free-mode-active {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        .ibexa-pb-config-panel {
+            &__header {
+                display: none;
+            }
+        }
+    }
+}

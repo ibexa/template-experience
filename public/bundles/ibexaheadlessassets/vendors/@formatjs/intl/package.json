@@ -1,0 +1,37 @@
+{
+  "name": "@formatjs/intl",
+  "version": "4.1.18",
+  "description": "Internationalize JS apps. This library provides an API to format dates, numbers, and strings, including pluralization and handling translations.",
+  "keywords": [
+    "format",
+    "formatting",
+    "globalization",
+    "i18n",
+    "internationalization",
+    "intl",
+    "locale",
+    "localization",
+    "react-intl",
+    "translate",
+    "translation"
+  ],
+  "homepage": "https://formatjs.github.io",
+  "bugs": "https://github.com/formatjs/formatjs/issues",
+  "license": "MIT",
+  "author": "Long Ho <holevietlong@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:formatjs/formatjs.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "dependencies": {
+    "@formatjs/fast-memoize": "3.1.7",
+    "@formatjs/icu-messageformat-parser": "3.5.16",
+    "intl-messageformat": "11.2.13"
+  }
+}

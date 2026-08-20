@@ -1,0 +1,17 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.c-product-variant-table {
+    &__header {
+        justify-content: flex-start;
+    }
+
+    &__back-btn {
+        margin-right: calculateRem(12px);
+    }
+
+    &__no-search-results {
+        .c-search-no-results__no-results-hint {
+            flex-basis: auto;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/inputs' as *;
+
+.ibexa-field-edit--ibexa_taxonomy_entry {
+    &.is-invalid {
+        .ibexa-tag-view-select {
+            @include area-invalid();
+
+            &__info {
+                color: $ibexa-color-danger;
+            }
+        }
+    }
+}
+
+.ibexa-field-edit--ibexa_taxonomy_entry_assignment {
+    &.is-invalid {
+        .ibexa-tag-view-select {
+            @include area-invalid();
+        }
+    }
+
+    .ibexa-field-edit__data--compound {
+        border: 0;
+        padding: 0;
+    }
+}

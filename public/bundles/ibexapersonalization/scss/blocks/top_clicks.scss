@@ -1,0 +1,19 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+
+.ibexa-db-top-clicks {
+    &__header {
+        margin-bottom: calculateRem(16px);
+    }
+
+    .ibexa-container {
+        padding: calculateRem(16px);
+    }
+
+    .ibexa-table-header {
+        justify-content: flex-end;
+
+        &__headline {
+            display: none;
+        }
+    }
+}

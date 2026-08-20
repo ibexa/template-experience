@@ -1,0 +1,11 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+
+.ibexa-modal--versions {
+    .modal-header {
+        background: $ibexa-color-white;
+    }
+
+    .modal-dialog {
+        min-width: 60vw;
+    }
+}

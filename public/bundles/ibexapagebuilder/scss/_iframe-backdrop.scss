@@ -1,0 +1,38 @@
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/custom.scss' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/functions/calculate.rem' as *;
+@use '@ibexa-admin-ui/src/bundle/Resources/public/scss/mixins/spinner' as *;
+
+.ibexa-pb-iframe-backdrop {
+    $self: &;
+
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0.4;
+    background-color: $ibexa-color-dark;
+
+    &--is-loading {
+        display: block;
+
+        #{$self} {
+            &__loader-container {
+                display: flex;
+            }
+        }
+    }
+
+    &__loader-container {
+        display: none;
+        height: 100%;
+    }
+
+    &__loader {
+        margin: auto;
+
+        @include spinner(calculateRem(80px), calculateRem(10px), $ibexa-color-white);
+    }
+}

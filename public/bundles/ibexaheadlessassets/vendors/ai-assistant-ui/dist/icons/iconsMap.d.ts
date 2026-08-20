@@ -1,0 +1,22 @@
+declare const iconsMap: {
+    arrowCollapseLeft: () => import("react").JSX.Element;
+    assistant: () => import("react").JSX.Element;
+    chatBubble: () => import("react").JSX.Element;
+    chevronDown: () => import("react").JSX.Element;
+    discard: () => import("react").JSX.Element;
+    discardCircle: () => import("react").JSX.Element;
+    fullScreen: () => import("react").JSX.Element;
+    fullScreenExit: () => import("react").JSX.Element;
+    microphone: () => import("react").JSX.Element;
+    newConversation: () => import("react").JSX.Element;
+    paperclip: () => import("react").JSX.Element;
+    play: () => import("react").JSX.Element;
+    plus: () => import("react").JSX.Element;
+    search: () => import("react").JSX.Element;
+    send: () => import("react").JSX.Element;
+    stop: () => import("react").JSX.Element;
+    tick: () => import("react").JSX.Element;
+    trash: () => import("react").JSX.Element;
+};
+export type IconName = keyof typeof iconsMap;
+export default iconsMap;

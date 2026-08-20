@@ -1,0 +1,15 @@
+@use '../../list-data-grid';
+
+@use 'products-tab/category-select-popup';
+@use 'products-tab/product-table-item';
+@use 'products-tab/product-table-thumbnail';
+@use 'products-tab/product-table';
+@use 'products-tab/product-variant-table';
+@use 'products-tab/product-variants-filters';
+@use 'products-tab/product-variants-view';
+@use 'products-tab/products-code-filter';
+@use 'products-tab/products-category-filter';
+@use 'products-tab/products-tab-content';
+@use 'products-tab/products-tab-layout';
+@use 'products-tab/selected-items-product-item-code';
+@use 'products-tab/selected-items-product-item-variants';
