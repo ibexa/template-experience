@@ -1,0 +1,136 @@
+.ck.ck-reset_all .ibexa-ckeditor-alert {
+    $self: '.ibexa-ckeditor-alert';
+
+    min-height: calculateRem(48px);
+    display: grid;
+    grid-template: 'icon content close-btn';
+    grid-template-columns: auto 1fr auto;
+    padding: calculateRem(8px) calculateRem(8px);
+    border-radius: 0 $ibexa-border-radius $ibexa-border-radius 0;
+    border-width: 0 0 0 calculateRem(4px);
+    border-left-style: solid;
+    align-items: center;
+    margin-bottom: calculateRem(16px);
+
+    &--hidden {
+        display: none;
+    }
+
+    &__icon-wrapper {
+        grid-area: icon;
+        display: flex;
+        align-self: start;
+        margin-top: calculateRem(8px);
+
+        .ck-icon {
+            width: calculateRem(12px);
+            height: calculateRem(12px);
+        }
+    }
+
+    &__content {
+        grid-area: content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding: calculateRem(4px) calculateRem(8px);
+    }
+
+    &__title {
+        max-width: calculateRem(160px);
+        text-wrap: wrap;
+        font-size: $ibexa-text-font-size-small;
+        line-height: calculateRem(18px);
+    }
+
+    &__close-btn {
+        grid-area: close-btn;
+        fill: inherit;
+        padding: calculateRem(4px);
+        border-radius: 50%;
+        margin-left: calculateRem(5px);
+        align-self: start;
+
+        .ck-icon {
+            width: calculateRem(12px);
+            height: calculateRem(12px);
+        }
+    }
+
+    &--info {
+        color: $ibexa-color-complementary-700;
+        background-color: $ibexa-color-complementary-100;
+        border-color: $ibexa-color-complementary-300 $ibexa-color-complementary-300 $ibexa-color-complementary-300
+            $ibexa-color-complementary;
+
+        .ck-icon {
+            fill: $ibexa-color-complementary-700;
+        }
+
+        #{$self} {
+            &__title {
+                color: $ibexa-color-complementary-700;
+            }
+
+            &__close-btn {
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+
+                    .ck-icon {
+                        fill: $ibexa-color-complementary-800;
+                    }
+                }
+
+                &:active,
+                &:focus-visible {
+                    background-color: transparent;
+                    border: calculateRem(1px) solid $ibexa-color-complementary-700;
+
+                    .ck-icon {
+                        fill: $ibexa-color-complementary-700;
+                    }
+                }
+            }
+        }
+    }
+
+    &--warning {
+        color: $ibexa-color-accent-700;
+        background-color: $ibexa-color-accent-100;
+        border-color: $ibexa-color-accent-300 $ibexa-color-accent-300 $ibexa-color-accent-300 $ibexa-color-accent;
+
+        .ck-icon {
+            fill: $ibexa-color-accent-700;
+        }
+
+        #{$self} {
+            &__title {
+                color: $ibexa-color-accent-700;
+            }
+
+            &__close-btn {
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+
+                    .ck-icon {
+                        fill: $ibexa-color-accent-800;
+                    }
+                }
+
+                &:active,
+                &:focus-visible {
+                    background-color: transparent;
+                    border: calculateRem(1px) solid $ibexa-color-accent-700;
+
+                    .ck-icon {
+                        fill: $ibexa-color-accent-700;
+                    }
+                }
+            }
+        }
+    }
+}

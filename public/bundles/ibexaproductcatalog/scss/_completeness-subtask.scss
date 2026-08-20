@@ -1,0 +1,121 @@
+.ibexa-pc-completeness-subtask {
+    position: relative;
+    display: flex;
+    margin: calculateRem(4px) calculateRem(12px) calculateRem(18px) calculateRem(12px);
+
+    &__left-col {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__right-col {
+        display: none;
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+        margin-right: calculateRem(12px);
+        background: radial-gradient($ibexa-color-white 50%, transparent 60%),
+            conic-gradient(transparent 0% 10%, $ibexa-color-success 50% 100%);
+        border: none;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin-right: calculateRem(12px);
+        font-size: $ibexa-text-font-size-medium;
+        font-weight: bold;
+    }
+
+    &__status {
+        padding-top: calculateRem(3px);
+        color: $ibexa-color-dark-400;
+        font-size: $ibexa-text-font-size-small;
+    }
+
+    &__edit-link {
+        color: $ibexa-color-info;
+        font-size: $ibexa-text-font-size-small;
+        text-decoration: none;
+
+        &:hover {
+            color: $ibexa-color-info;
+            text-decoration: none;
+        }
+    }
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: calculateRem(7px);
+        left: calculateRem(5px);
+        display: none;
+        width: calculateRem(14px);
+        height: calculateRem(7px);
+        border-left: calculateRem(1px) solid $ibexa-color-white;
+        border-bottom: calculateRem(1px) solid $ibexa-color-white;
+        transform: rotate(-60deg);
+    }
+
+    &--not-started {
+        .ibexa-pc-completeness-subtask {
+            &__icon-wrapper {
+                background: transparent;
+                border: calculateRem(3px) solid $ibexa-color-light;
+            }
+        }
+    }
+
+    &--completed {
+        &::before {
+            display: block;
+        }
+
+        .ibexa-pc-completeness-subtask {
+            &__icon-wrapper {
+                background: $ibexa-color-success;
+                border: calculateRem(3px) solid $ibexa-color-success;
+            }
+        }
+    }
+
+    &--grouped {
+        &::before {
+            top: calculateRem(7px);
+            left: calculateRem(4px);
+            width: calculateRem(9px);
+            height: calculateRem(4px);
+        }
+
+        .ibexa-pc-completeness-subtask {
+            &__name {
+                font-weight: normal;
+            }
+
+            &__icon-wrapper {
+                width: calculateRem(16px);
+                height: calculateRem(16px);
+                border-width: calculateRem(2px);
+            }
+        }
+    }
+
+    &--with-edit-link {
+        .ibexa-pc-completeness-subtask {
+            &__left-col {
+                width: 80%;
+            }
+
+            &__right-col {
+                display: flex;
+                justify-content: flex-end;
+                width: 20%;
+            }
+        }
+    }
+}

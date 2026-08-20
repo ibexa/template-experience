@@ -1,0 +1,118 @@
+.c-selection-sidebar {
+    position: absolute;
+    width: calculateRem(386px);
+    height: calculateRem(72px);
+    background: $ibexa-color-white;
+    top: calculateRem(110px);
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: $ibexa-border-radius;
+    border-bottom-left-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-light;
+    box-shadow: calculateRem(4px) calculateRem(22px) calculateRem(47px) 0 rgba($ibexa-color-info, 0.2);
+    transition: all $ibexa-admin-transition-duration $ibexa-admin-transition;
+
+    &__expand-btn {
+        margin-left: calculateRem(5px);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: calculateRem(12px) calculateRem(12px) calculateRem(12px) calculateRem(36px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-light;
+    }
+
+    &__header-selected-events-title {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__event {
+        display: grid;
+        grid-template-columns: calculateRem(50px) 1fr calculateRem(50px);
+        margin-bottom: calculateRem(12px);
+        border: calculateRem(1px) solid $ibexa-color-light;
+        border-radius: $ibexa-border-radius;
+        box-shadow: calculateRem(4px) calculateRem(2px) calculateRem(17px) 0 rgba($ibexa-color-black, 0.05);
+    }
+
+    &__event-icon-wrapper {
+        padding: calculateRem(5px);
+    }
+
+    &__event-data-wrapper {
+        padding: calculateRem(5px) calculateRem(12px);
+    }
+
+    &__event-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calculateRem(42px);
+        height: calculateRem(42px);
+        border-radius: $ibexa-border-radius;
+    }
+
+    &__events-info {
+        font-size: calculateRem(10px);
+        text-align: center;
+        border-bottom: calculateRem(1px) solid $ibexa-color-white;
+        display: flex;
+        flex-direction: column;
+        height: calculateRem(45px);
+        justify-content: center;
+    }
+
+    &__events-group {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__events-list {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding: 0;
+    }
+
+    .c-events-actions {
+        display: none;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    &--expanded {
+        top: calculateRem(73px);
+        width: calculateRem(480px);
+        height: calc(100vh - #{calculateRem(73px)});
+
+        .c-selection-sidebar {
+            &__events-list {
+                padding: calculateRem(10px) calculateRem(22px);
+            }
+
+            &__header-selected-events-count {
+                display: block;
+            }
+
+            &__expand-btn {
+                .ibexa-icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .c-events-actions {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.c-tb-list-item {
+    &__group {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        padding-right: calculateRem(4px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid transparent;
+    }
+
+    &__cover {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &--grouped-source {
+        position: relative;
+        z-index: 10000;
+
+        .c-tb-list-item-single {
+            &__element {
+                border-radius: $ibexa-border-radius;
+                background: var(--ibexa-tb-list-item-dragged-bg-color);
+                border-color: var(--ibexa-tb-list-item-dragged-border-color);
+                min-width: calculateRem(140px);
+            }
+
+            &__drag-icon {
+                opacity: 1;
+            }
+
+            &__indentation,
+            .c-tb-toggler {
+                display: none;
+            }
+
+            .ibexa-input:disabled {
+                background-color: var(--ibexa-input-choice-bg-color);
+                border-color: var(--ibexa-input-border-color);
+            }
+
+            .c-tb-contextual-menu {
+                display: block;
+            }
+        }
+    }
+}

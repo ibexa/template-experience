@@ -1,0 +1,41 @@
+.c-pc-products-codes-filter {
+    position: relative;
+
+    &__clear {
+        display: none;
+        position: absolute;
+        top: calculateRem(45px);
+        right: calculateRem(7px);
+        width: calculateRem(16px);
+        height: calculateRem(16px);
+        transform: translateY(-50%);
+        border: none;
+        background: none;
+        outline: none;
+
+        &::before,
+        &::after {
+            content: '';
+            width: calculateRem(1px);
+            height: calculateRem(11px);
+            background: $ibexa-color-dark;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        &::before {
+            transform: translate(50%, -50%) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translate(50%, -50%) rotate(45deg);
+        }
+    }
+
+    &--has-value {
+        .c-pc-products-codes-filter__clear {
+            display: block;
+        }
+    }
+}

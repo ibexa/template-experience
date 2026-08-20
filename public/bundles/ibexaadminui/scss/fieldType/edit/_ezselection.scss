@@ -1,0 +1,17 @@
+.ibexa-field-edit--ezselection {
+    .ibexa-data-source {
+        position: relative;
+
+        .ibexa-dropdown {
+            &__selection-info {
+                width: 100%;
+            }
+
+            &__items {
+                max-height: calculateRem(300px);
+                overflow-y: auto;
+                width: 100%;
+            }
+        }
+    }
+}

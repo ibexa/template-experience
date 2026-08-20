@@ -1,0 +1,37 @@
+.ibexa-sf-design-layouts {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: auto;
+    padding: calculateRem(24px);
+    border: calculateRem(1px) solid $ibexa-color-dark-200;
+    border-radius: $ibexa-border-radius;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calculateRem(200px);
+        height: calculateRem(240px);
+        margin: calculateRem(8px);
+        padding: calculateRem(16px);
+        border: calculateRem(1px) solid $ibexa-color-dark-200;
+        border-radius: $ibexa-border-radius;
+
+        &--selected {
+            border-color: $ibexa-color-dark;
+        }
+    }
+
+    &__item-image {
+        width: calculateRem(175px);
+        height: calculateRem(175px);
+        object-fit: cover;
+        border-radius: $ibexa-border-radius;
+    }
+
+    &__item-desc {
+        margin-top: calculateRem(16px);
+        font-size: $ibexa-text-font-size-small;
+    }
+}

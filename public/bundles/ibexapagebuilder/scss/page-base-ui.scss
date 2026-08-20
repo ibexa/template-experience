@@ -1,0 +1,31 @@
+@import './public/bundles/ibexaadminui/scss/custom.scss';
+@import './public/bundles/ibexaadminui/scss/functions/calculate.rem.scss';
+@import './public/bundles/ibexaadminui/scss/mixins.scss';
+
+:root {
+    --ibexa-primary-color: #{$ibexa-color-info};
+    --ibexa-input-hover-border-color: var(--ibexa-primary-color);
+    --ibexa-input-focus-border-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-bg-color: var(--ibexa-primary-color);
+    --ibexa-input-checked-disabled-border-color: #{$ibexa-color-info-300};
+    --ibexa-input-checked-disabled-bg-color: #{$ibexa-color-info-300};
+    --ibexa-input-focus-shadow-color: #{rgba($ibexa-color-info, 0.2)};
+    --ibexa-btn-shadow-box-primary-color: #{rgba($ibexa-color-info, 0.5)};
+    --ibexa-dropdown-shadow-box-primary-color: #{rgba($ibexa-color-info, 0.2)};
+}
+
+@import 'action-bar';
+@import 'menu-bar';
+@import 'config-panel';
+@import 'page-info-bar';
+@import 'back-to-current-time-wrapper';
+@import 'events-tooltip-container';
+@import 'fields-config-panel';
+@import 'page-builder';
+@import 'iframe-backdrop';
+@import 'modals';
+@import 'content-action-info';
+@import 'preview-error-screen';
+@import 'timeline-wrapper';
+@import 'event-item';
+@import 'udw';
